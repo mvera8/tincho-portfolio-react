@@ -1,6 +1,7 @@
 import { Badge, Box, Card, Container, Grid, SimpleGrid, ThemeIcon, Title, useMantineColorScheme } from '@mantine/core';
 import { SectionTitle } from '../components';
 import { IconBrandWordpress, IconBrandNextjs, IconBrandReact, IconBrandDocker, IconBrandBootstrap, IconBrandFigma, IconBrandHtml5, IconBrandJavascript } from '@tabler/icons-react';
+import T from "../i18n/T.jsx";
 
 const skills = [
 	{ title: 'WordPress', icon: IconBrandWordpress, color: 'black', progress: 99 },
@@ -37,9 +38,9 @@ export const SkillsSection = () => {
 				<Grid mb="md" align="center">
 					<Grid.Col span={4}>
 						<SectionTitle
-							title="Profesional Problem Solutions For Digital Products"
-							subtitle="About Me"
-							text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis eget justo quis semper. Maecenas facilisis sapien ipsum, at malesuada ligula ultricies at."
+							title={<T k="skills.title" />}
+							subtitle={<T k="skills.subtitle" />}
+							text={<T k="skills.text" />}
 						/>
 					</Grid.Col>
 					<Grid.Col span={7} offset={1}>

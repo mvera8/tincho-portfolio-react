@@ -1,14 +1,15 @@
 import { Box, Button, Card, Container, Grid, Image, Title } from '@mantine/core'
 import { SectionTitle, TextDimmed } from '../components'
 import { IconArrowUpRight } from '@tabler/icons-react'
+import T from "../i18n/T.jsx";
 
 export const PortfolioSection = () => {
 	return (
 		<Box component="section" py="xl">
 			<Container size="lg" py="xl" mb="xl">
 				<SectionTitle
-					title="Explore My Popular Projects"
-					subtitle="Latest Work"
+					title={<T k="portfolio.title" />}
+					subtitle={<T k="portfolio.subtitle" />}
 					centerText
 				/>
 				<Grid mb="mb">

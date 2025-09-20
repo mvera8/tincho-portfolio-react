@@ -8,7 +8,7 @@ export const SectionTitle = ({ title, subtitle, text, centerText = false }) => {
   return (
     <>
       {subtitle && (
-				<TextDimmed text={subtitle} align={ta} />
+        <TextDimmed text={subtitle} align={ta} />
       )}
 
       {title && (
@@ -16,7 +16,7 @@ export const SectionTitle = ({ title, subtitle, text, centerText = false }) => {
           order={2}
           size="h1"
           mb="lg"
-					tt="capitalize"
+          tt="capitalize"
           maw={500}
           ta={ta}
           mx={centerText ? 'auto' : undefined}
@@ -25,16 +25,16 @@ export const SectionTitle = ({ title, subtitle, text, centerText = false }) => {
         </Title>
       )}
 
-			{text && (
-				<Text size="lg">{text}</Text>
+      {text && (
+        <Text size="lg" ta={ta}>{text}</Text>
       )}
     </>
   );
 };
 
 SectionTitle.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-	text:  PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  subtitle: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   centerText: PropTypes.bool,
 };

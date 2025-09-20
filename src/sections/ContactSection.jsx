@@ -1,6 +1,7 @@
 import { Box, Button, Container, Grid, SimpleGrid, Stack, Textarea, TextInput, useMantineColorScheme } from "@mantine/core"
 import { MvList, SectionTitle } from "../components"
 import { IconChevronRight } from "@tabler/icons-react"
+import T from "../i18n/T.jsx";
 
 export const ContactSection = () => {
 	const colorScheme = useMantineColorScheme();
@@ -11,16 +12,14 @@ export const ContactSection = () => {
 				<Grid mb="md" align="center">
 					<Grid.Col span={4}>
 						<SectionTitle
-							title="Lets Talk for your next project"
-							subtitle="Get in touch"
-							text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis eget justo quis semper. Maecenas facilisis sapien ipsum, at malesuada ligula ultricies at."
+							title={<T k="contact.title" />}
+							subtitle={<T k="contact.subtitle" />}
+							text={<T k="contact.text" />}
 						/>
 
 						<MvList />
 					</Grid.Col>
 					<Grid.Col span={7} offset={1}>
-
-
 						<form onSubmit={(event) => event.preventDefault()}>
 							<Stack gap="xl">
 								<SimpleGrid cols={2}>
@@ -48,18 +47,8 @@ export const ContactSection = () => {
 
 							</Stack>
 						</form>
-
 					</Grid.Col>
 				</Grid>
-
-
-
-
-
-
-
-			
-
 			</Container>
 		</Box>	
 	)

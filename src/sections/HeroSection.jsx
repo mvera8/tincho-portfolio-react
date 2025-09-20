@@ -1,10 +1,15 @@
 import { Box, Button, Card, Container, Grid, Group, Stack, Text, Title } from "@mantine/core"
 import { IconChevronRight } from "@tabler/icons-react";
-import { MvImage, TextDimmed, TextList } from "../components";
+import { Each, MvImage, TextDimmed, TextList } from "../components";
+import { useI18n } from "../i18n/useI18n.js";
 import T from "../i18n/T.jsx";
 import classes from './HeroSection.module.css';
 
 export const HeroSection = () => {
+	const { get } = useI18n();
+	const bulletsRaw = get("home.bullets");
+	const bullets = Array.isArray(bulletsRaw) ? bulletsRaw : []; // guard
+
 	return (
 		<Box component="section">
 			<Container size="xl" pb="xl">
@@ -52,9 +57,17 @@ export const HeroSection = () => {
 								align="stretch"
 								justify="center"
 							>
-								<TextList title={<T k="home.bullet.title1" />} text={<T k="home.bullet.text1" />} showDivider />
-								<TextList title={<T k="home.bullet.title2" />} text={<T k="home.bullet.text2" />} showDivider />
-								<TextList title={<T k="home.bullet.title3" />} text={<T k="home.bullet.text3" />} />
+								<Each
+									of={bullets}
+									render={({ title, text }, idx) => (
+										<TextList
+											key={`${title}-${idx}`}
+											title={title}
+											text={text}
+											showDivider={idx < bullets.length - 1}
+										/>
+									)}
+								/>
 							</Stack>
 						</Card>
 					</Grid.Col>

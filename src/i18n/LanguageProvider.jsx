@@ -71,7 +71,12 @@ function LanguageProvider({ children }) {
     return key;
   }, [getRaw, pluralRules]);
 
-  const value = useMemo(() => ({ lang, setLang, t, ready }), [lang, t, ready]);
+  const get = useCallback((key) => getRaw(key), [getRaw]);
+
+  const value = useMemo(
+    () => ({ lang, setLang, t, get, ready }),
+    [lang, t, get, ready]
+  );
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }

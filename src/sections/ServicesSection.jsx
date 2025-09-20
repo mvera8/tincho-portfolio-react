@@ -1,6 +1,7 @@
 import { Box, Card, Container, Grid, SimpleGrid, Text, ThemeIcon, Title } from "@mantine/core"
 import { SectionTitle } from "../components"
 import { IconBrandWordpress, IconBrush, IconChessBishop, IconDeviceMobile, IconMovie, IconSettings2, IconShoppingCart, IconTopologyRing3 } from "@tabler/icons-react"
+import T from "../i18n/T.jsx";
 
 const services = [
 	{ title: 'WordPress Development', icon: IconBrandWordpress, description: 'Custom themes, plugin integrations, and site optimization for a seamless WordPress experience.' },
@@ -44,8 +45,8 @@ export const ServicesSection = () => {
 		<Box component="section" py="xl">
 			<Container size="lg" py="xl" mb="xl">
 				<SectionTitle
-					title="My Special service for your business development"
-					subtitle="Popular Services"
+					title={<T k="services.title" />}
+					subtitle={<T k="services.subtitle" />}
 					centerText
 				/>
 

@@ -7,6 +7,7 @@ import { ActionIcon,
 import { SectionTitle, TextDimmed } from '../components'
 import classes from './ResumeSection.module.css';
 import { IconArrowUpRight } from '@tabler/icons-react';
+import T from "../i18n/T.jsx";
 
 const experience = [
 	{
@@ -69,8 +70,8 @@ export const ResumeSection = () => {
 				<Grid.Col span={7} offset={1}>
 
 					<SectionTitle
-						title="Real Problem Solutions Experience"
-						subtitle="My Resume"
+						title={<T k="resume.title" />}
+						subtitle={<T k="resume.subtitle" />}
 					/>
 					
 					<Card p="xl" radius="md">

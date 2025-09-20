@@ -1,16 +1,25 @@
 {
+	"site.name": "Martin Vera | Web Developer",
 	"navbar.home": "Home",
 	"home.hello": "{emoji} Hello, I'm",
 	"home.title": "Web Developer",
 	"home.text": "I build production-grade WordPress multisites and modern React apps with a focus on speed, reliability, and maintainability. I’ve led projects that aggregate data across multiple properties (dashboards, reporting, and internal tools), automated content operations (WP-CLI, custom scripts, Jenkins/GitHub Actions), and improved developer workflows end-to-end.",
 	"home.cta1": "Hire Me",
 	"home.cta2": "Download Resume",
-	"home.bullet.title1": "10+",
-	"home.bullet.text1": "Years of Experience",
-	"home.bullet.title2": "100%",
-	"home.bullet.text2": "Client Satisfaction",
-	"home.bullet.title3": "A Lot",
-	"home.bullet.text3": "AI Helping",
+	"home.bullets": [
+		{
+			"title": "10+",
+			"text": "Years of Experience"
+		},
+		{
+			"title": "100%",
+			"text": "Client Satisfaction"
+		},
+		{
+			"title": "A Lot",
+			"text": "AI Helping"
+		}
+	],
 	"about.subtitle": "About Me",
 	"about.title": "Profesional Problem Solutions For Digital Products",
 	"about.text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis eget justo quis semper. Maecenas facilisis sapien ipsum, at malesuada ligula ultricies at. Vivamus fermentum odio et ex suscipit, sit amet accumsan nisl vulputate.",
@@ -27,9 +36,5 @@
 	"blog.title": "Latest News & Blog",
 	"contact.subtitle": "Get in touch",
 	"contact.title": "Lets Talk for your next project",
-	"contact.text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis eget justo quis semper. Maecenas facilisis sapien ipsum, at malesuada ligula ultricies at. Vivamus fermentum odio et ex suscipit, sit amet accumsan nisl vulputate.",
-	"cart.items": {
-		"one": "{count} item",
-		"other": "{count} items"
-	}
+	"contact.text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis eget justo quis semper. Maecenas facilisis sapien ipsum, at malesuada ligula ultricies at. Vivamus fermentum odio et ex suscipit, sit amet accumsan nisl vulputate."
 }

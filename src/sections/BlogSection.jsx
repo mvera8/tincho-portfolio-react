@@ -1,5 +1,6 @@
 import { Box, Card, Container, Image, SimpleGrid, Title } from '@mantine/core';
 import { SectionTitle, TextDimmed } from '../components';
+import T from "../i18n/T.jsx";
 
 const posts = [
 	{ title: 'Tips for Conductin See SUability Studies' },
@@ -38,8 +39,8 @@ export const BlogSection = () => {
 		>
 			<Container size="lg" py="xl" mb="xl">
 				<SectionTitle
-					title="Latest News & Blog"
-					subtitle="News & Blog"
+					title={<T k="blog.title" />}
+					subtitle={<T k="blog.subtitle" />}
 					centerText
 				/>
 				<SimpleGrid cols={2}>
