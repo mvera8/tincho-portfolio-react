@@ -1,0 +1,12 @@
+{
+	"navbar.home": "Inicio",
+	"home.hello": "{emoji} Hola, Yo Soy",
+	"home.title": "Desarrollador Web",
+	"home.subtitle": "Hola {name}, ¡bienvenido!",
+	"home.cta": "Empezar",
+	"cart.items": {
+		"one": "{count} artículo",
+		"other": "{count} artículos"
+	},
+	"money.balance": "Tu saldo es {amount}"
+}
