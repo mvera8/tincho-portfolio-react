@@ -9,10 +9,10 @@ import { useI18n } from '../i18n/useI18n.js';
 const items = [
 	{path: '/', name: <T k="navbar.home" />},
 	{path: '/blog', name: 'Blog'},
-	{path: '/post', name: 'Post'},
-	{path: '/portfolio-post', name: 'PortfolioPost'},
-	{path: '/service-post', name: 'ServicePost'},
-	{path: '/test', name: 'Test'},
+	// {path: '/post', name: 'Post'},
+	// {path: '/portfolio-post', name: 'PortfolioPost'},
+	// {path: '/service-post', name: 'ServicePost'},
+	// {path: '/test', name: 'Test'},
 ];
 
 export const Navbar = () => {
@@ -44,7 +44,7 @@ export const Navbar = () => {
 								)
 							)} />
 
-							<Button.Group>
+							<Button.Group ms="sm">
 								<Button
 									onClick={() => setLang("es")}
 									aria-pressed={lang === "es"}
@@ -60,7 +60,8 @@ export const Navbar = () => {
 							<Button
 								onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
 								variant="transparent"
-								color='gray'
+								color="gray"
+								ms="sm"
 								pl="xs"
 								pr="xs">
 								{computedColorScheme === 'light' ? <IconMoon size={20} /> : <IconSun size={20} />}

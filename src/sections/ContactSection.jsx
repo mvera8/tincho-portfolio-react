@@ -1,10 +1,12 @@
 import { Box, Button, Container, Grid, SimpleGrid, Stack, Textarea, TextInput, useMantineColorScheme } from "@mantine/core"
 import { MvList, SectionTitle } from "../components"
 import { IconChevronRight } from "@tabler/icons-react"
+import { useI18n } from "../i18n/useI18n.js";
 import T from "../i18n/T.jsx";
 
 export const ContactSection = () => {
 	const colorScheme = useMantineColorScheme();
+	const { t } = useI18n();
 
 	return (
 		<Box bg={colorScheme.colorScheme === 'dark' ? 'dark' : 'gray.1'} component="section" py="xl">
@@ -23,16 +25,16 @@ export const ContactSection = () => {
 						<form onSubmit={(event) => event.preventDefault()}>
 							<Stack gap="xl">
 								<SimpleGrid cols={2}>
-									<TextInput size="lg" label="Your name" placeholder="Your name" required />
-									<TextInput size="lg" label="Your email" placeholder="hello@mantine.dev" required />
+									<TextInput size="lg" label={t("contact.input.name")} placeholder={t("contact.input.name")} required />
+									<TextInput size="lg" label={t("contact.input.email")} placeholder={t("contact.input.email")} required />
 								</SimpleGrid>
 
-								<TextInput size="lg" label="Subject" placeholder="Subject" required />
+								<TextInput size="lg" label={t("contact.input.subject")} placeholder={t("contact.input.subject")} required />
 
 								<Textarea
 									size="lg"
-									label="Your message"
-									placeholder="Please include all relevant information"
+									label={t("contact.input.message")}
+									placeholder={t("contact.input.message.placeholder")}
 									minRows={3}
 								/>
 
@@ -41,8 +43,8 @@ export const ContactSection = () => {
 									variant="filled"
 									color="red"
 									size="lg"
-									rightSection={<IconChevronRight size={20} />}
-									>Send message
+									rightSection={<IconChevronRight size={20} />}>
+										<T k="contact.input.btn" />
 								</Button>
 
 							</Stack>

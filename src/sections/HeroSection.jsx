@@ -8,12 +8,12 @@ import classes from './HeroSection.module.css';
 export const HeroSection = () => {
 	const { get } = useI18n();
 	const bulletsRaw = get("home.bullets");
-	const bullets = Array.isArray(bulletsRaw) ? bulletsRaw : []; // guard
+	const bullets = Array.isArray(bulletsRaw) ? bulletsRaw : [];
 
 	return (
 		<Box component="section">
 			<Container size="xl" pb="xl">
-				<Grid align="center" py="xl">
+				<Grid justify="center" align="center" py="xl">
 					<Grid.Col span={5}>
 						<Text size="xl" c="dimmed" mb="xs">
 							<T k="home.hello" values={{ emoji: "👋" }} />
@@ -50,27 +50,29 @@ export const HeroSection = () => {
 						<MvImage image="hero_image.webp" alt="Tincho Vera" />
 					</Grid.Col>
 
-					<Grid.Col span={2}>
-						<Card p="xl" radius="md">
-							<Stack
-								h={300}
-								align="stretch"
-								justify="center"
-							>
-								<Each
-									of={bullets}
-									render={({ title, text }, idx) => (
-										<TextList
-											key={`${title}-${idx}`}
-											title={title}
-											text={text}
-											showDivider={idx < bullets.length - 1}
-										/>
-									)}
-								/>
-							</Stack>
-						</Card>
-					</Grid.Col>
+					{bullets.length > 0 &&
+						<Grid.Col span={2}>
+							<Card p="xl" radius="md">
+								<Stack
+									h={300}
+									align="stretch"
+									justify="center"
+								>
+									<Each
+										of={bullets}
+										render={({ title, text }, idx) => (
+											<TextList
+												key={`${title}-${idx}`}
+												title={title}
+												text={text}
+												showDivider={idx < bullets.length - 1}
+											/>
+										)}
+									/>
+								</Stack>
+							</Card>
+						</Grid.Col>
+					}					
 				</Grid>
 			</Container>
 		</Box>

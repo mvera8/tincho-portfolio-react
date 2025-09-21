@@ -3,7 +3,7 @@
 	"navbar.home": "Home",
 	"home.hello": "{emoji} Hello, I'm",
 	"home.title": "Web Developer",
-	"home.text": "I build production-grade WordPress multisites and modern React apps with a focus on speed, reliability, and maintainability. I’ve led projects that aggregate data across multiple properties (dashboards, reporting, and internal tools), automated content operations (WP-CLI, custom scripts, Jenkins/GitHub Actions), and improved developer workflows end-to-end.",
+	"home.text": "If you want someone who designs the experience, builds the product, automates the pipeline, and tests it properly — that’s me ❤️.",
 	"home.cta1": "Hire Me",
 	"home.cta2": "Download Resume",
 	"home.bullets": [
@@ -16,25 +16,196 @@
 			"text": "Client Satisfaction"
 		},
 		{
-			"title": "A Lot",
-			"text": "AI Helping"
+			"title": "1M",
+			"text": "Lines of Code Shipped"
 		}
 	],
 	"about.subtitle": "About Me",
-	"about.title": "Profesional Problem Solutions For Digital Products",
-	"about.text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis eget justo quis semper. Maecenas facilisis sapien ipsum, at malesuada ligula ultricies at. Vivamus fermentum odio et ex suscipit, sit amet accumsan nisl vulputate.",
-	"resume.subtitle": "My resume",
-	"resume.title": "Real Problem Solutions Experience",
-	"services.subtitle": "Popular services",
-	"services.title": "My Special service for your business development",
-	"skills.subtitle": "Top skills",
-	"skills.title": "Profesional Problem Solutions For Digital Products",
-	"skills.text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis eget justo quis semper. Maecenas facilisis sapien ipsum, at malesuada ligula ultricies at. Vivamus fermentum odio et ex suscipit, sit amet accumsan nisl vulputate.",
+	"about.title": "Highlights of what I do (and love):",
+	"about.text": "I build production-grade WordPress multisites and modern React apps with a focus on speed, reliability, and maintainability. I’ve led projects that aggregate data across multiple properties (dashboards, reporting, and internal tools), automate content operations (WP-CLI, custom scripts, Jenkins/GitHub Actions), and improve developer workflows end-to-end.",
+	"resume.subtitle": "My résumé",
+	"resume.title": "Experience Solving Real Problems",
+	"resume.jobs": [
+		{
+			"title": "OnPoint Global",
+			"link": "https://onpointglobal.com/",
+			"puesto": "WordPress Tech Lead",
+			"time": "Aug. 2019 – Present"
+		},
+		{
+			"title": "Muu Vainilla",
+			"link": "https://www.muuvainilla.com/",
+			"puesto": "Fullstack Developer",
+			"time": "Jul. 2015 – Jul. 2019"
+		},
+		{
+			"title": "Meeting Inc",
+			"link": "https://www.meeting.com.uy/",
+			"puesto": "Front-End Developer",
+			"time": "Jun. 2014 – Jun. 2015"
+		},
+		{
+			"title": "Mambo Publicidad",
+			"link": "https://mambo.uy/",
+			"puesto": "Front-End Developer",
+			"time": "Apr. 2012 – Apr. 2014"
+		}
+	],
+	"services.subtitle": "Popular Services",
+	"services.title": "Services to Grow Your Business",
+	"services.items": [
+		{
+			"title": "WordPress Development",
+			"icon": "IconBrandWordpress",
+			"description": "Custom themes, plugin integrations, and site optimization for a seamless WordPress experience."
+		},
+		{
+			"title": "Mobile App Design & Development",
+			"icon": "IconDeviceMobile",
+			"description": "Fast, scalable React / Next.js apps with modern UI."
+		},
+		{
+			"title": "Design Systems (UI/UX)",
+			"icon": "IconBrush",
+			"description": "Accessible, mobile-first interfaces that feel native on any device."
+		},
+		{
+			"title": "Branding & Visual Identity",
+			"icon": "IconTopologyRing3",
+			"description": "Brand identity, visual guidelines, and cross-channel consistency."
+		},
+		{
+			"title": "Consulting & Strategy",
+			"icon": "IconChessBishop",
+			"description": "Technical audits, roadmaps, and actionable recommendations with a growth focus."
+		},
+		{
+			"title": "Video Editing",
+			"icon": "IconMovie",
+			"description": "Agile editing for promos, social clips, and tutorials."
+		},
+		{
+			"title": "E-commerce Solutions",
+			"icon": "IconShoppingCart",
+			"description": "Robust stores with seamless shopping experiences that convert."
+		},
+		{
+			"title": "Cypress E2E Testing",
+			"icon": "IconSettings2",
+			"description": "Stable suites, visual checks, and practical coverage that pays for itself."
+		}
+	],
+	"skills.subtitle": "Top Skills",
+	"skills.title": "Tech I Use",
+	"skills.items": [
+		{
+			"title": "WordPress",
+			"icon": "IconBrandWordpress",
+			"color": "black",
+			"progress": 99,
+			"category": "backend"
+		},
+		{
+			"title": "PHP",
+			"icon": "IconBrandPhp",
+			"color": "green",
+			"progress": 99,
+			"category": "backend"
+		},
+		{
+			"title": "HTML5",
+			"icon": "IconBrandHtml5",
+			"color": "orange",
+			"progress": 90,
+			"category": "frontend"
+		},
+		{
+			"title": "JavaScript",
+			"icon": "IconBrandJavascript",
+			"color": "red",
+			"progress": 90,
+			"category": "frontend"
+		},
+		{
+			"title": "React",
+			"icon": "IconBrandReact",
+			"color": "blue",
+			"progress": 90,
+			"category": "frontend"
+		},
+		{
+			"title": "Next.js",
+			"icon": "IconBrandNextjs",
+			"color": "black",
+			"progress": 90,
+			"category": "frontend"
+		},
+		{
+			"title": "Bootstrap",
+			"icon": "IconBrandBootstrap",
+			"color": "purple",
+			"progress": 90,
+			"category": "frontend"
+		},
+		{
+			"title": "Figma",
+			"icon": "IconBrandFigma",
+			"color": "teal",
+			"progress": 90,
+			"category": "design"
+		},
+		{
+			"title": "Docker",
+			"icon": "IconBrandDocker",
+			"color": "blue",
+			"progress": 90,
+			"category": "devops"
+		},
+		{
+			"title": "Cypress",
+			"icon": "IconBrandCypress",
+			"color": "teal",
+			"progress": 90,
+			"category": "testing"
+		},
+		{
+			"title": "Photoshop",
+			"icon": "IconBrandAdobePhotoshop",
+			"color": "blue",
+			"progress": 90,
+			"category": "design"
+		}
+	],
 	"portfolio.subtitle": "Latest Work",
-	"portfolio.title": "Explore My Popular Projects",
+	"portfolio.title": "Explore My Projects",
+	"portfolio.works": [
+		{
+			"id": "cleanmax",
+			"title": "Cleanmax Website",
+			"text": "Multi-page landing with contact form and clean styling. Focused on performance and message clarity."
+		}
+	],
 	"blog.subtitle": "News & Blog",
-	"blog.title": "Latest News & Blog",
-	"contact.subtitle": "Get in touch",
-	"contact.title": "Lets Talk for your next project",
-	"contact.text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis eget justo quis semper. Maecenas facilisis sapien ipsum, at malesuada ligula ultricies at. Vivamus fermentum odio et ex suscipit, sit amet accumsan nisl vulputate."
+	"blog.title": "Latest Articles",
+	"blog.posts": [
+		{
+			"title": "How to Optimize Your WordPress Site for Lightning-Fast Performance",
+			"text": "Practical tips and tools to speed up your site, improve SEO, and enhance the user experience."
+		},
+		{
+			"title": "The Power of UI/UX in Modern Web Development",
+			"text": "How intentional design and great UX can make your site more engaging and effective."
+		}
+	],
+	"contact.subtitle": "Get in Touch",
+	"contact.title": "Ready to elevate your product?",
+	"contact.text": "Let’s build something reliable, fast, and truly useful. I ship. No drama.",
+	"contact.input.name": "Your name",
+	"contact.input.email": "Your email",
+	"contact.input.email.placeholder": "hello@martinvera.com.uy",
+	"contact.input.subject": "Subject",
+	"contact.input.message": "Your message",
+	"contact.input.message.placeholder": "Please include all relevant information",
+	"contact.btn": "Send message",
+	"contact.input.btn": "Send message"
 }
