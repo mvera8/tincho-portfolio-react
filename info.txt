@@ -6,7 +6,6 @@ https://hirelab.io/
 https://inversweb.com/product/html/reeni/index-white.html
 
 Task:
-- Logo
 - Mobile
 - Hover items above elements
 - Blur component

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const MvImage = ({image, alt}) => {
 	return (
-		<Image h={600} radius="md" src={"/public/" + image} alt={alt} />
+		<Image h={{ md: 200, lg: 600 }} radius="md" src={"/" + image} alt={alt} />
 	)
 }
 

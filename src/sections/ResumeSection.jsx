@@ -20,15 +20,15 @@ export const ResumeSection = () => {
 		<Box component="section" py="xl">
 			<Container size="lg" py="xl" mb="xl">
 				<Grid mb="md" align="center">
-					<Grid.Col span={4}>
+					<Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
 						<div className={classes.circle}></div>
 					</Grid.Col>
-					<Grid.Col span={7} offset={1}>
+					<Grid.Col span={{ base: 12, md: 12, lg: 7 }} offset={{ md: 0, lg: 1 }}>
 						<SectionTitle
 							title={<T k="resume.title" />}
 							subtitle={<T k="resume.subtitle" />}
 						/>
-						<Card p="xl" radius="md">
+						<Card p={{ md: "sm", lg: "xl"}} radius="md">
 							<Table>
 								<Table.Tbody>
 									<Each

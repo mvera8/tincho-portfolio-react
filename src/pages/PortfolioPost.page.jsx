@@ -14,7 +14,7 @@ export const PortfolioPostPage = () => {
 							<Image
 								radius="md"
 								mb="lg"
-								src="/public/cleanmax.webp"
+								src="/cleanmax.webp"
 							/>
 						</Grid.Col>
 						<Grid.Col span={2}>

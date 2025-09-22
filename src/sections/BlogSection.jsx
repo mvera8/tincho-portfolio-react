@@ -35,7 +35,7 @@ export const BlogSection = () => {
 								withBorder>
 								<SimpleGrid cols={2}>
 									<Image
-										src="/public/cleanmax.webp"
+										src="/cleanmax.webp"
 										alt='Cleanmax'
 									/>
 									<div>

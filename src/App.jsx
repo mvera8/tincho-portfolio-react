@@ -1,10 +1,10 @@
 import { createTheme, MantineProvider } from '@mantine/core';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from './error-page';
 import { HomePage, PostPage, PortfolioPostPage, BlogPage, TestPage, ServicePostPage } from './pages';
+import ErrorPage from './error-page';
+import LanguageProvider from './i18n/LanguageProvider';
 
 import '@mantine/core/styles.css';
-import LanguageProvider from './i18n/LanguageProvider';
 
 const theme = createTheme({
 	fontFamily: 'Open Sans, sans-serif',

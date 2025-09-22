@@ -14,14 +14,13 @@ export const HeroSection = () => {
 		<Box component="section">
 			<Container size="xl" pb="xl">
 				<Grid justify="center" align="center" py="xl">
-					<Grid.Col span={5}>
+					<Grid.Col span={{ base: 12, md: 12, lg: 5 }}>
 						<Text size="xl" c="dimmed" mb="xs">
 							<T k="home.hello" values={{ emoji: "👋" }} />
 						</Text>
-						<Title order={1} c="gray" className={classes.title} mb="xs">
+						<Title order={1} c="gray" fw={900} className={classes.title} mb="xs">
               <Text
-								className={classes.title}
-                component="span"
+                component="div"
                 inherit
                 variant="gradient"
                 gradient={{ from: 'red.5', to: 'red.2' }}
@@ -46,12 +45,12 @@ export const HeroSection = () => {
 						</Group>
 					</Grid.Col>
 
-					<Grid.Col span={4} offset={1}>
+					<Grid.Col span={{ base: 12, md: 12, lg: 4 }} offset={{ md: 0, lg: 1 }}>
 						<MvImage image="hero_image.webp" alt="Tincho Vera" />
 					</Grid.Col>
 
 					{bullets.length > 0 &&
-						<Grid.Col span={2}>
+						<Grid.Col span={{ base: 12, md: 12, lg: 2 }}>
 							<Card p="xl" radius="md">
 								<Stack
 									h={300}
