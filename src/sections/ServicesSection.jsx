@@ -35,22 +35,22 @@ export const ServicesSection = () => {
               const IconCmp = ICONS[icon] ?? IconBrandWordpress;
               return (
                 <Card
-                  key={`${title}-${idx}`}
+                  key={idx}
                   radius="md"
-                  padding="xl"
+                  padding={{ md: "sm", lg: "xl"}}
                   component="a"
                   href="/service-post"
                   withBorder
                 >
                   <Grid>
-                    <Grid.Col span={2}>
+                    <Grid.Col span={{ base: 12, md: 12, lg: 2 }}>
                       <Text size="xl" c="gray">.0{idx + 1}</Text>
                     </Grid.Col>
-                    <Grid.Col span={8}>
+                    <Grid.Col span={{ base: 12, md: 12, lg: 8 }}>
                       <Title order={4} c="gray">{title}</Title>
                       <Text c="dimmed" truncate="end">{description}</Text>
                     </Grid.Col>
-                    <Grid.Col span={2} ta="end">
+                    <Grid.Col span={{ base: 12, md: 12, lg: 2 }} ta={{ md: "center", lg: "end"}}>
                       <ThemeIcon variant="light" color="red" radius="xl" size="xl">
                         <IconCmp size={22} />
                       </ThemeIcon>

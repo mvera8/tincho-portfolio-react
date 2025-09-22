@@ -23,7 +23,7 @@ export const BlogSection = () => {
 					subtitle={<T k="blog.subtitle" />}
 					centerText
 				/>
-				<SimpleGrid cols={2}>
+				<SimpleGrid cols={{ base: 1, md: 1, lg: 2 }}>
 					<Each
 						of={posts}
 						render={({ title, text }, idx) => (
@@ -33,7 +33,7 @@ export const BlogSection = () => {
 								component="a"
 								href="/post"
 								withBorder>
-								<SimpleGrid cols={2}>
+								<SimpleGrid cols={{ base: 1, md: 1, lg: 2 }}>
 									<Image
 										src="/cleanmax.webp"
 										alt='Cleanmax'

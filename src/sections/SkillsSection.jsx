@@ -56,7 +56,7 @@ export const SkillsSection = () => {
     <Box bg={colorScheme.colorScheme === 'dark' ? 'dark' : 'gray.1'} component="section" py="xl">
       <Container size="lg" py="xl" mb="xl">
         <Grid mb="md" align="center">
-          <Grid.Col span={3}>
+          <Grid.Col span={{ base: 12, md: 12, lg: 3 }}>
             <SectionTitle
               title={<T k="skills.title" />}
               subtitle={<T k="skills.subtitle" />}
@@ -77,14 +77,14 @@ export const SkillsSection = () => {
             </Group>
           </Grid.Col>
 
-          <Grid.Col span={9}>
-            <SimpleGrid cols={6}>
+          <Grid.Col span={{ base: 12, md: 12, lg: 9 }}>
+            <SimpleGrid cols={{ base: 2, md: 2, lg: 6 }}>
               <Each
                 of={filtered}
                 render={({ title, icon, color, progress }, idx) => {
                   const IconCmp = ICONS[icon] ?? IconBrandWordpress;
                   return (
-                    <Card key={`${title}-${idx}`} radius="md" p="md" withBorder>
+                    <Card key={`${title}-${idx}`} radius="md" p="md">
                       <ThemeIcon variant="white" radius="xl" size="xl" mb="xs" mx="auto">
                         <IconCmp size={40} stroke={1.5} color={color} />
                       </ThemeIcon>

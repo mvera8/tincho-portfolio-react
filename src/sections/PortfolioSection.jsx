@@ -23,7 +23,7 @@ export const PortfolioSection = () => {
           of={works}
           render={({ id, title, text }, idx) => (
             <Grid key={id ?? idx} mb="md" align="stretch">
-              <Grid.Col span={4}>
+              <Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
                 <Card padding="xl" radius="md" withBorder style={{ height: '100%' }}>
                   <Title order={3} size="h2" c="gray">{title}</Title>
                   <TextDimmed text={text} />
@@ -33,7 +33,7 @@ export const PortfolioSection = () => {
                 </Card>
               </Grid.Col>
 
-              <Grid.Col span={8}>
+              <Grid.Col span={{ base: 12, md: 12, lg: 8 }}>
                 <Card radius="md" component="a" href="/portfolio-post" withBorder>
                   <Card.Section>
                     <Image radius="md" src="/cleanmax.webp" alt="Cleanmax" />

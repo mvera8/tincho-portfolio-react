@@ -18,7 +18,7 @@ export const ResumeSection = () => {
 
 	return (
 		<Box component="section" py="xl">
-			<Container size="lg" py="xl" mb="xl">
+			<Container size="lg" pt="xl">
 				<Grid mb="md" align="center">
 					<Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
 						<div className={classes.circle}></div>

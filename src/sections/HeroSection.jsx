@@ -23,7 +23,7 @@ export const HeroSection = () => {
                 component="div"
                 inherit
                 variant="gradient"
-                gradient={{ from: 'red.5', to: 'red.2' }}
+                gradient={{ from: 'red.4', to: 'red.8' }}
               >&quot;Tincho&quot; Vera{' '}</Text>{' '} <T k="home.title" />
 						</Title>
 						<TextDimmed text={<T k="home.text" />} />

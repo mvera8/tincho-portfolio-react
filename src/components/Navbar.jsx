@@ -28,7 +28,7 @@ export const Navbar = () => {
 			<header>
 				<Container size="xl" py="sm">
 					<Group justify="space-between" h="100%">
-						<Logo type="text" />
+						<Logo type="gradient" />
 
 						<Button.Group>
 							<Each of={items} render={(item, index) => (

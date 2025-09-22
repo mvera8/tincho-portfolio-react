@@ -12,7 +12,7 @@ export const ContactSection = () => {
 		<Box bg={colorScheme.colorScheme === 'dark' ? 'dark' : 'gray.1'} component="section" py="xl">
 			<Container size="lg" py="xl" mb="xl">
 				<Grid mb="md" align="center">
-					<Grid.Col span={4}>
+					<Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
 						<SectionTitle
 							title={<T k="contact.title" />}
 							subtitle={<T k="contact.subtitle" />}
@@ -21,18 +21,18 @@ export const ContactSection = () => {
 
 						<MvList />
 					</Grid.Col>
-					<Grid.Col span={7} offset={1}>
+					<Grid.Col span={{ base: 12, md: 12, lg: 7 }} offset={{ md: 0, lg: 1 }}>
 						<form onSubmit={(event) => event.preventDefault()}>
 							<Stack gap="xl">
-								<SimpleGrid cols={2}>
-									<TextInput size="lg" label={t("contact.input.name")} placeholder={t("contact.input.name")} required />
-									<TextInput size="lg" label={t("contact.input.email")} placeholder={t("contact.input.email")} required />
+								<SimpleGrid cols={{ base: 1, md: 1, lg: 2 }} mb={0}>
+									<TextInput size="lg" variant={colorScheme.colorScheme === 'dark' ? 'filled' : 'default'} label={t("contact.input.name")} placeholder={t("contact.input.name")} required />
+									<TextInput size="lg" variant={colorScheme.colorScheme === 'dark' ? 'filled' : 'default'} label={t("contact.input.email")} placeholder={t("contact.input.email")} required />
 								</SimpleGrid>
 
-								<TextInput size="lg" label={t("contact.input.subject")} placeholder={t("contact.input.subject")} required />
+								<TextInput size="lg" variant={colorScheme.colorScheme === 'dark' ? 'filled' : 'default'} label={t("contact.input.subject")} placeholder={t("contact.input.subject")} required />
 
 								<Textarea
-									size="lg"
+									size="lg" variant={colorScheme.colorScheme === 'dark' ? 'filled' : 'default'}
 									label={t("contact.input.message")}
 									placeholder={t("contact.input.message.placeholder")}
 									minRows={3}
