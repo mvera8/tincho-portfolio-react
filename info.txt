@@ -1,39 +1,13 @@
 color: #8e1b22
 Tipography: OpenSans 700
 
-
-https://aaronhendrick.com/aaronhendrick-resume.pdf
-
-
+References:
 https://hirelab.io/
-
-
-
 https://inversweb.com/product/html/reeni/index-white.html
 
-.about-us-left-content-wrap .years-of-experience-card {
-    border-radius: 20px;
-    border: 0.5px solid rgba(255, 255, 255, 0.05);
-    background: rgba(22, 22, 22, 0.3);
-    box-shadow: 15px 26.023px 50px 0px rgba(253, 196, 72, 0.04);
-    backdrop-filter: blur(35px);
-    padding: 64px 80px;
-    display: flex
-;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.about-us-left-content-wrap.bg-vactor-one::after {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 197px;
-    background: linear-gradient(0deg, rgba(255, 1, 79, 0) 15.49%, var(--color-primary) 100%);
-    filter: blur(2px);
-    border-radius: 100%;
-    width: 410px;
-    height: 410px;
-    z-index: -1;
-}
+Task:
+- Mobile
+- Hover items above elements
+- Blur component
+- SEO Optimize
+- Form Work

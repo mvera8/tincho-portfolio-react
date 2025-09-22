@@ -1,25 +1,29 @@
 import { Box, Button, Card, Container, Grid, Group, Stack, Text, Title } from "@mantine/core"
 import { IconChevronRight } from "@tabler/icons-react";
-import { MvImage, TextDimmed, TextList } from "../components";
+import { Each, MvImage, TextDimmed, TextList } from "../components";
+import { useI18n } from "../i18n/useI18n.js";
 import T from "../i18n/T.jsx";
 import classes from './HeroSection.module.css';
 
 export const HeroSection = () => {
+	const { get } = useI18n();
+	const bulletsRaw = get("home.bullets");
+	const bullets = Array.isArray(bulletsRaw) ? bulletsRaw : [];
+
 	return (
 		<Box component="section">
 			<Container size="xl" pb="xl">
-				<Grid align="center" py="xl">
-					<Grid.Col span={5}>
+				<Grid justify="center" align="center" py="xl">
+					<Grid.Col span={{ base: 12, md: 12, lg: 5 }}>
 						<Text size="xl" c="dimmed" mb="xs">
 							<T k="home.hello" values={{ emoji: "👋" }} />
 						</Text>
-						<Title order={1} c="gray" className={classes.title} mb="xs">
+						<Title order={1} c="gray" fw={900} className={classes.title} mb="xs">
               <Text
-								className={classes.title}
-                component="span"
+                component="div"
                 inherit
                 variant="gradient"
-                gradient={{ from: 'red.5', to: 'red.2' }}
+                gradient={{ from: 'red.4', to: 'red.8' }}
               >&quot;Tincho&quot; Vera{' '}</Text>{' '} <T k="home.title" />
 						</Title>
 						<TextDimmed text={<T k="home.text" />} />
@@ -41,23 +45,33 @@ export const HeroSection = () => {
 						</Group>
 					</Grid.Col>
 
-					<Grid.Col span={4} offset={1}>
+					<Grid.Col span={{ base: 12, md: 12, lg: 4 }} offset={{ md: 0, lg: 1 }}>
 						<MvImage image="hero_image.webp" alt="Tincho Vera" />
 					</Grid.Col>
 
-					<Grid.Col span={2}>
-						<Card p="xl" radius="md">
-							<Stack
-								h={300}
-								align="stretch"
-								justify="center"
-							>
-								<TextList title={<T k="home.bullet.title1" />} text={<T k="home.bullet.text1" />} showDivider />
-								<TextList title={<T k="home.bullet.title2" />} text={<T k="home.bullet.text2" />} showDivider />
-								<TextList title={<T k="home.bullet.title3" />} text={<T k="home.bullet.text3" />} />
-							</Stack>
-						</Card>
-					</Grid.Col>
+					{bullets.length > 0 &&
+						<Grid.Col span={{ base: 12, md: 12, lg: 2 }}>
+							<Card p="xl" radius="md">
+								<Stack
+									h={300}
+									align="stretch"
+									justify="center"
+								>
+									<Each
+										of={bullets}
+										render={({ title, text }, idx) => (
+											<TextList
+												key={`${title}-${idx}`}
+												title={title}
+												text={text}
+												showDivider={idx < bullets.length - 1}
+											/>
+										)}
+									/>
+								</Stack>
+							</Card>
+						</Grid.Col>
+					}					
 				</Grid>
 			</Container>
 		</Box>

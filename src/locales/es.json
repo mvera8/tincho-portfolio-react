@@ -1,12 +1,211 @@
 {
+	"site.description": "Diseño & Desarrollo",
 	"navbar.home": "Inicio",
-	"home.hello": "{emoji} Hola, Yo Soy",
+	"home.hello": "{emoji} Hola, soy",
 	"home.title": "Desarrollador Web",
-	"home.subtitle": "Hola {name}, ¡bienvenido!",
-	"home.cta": "Empezar",
-	"cart.items": {
-		"one": "{count} artículo",
-		"other": "{count} artículos"
-	},
-	"money.balance": "Tu saldo es {amount}"
+	"home.text": "Si buscás a alguien que diseñe la experiencia, construya el producto, automatice el pipeline y lo pruebe como corresponde, soy yo ❤️.",
+	"home.cta1": "Contrátame",
+	"home.cta2": "Descargar CV",
+	"home.bullets": [
+		{
+			"title": "10+",
+			"text": "Años de experiencia"
+		},
+		{
+			"title": "100%",
+			"text": "Satisfacción de clientes"
+		},
+		{
+			"title": "1M",
+			"text": "Líneas de código escritas"
+		}
+	],
+	"about.subtitle": "Sobre mí",
+	"about.title": "Lo que hago (y me encanta):",
+	"about.text": "Construyo multisitios de WordPress a nivel productivo y apps modernas en React, con foco en velocidad, confiabilidad y mantenibilidad. Lideré proyectos que agregan datos de múltiples propiedades (dashboards, reportes y herramientas internas), automatizan operaciones de contenido (WP-CLI, scripts, Jenkins/GitHub Actions) y mejoran el flujo de trabajo de desarrolladores end-to-end.",
+	"resume.subtitle": "Mi currículum",
+	"resume.title": "Experiencia resolviendo problemas reales",
+	"resume.jobs": [
+		{
+			"title": "OnPoint Global",
+			"link": "https://onpointglobal.com/",
+			"puesto": "WordPress Tech Lead",
+			"time": "Ago. 2019 – Hoy"
+		},
+		{
+			"title": "Muu Vainilla",
+			"link": "https://www.muuvainilla.com/",
+			"puesto": "Fullstack Developer",
+			"time": "Jul. 2015 – Jul. 2019"
+		},
+		{
+			"title": "Meeting Inc",
+			"link": "https://www.meeting.com.uy/",
+			"puesto": "Front-End Developer",
+			"time": "Jun. 2014 – Jun. 2015"
+		},
+		{
+			"title": "Mambo Publicidad",
+			"link": "https://mambo.uy/",
+			"puesto": "Front-End Developer",
+			"time": "Abr. 2012 – Abr. 2014"
+		}
+	],
+	"services.subtitle": "Servicios populares",
+	"services.title": "Servicios para impulsar tu negocio",
+	"services.items": [
+		{
+			"title": "Desarrollo WordPress",
+			"icon": "IconBrandWordpress",
+			"description": "Temas a medida, integración de plugins y optimización del sitio para una experiencia fluida."
+		},
+		{
+			"title": "Diseño y Desarrollo de Apps",
+			"icon": "IconDeviceMobile",
+			"description": "Apps rápidas y escalables en React / Next.js con UI moderna."
+		},
+		{
+			"title": "Sistemas de Diseño (UI/UX)",
+			"icon": "IconBrush",
+			"description": "Interfaces accesibles y mobile-first que se sienten nativas en cualquier dispositivo."
+		},
+		{
+			"title": "Branding e Identidad Visual",
+			"icon": "IconTopologyRing3",
+			"description": "Identidad de marca, guías visuales y consistencia en todos los puntos de contacto."
+		},
+		{
+			"title": "Consultoría y Estrategia",
+			"icon": "IconChessBishop",
+			"description": "Auditorías técnicas, roadmaps y recomendaciones accionables para crecer con foco."
+		},
+		{
+			"title": "Edición de Video",
+			"icon": "IconMovie",
+			"description": "Edición ágil para piezas promocionales, sociales y tutoriales."
+		},
+		{
+			"title": "E-commerce",
+			"icon": "IconShoppingCart",
+			"description": "Tiendas robustas con experiencias de compra fluidas que convierten."
+		},
+		{
+			"title": "Testing E2E con Cypress",
+			"icon": "IconSettings2",
+			"description": "Suites estables, checks visuales y cobertura práctica que se paga sola."
+		}
+	],
+	"skills.subtitle": "Habilidades destacadas",
+	"skills.title": "Tecnologías que uso",
+	"skills.items": [
+		{
+			"title": "WordPress",
+			"icon": "IconBrandWordpress",
+			"color": "black",
+			"progress": 99,
+			"category": "backend"
+		},
+		{
+			"title": "PHP",
+			"icon": "IconBrandPhp",
+			"color": "green",
+			"progress": 99,
+			"category": "backend"
+		},
+		{
+			"title": "HTML5",
+			"icon": "IconBrandHtml5",
+			"color": "orange",
+			"progress": 90,
+			"category": "frontend"
+		},
+		{
+			"title": "JavaScript",
+			"icon": "IconBrandJavascript",
+			"color": "red",
+			"progress": 90,
+			"category": "frontend"
+		},
+		{
+			"title": "React",
+			"icon": "IconBrandReact",
+			"color": "blue",
+			"progress": 90,
+			"category": "frontend"
+		},
+		{
+			"title": "Next.js",
+			"icon": "IconBrandNextjs",
+			"color": "black",
+			"progress": 90,
+			"category": "frontend"
+		},
+		{
+			"title": "Bootstrap",
+			"icon": "IconBrandBootstrap",
+			"color": "purple",
+			"progress": 90,
+			"category": "frontend"
+		},
+		{
+			"title": "Figma",
+			"icon": "IconBrandFigma",
+			"color": "teal",
+			"progress": 90,
+			"category": "design"
+		},
+		{
+			"title": "Docker",
+			"icon": "IconBrandDocker",
+			"color": "blue",
+			"progress": 90,
+			"category": "devops"
+		},
+		{
+			"title": "Cypress",
+			"icon": "IconBrandCypress",
+			"color": "teal",
+			"progress": 90,
+			"category": "testing"
+		},
+		{
+			"title": "Photoshop",
+			"icon": "IconBrandAdobePhotoshop",
+			"color": "blue",
+			"progress": 90,
+			"category": "design"
+		}
+	],
+	"portfolio.subtitle": "Últimos trabajos",
+	"portfolio.title": "Explorá mis proyectos",
+	"portfolio.works": [
+		{
+			"id": "cleanmax",
+			"title": "Sitio web Cleanmax",
+			"text": "Landing multipágina con formulario de contacto y estilo limpio. Enfoque en rendimiento y claridad del mensaje."
+		}
+	],
+	"blog.subtitle": "Noticias y Blog",
+	"blog.title": "Últimos artículos",
+	"blog.posts": [
+		{
+			"title": "Cómo optimizar tu sitio WordPress para un rendimiento al máximo",
+			"text": "Consejos y herramientas prácticas para acelerar tu sitio, mejorar SEO y la experiencia de usuario."
+		},
+		{
+			"title": "El poder del UI/UX en el desarrollo web moderno",
+			"text": "Cómo un diseño intencional y una buena experiencia pueden hacer tu sitio más atractivo y efectivo."
+		}
+	],
+	"contact.subtitle": "Contacto",
+	"contact.title": "¿Listo para elevar tu producto?",
+	"contact.text": "Construyamos algo confiable, rápido y realmente útil. Yo envío. Sin drama.",
+	"contact.input.name": "Tu nombre",
+	"contact.input.email": "Tu email",
+	"contact.input.email.placeholder": "hola@martinvera.com.uy",
+	"contact.input.subject": "Asunto",
+	"contact.input.message": "Tu mensaje",
+	"contact.input.message.placeholder": "Incluí toda la información relevante",
+	"contact.btn": "Enviar mensaje",
+	"contact.input.btn": "Enviar mensaje"
 }

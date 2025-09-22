@@ -9,7 +9,7 @@ export const AboutSection = () => {
 		<Box bg={colorScheme.colorScheme === 'dark' ? 'dark' : 'gray.1'} component="section" py="xl">
 			<Container size="lg" py="xl" mb="xl">
 				<Grid mb="md" align="center">
-					<Grid.Col span={6}>
+					<Grid.Col span={{ base: 12, md: 12, lg: 6 }}>
 						<SectionTitle
 							title={<T k="about.title" />}
 							subtitle={<T k="about.subtitle" />}
@@ -20,7 +20,7 @@ export const AboutSection = () => {
 							lala
 						</Card>
 					</Grid.Col>
-					<Grid.Col span={5} offset={1}>
+					<Grid.Col span={{ base: 12, md: 12, lg: 5 }} offset={{ md: 0, lg: 1 }}>
 						<MvImage image="martin_vera.webp" alt="Tincho Vera" />
 					</Grid.Col>
 				</Grid>

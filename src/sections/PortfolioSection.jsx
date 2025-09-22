@@ -1,37 +1,49 @@
-import { Box, Button, Card, Container, Grid, Image, Title } from '@mantine/core'
-import { SectionTitle, TextDimmed } from '../components'
-import { IconArrowUpRight } from '@tabler/icons-react'
+import { Box, Button, Card, Container, Grid, Image, Title } from '@mantine/core';
+import { Each, SectionTitle, TextDimmed } from '../components';
+import { IconArrowUpRight } from '@tabler/icons-react';
+import { useI18n } from '../i18n/useI18n.js';
+import T from "../i18n/T.jsx";
 
 export const PortfolioSection = () => {
-	return (
-		<Box component="section" py="xl">
-			<Container size="lg" py="xl" mb="xl">
-				<SectionTitle
-					title="Explore My Popular Projects"
-					subtitle="Latest Work"
-					centerText
-				/>
-				<Grid mb="mb">
-					<Grid.Col span={4}>
-						<Card padding="xl" radius="md" withBorder style={{height: '100%'}}>
-							<Title order={3} size="h2" c="gray">Cleanmax Website</Title>
-							<TextDimmed text="Please click anywhere on this card to claim your reward, this is not a fraud, trust us" />
-							<Button fullWidth size="md" rightSection={<IconArrowUpRight size={20} />}>View Project</Button>
-						</Card>
-					</Grid.Col>
-					<Grid.Col span={8}>
-						<Card radius="md" component="a" href="/portfolio-post" withBorder>
-							<Card.Section>
-								<Image
-									radius="md"
-									src="/public/cleanmax.webp"
-									alt='Cleanmax'
-								/>
-							</Card.Section>
-						</Card>
-					</Grid.Col>
-				</Grid>
-			</Container>
-		</Box>	
-	)
-}
+  const { get } = useI18n();
+  const worksRaw = get("portfolio.works");
+  const works = Array.isArray(worksRaw) ? worksRaw : [];
+  if (works.length === 0) return null;
+
+  return (
+    <Box component="section" py="xl">
+      <Container size="lg" py="xl">
+        <SectionTitle
+          title={<T k="portfolio.title" />}
+          subtitle={<T k="portfolio.subtitle" />}
+          centerText
+        />
+
+        <Each
+          of={works}
+          render={({ id, title, text }, idx) => (
+            <Grid key={id ?? idx} mb="md" align="stretch">
+              <Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
+                <Card padding="xl" radius="md" withBorder style={{ height: '100%' }}>
+                  <Title order={3} size="h2" c="gray">{title}</Title>
+                  <TextDimmed text={text} />
+                  <Button fullWidth size="md" rightSection={<IconArrowUpRight size={20} />}>
+                    View Project
+                  </Button>
+                </Card>
+              </Grid.Col>
+
+              <Grid.Col span={{ base: 12, md: 12, lg: 8 }}>
+                <Card radius="md" component="a" href="/portfolio-post" withBorder>
+                  <Card.Section>
+                    <Image radius="md" src="/cleanmax.webp" alt="Cleanmax" />
+                  </Card.Section>
+                </Card>
+              </Grid.Col>
+            </Grid>
+          )}
+        />
+      </Container>
+    </Box>
+  );
+};

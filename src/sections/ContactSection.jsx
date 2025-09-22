@@ -1,39 +1,40 @@
 import { Box, Button, Container, Grid, SimpleGrid, Stack, Textarea, TextInput, useMantineColorScheme } from "@mantine/core"
 import { MvList, SectionTitle } from "../components"
 import { IconChevronRight } from "@tabler/icons-react"
+import { useI18n } from "../i18n/useI18n.js";
+import T from "../i18n/T.jsx";
 
 export const ContactSection = () => {
 	const colorScheme = useMantineColorScheme();
+	const { t } = useI18n();
 
 	return (
 		<Box bg={colorScheme.colorScheme === 'dark' ? 'dark' : 'gray.1'} component="section" py="xl">
 			<Container size="lg" py="xl" mb="xl">
 				<Grid mb="md" align="center">
-					<Grid.Col span={4}>
+					<Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
 						<SectionTitle
-							title="Lets Talk for your next project"
-							subtitle="Get in touch"
-							text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis eget justo quis semper. Maecenas facilisis sapien ipsum, at malesuada ligula ultricies at."
+							title={<T k="contact.title" />}
+							subtitle={<T k="contact.subtitle" />}
+							text={<T k="contact.text" />}
 						/>
 
 						<MvList />
 					</Grid.Col>
-					<Grid.Col span={7} offset={1}>
-
-
+					<Grid.Col span={{ base: 12, md: 12, lg: 7 }} offset={{ md: 0, lg: 1 }}>
 						<form onSubmit={(event) => event.preventDefault()}>
 							<Stack gap="xl">
-								<SimpleGrid cols={2}>
-									<TextInput size="lg" label="Your name" placeholder="Your name" required />
-									<TextInput size="lg" label="Your email" placeholder="hello@mantine.dev" required />
+								<SimpleGrid cols={{ base: 1, md: 1, lg: 2 }} mb={0}>
+									<TextInput size="lg" variant={colorScheme.colorScheme === 'dark' ? 'filled' : 'default'} label={t("contact.input.name")} placeholder={t("contact.input.name")} required />
+									<TextInput size="lg" variant={colorScheme.colorScheme === 'dark' ? 'filled' : 'default'} label={t("contact.input.email")} placeholder={t("contact.input.email")} required />
 								</SimpleGrid>
 
-								<TextInput size="lg" label="Subject" placeholder="Subject" required />
+								<TextInput size="lg" variant={colorScheme.colorScheme === 'dark' ? 'filled' : 'default'} label={t("contact.input.subject")} placeholder={t("contact.input.subject")} required />
 
 								<Textarea
-									size="lg"
-									label="Your message"
-									placeholder="Please include all relevant information"
+									size="lg" variant={colorScheme.colorScheme === 'dark' ? 'filled' : 'default'}
+									label={t("contact.input.message")}
+									placeholder={t("contact.input.message.placeholder")}
 									minRows={3}
 								/>
 
@@ -42,24 +43,14 @@ export const ContactSection = () => {
 									variant="filled"
 									color="red"
 									size="lg"
-									rightSection={<IconChevronRight size={20} />}
-									>Send message
+									rightSection={<IconChevronRight size={20} />}>
+										<T k="contact.input.btn" />
 								</Button>
 
 							</Stack>
 						</form>
-
 					</Grid.Col>
 				</Grid>
-
-
-
-
-
-
-
-			
-
 			</Container>
 		</Box>	
 	)
