@@ -35,7 +35,7 @@ export const ServicePostPage = () => {
 				<Container size="lg" pt="xl">
 					<SectionTitle
 						title="Built to help you grow"
-						subtitle="Features"
+						subtitle="Service Features"
 						centerText
 					/>
 					

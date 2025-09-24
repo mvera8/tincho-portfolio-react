@@ -28,7 +28,7 @@ export const ResumeSection = () => {
 							title={<T k="resume.title" />}
 							subtitle={<T k="resume.subtitle" />}
 						/>
-						<Card p={{ md: "sm", lg: "xl"}} radius="md">
+						<Card p={{ base: "sm", lg: "xl"}} radius="md">
 							<Table>
 								<Table.Tbody>
 									<Each

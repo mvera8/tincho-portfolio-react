@@ -21,7 +21,7 @@ export const AboutSection = () => {
 						</Card>
 					</Grid.Col>
 					<Grid.Col span={{ base: 12, md: 12, lg: 5 }} offset={{ md: 0, lg: 1 }}>
-						<MvImage image="martin_vera.webp" alt="Tincho Vera" />
+						<MvImage image="martin_vera_toy.webp" alt="Tincho Vera" />
 					</Grid.Col>
 				</Grid>
 			</Container>

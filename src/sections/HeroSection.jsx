@@ -13,7 +13,7 @@ export const HeroSection = () => {
 	return (
 		<Box component="section">
 			<Container size="xl" pb="xl">
-				<Grid justify="center" align="center" py="xl">
+				<Grid justify="center" align="center" py={{base: "md", lg: "xl" }}>
 					<Grid.Col span={{ base: 12, md: 12, lg: 5 }}>
 						<Text size="xl" c="dimmed" mb="xs">
 							<T k="home.hello" values={{ emoji: "👋" }} />

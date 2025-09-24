@@ -1,4 +1,4 @@
-import { Box, Button, Card, Container, Grid, Image, Title } from '@mantine/core';
+import { Box, Button, Card, Container, Grid, Image, Stack, Title } from '@mantine/core';
 import { Each, SectionTitle, TextDimmed } from '../components';
 import { IconArrowUpRight } from '@tabler/icons-react';
 import { useI18n } from '../i18n/useI18n.js';
@@ -22,25 +22,30 @@ export const PortfolioSection = () => {
         <Each
           of={works}
           render={({ id, title, text }, idx) => (
-            <Grid key={id ?? idx} mb="md" align="stretch">
-              <Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
-                <Card padding="xl" radius="md" withBorder style={{ height: '100%' }}>
-                  <Title order={3} size="h2" c="gray">{title}</Title>
-                  <TextDimmed text={text} />
-                  <Button fullWidth size="md" rightSection={<IconArrowUpRight size={20} />}>
-                    View Project
-                  </Button>
-                </Card>
-              </Grid.Col>
-
-              <Grid.Col span={{ base: 12, md: 12, lg: 8 }}>
-                <Card radius="md" component="a" href="/portfolio-post" withBorder>
-                  <Card.Section>
-                    <Image radius="md" src="/cleanmax.webp" alt="Cleanmax" />
-                  </Card.Section>
-                </Card>
-              </Grid.Col>
-            </Grid>
+						<Card key={id ?? idx} p={0} radius="md" mb="md" withBorder style={{ height: '100%' }}>
+							<Grid align="stretch">
+								<Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
+									<Stack
+											h={'100%'}
+											align="stretch"
+											justify="space-between"
+											gap="md"
+											p={{base: "lg", lg: "xl"}}
+										>
+											<div>
+												<Title order={3} size="h2" c="gray" mb="md">{title}</Title>
+												<TextDimmed text={text} />
+											</div>
+											<Button fullWidth size="md" rightSection={<IconArrowUpRight size={20} />}>
+												View Project
+											</Button>
+										</Stack>
+								</Grid.Col>
+								<Grid.Col span={{ base: 12, md: 12, lg: 8 }}>
+									<Image radius="md" src="/cleanmax.webp" alt="Cleanmax" />
+								</Grid.Col>
+							</Grid>
+						</Card>
           )}
         />
       </Container>
