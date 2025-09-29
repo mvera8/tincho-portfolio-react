@@ -7,5 +7,6 @@ export * from './Navbar';
 export * from './MvImage';
 export * from './MvList';
 export * from './SectionTitle';
+export * from './SocialMedia';
 export * from './TextDimmed';
 export * from './TextList';

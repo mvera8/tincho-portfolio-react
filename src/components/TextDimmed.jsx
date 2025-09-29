@@ -6,7 +6,7 @@ export const TextDimmed = ({ text, children, align = "left", capitalizeText = fa
   const transform = capitalizeText ? "capitalize" : undefined;
 
   return (
-    <Text c="dimmed" size="sm" mb="md" ta={align} tt={transform}>
+    <Text c="dimmed" size="sm" ta={align} tt={transform}>
       {content}
     </Text>
   );

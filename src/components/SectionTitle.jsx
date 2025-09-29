@@ -15,7 +15,7 @@ export const SectionTitle = ({ title, subtitle, text, centerText = false }) => {
         <Title
           order={2}
           size="h1"
-          mb="lg"
+          my="lg"
           tt="capitalize"
           maw={500}
           ta={ta}

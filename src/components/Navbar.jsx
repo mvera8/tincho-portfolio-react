@@ -18,6 +18,7 @@ import T from "../i18n/T.jsx";
 const items = [
   { path: '/', name: <T k="navbar.home" /> },
   { path: '/blog', name: 'Blog' },
+	{ path: '#contact', name: <T k="navbar.contact" /> },
   // { path: '/post', name: 'Post' },
   // { path: '/portfolio-post', name: 'PortfolioPost' },
   // { path: '/service-post', name: 'ServicePost' },
@@ -39,7 +40,7 @@ export const Navbar = () => {
           </Grid.Col>
 
           <Grid.Col span={{ base: 12, lg: 7 }} order={{ base: 3, lg: 2 }}>
-            <Group justify="flex-end" wrap="nowrap">
+            <Group justify="center" wrap="nowrap">
 							{/* desktop menu */}
 							<Button.Group visibleFrom="lg">
                 <Each

@@ -28,7 +28,7 @@ export const HeroSection = () => {
 						</Title>
 						<TextDimmed text={<T k="home.text" />} />
 
-						<Group>
+						<Group mt="xl">
 							<Button
 								variant="filled"
 								color="red"

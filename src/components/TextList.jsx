@@ -8,7 +8,7 @@ export const TextList = ({ title, text, showDivider = false }) => {
 			<Text fw={700} c="red" size="xl" mb={0}>{title}</Text>
 			<TextDimmed text={text} />
 			{showDivider && (
-				<Divider />
+				<Divider mt="lg" />
       )}
 		</div>
 	)

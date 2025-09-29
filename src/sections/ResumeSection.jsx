@@ -35,9 +35,12 @@ export const ResumeSection = () => {
 										of={jobs}
 										render={({ title, link, puesto, time }, idx) => (
 											<Table.Tr key={idx}>
-												<Table.Td ta="start" py="md">
+												<Table.Td ta="start" pt="md">
 													<ActionIcon
-														variant="light" color="red" radius="xl" size="xl"
+														variant="light"
+														color="red"
+														radius="xl"
+														size="xl"
 														component="a"
 														target='blank'
 														href={link}
