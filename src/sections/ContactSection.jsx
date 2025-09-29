@@ -9,7 +9,7 @@ export const ContactSection = () => {
 	const { t } = useI18n();
 
 	return (
-		<Box bg={colorScheme.colorScheme === 'dark' ? 'dark' : 'gray.1'} component="section" py="xl">
+		<Box id="contact" bg={colorScheme.colorScheme === 'dark' ? 'dark' : 'gray.1'} component="section" py="xl">
 			<Container size="lg" py="xl" mb="xl">
 				<Grid mb="md" align="center">
 					<Grid.Col span={{ base: 12, md: 12, lg: 4 }}>

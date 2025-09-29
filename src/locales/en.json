@@ -1,6 +1,7 @@
 {
 	"site.description": "Design & Development",
 	"navbar.home": "Home",
+	"navbar.contact": "Contact",
 	"home.hello": "{emoji} Hello, I'm",
 	"home.title": "Web Developer",
 	"home.text": "If you want someone who designs the experience, builds the product, automates the pipeline, and tests it properly — that’s me ❤️.",
@@ -55,9 +56,16 @@
 	"services.title": "Services to Grow Your Business",
 	"services.items": [
 		{
+			"id": "wordpress",
 			"title": "WordPress Development",
 			"icon": "IconBrandWordpress",
-			"description": "Custom themes, plugin integrations, and site optimization for a seamless WordPress experience."
+			"description": "Custom themes, plugin integrations, and site optimization for a seamless WordPress experience.",
+			"items": [
+				{
+					"title": "Manage your site in the most prodcutive way",
+					"image": "dashboard"
+				}
+			]
 		},
 		{
 			"title": "Mobile App Design & Development",

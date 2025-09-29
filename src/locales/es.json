@@ -1,6 +1,7 @@
 {
 	"site.description": "Diseño & Desarrollo",
 	"navbar.home": "Inicio",
+	"navbar.contact": "Contacto",
 	"home.hello": "{emoji} Hola, soy",
 	"home.title": "Desarrollador Web",
 	"home.text": "Si buscás a alguien que diseñe la experiencia, construya el producto, automatice el pipeline y lo pruebe como corresponde, soy yo ❤️.",
@@ -55,9 +56,16 @@
 	"services.title": "Servicios para impulsar tu negocio",
 	"services.items": [
 		{
+			"id": "wordpress",
 			"title": "Desarrollo WordPress",
 			"icon": "IconBrandWordpress",
-			"description": "Temas a medida, integración de plugins y optimización del sitio para una experiencia fluida."
+			"description": "Temas a medida, integración de plugins y optimización del sitio para una experiencia fluida.",
+			"items": [
+				{
+					"title": "Manage your site in the most prodcutive way",
+					"image": "dashboard"
+				}
+			]
 		},
 		{
 			"title": "Diseño y Desarrollo de Apps",

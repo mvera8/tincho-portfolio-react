@@ -1,5 +1,5 @@
 import { Box, Card, Container, Grid, useMantineColorScheme } from '@mantine/core';
-import { MvImage, MvList, SectionTitle } from '../components';
+import { MvImage, MvList, SectionTitle, SocialMedia } from '../components';
 import T from "../i18n/T.jsx";
 
 export const AboutSection = () => {
@@ -17,7 +17,7 @@ export const AboutSection = () => {
 						/>
 						<MvList />
 						<Card mb={10} shadow="xs" withBorder>
-							lala
+							<SocialMedia align="flex-start" />
 						</Card>
 					</Grid.Col>
 					<Grid.Col span={{ base: 12, md: 12, lg: 5 }} offset={{ md: 0, lg: 1 }}>

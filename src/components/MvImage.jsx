@@ -1,9 +1,20 @@
-import { Image } from '@mantine/core';
+import { Box, Image } from '@mantine/core';
 import PropTypes from 'prop-types';
 
 export const MvImage = ({image, alt}) => {
 	return (
-		<Image h={{ md: 200, lg: 600 }} radius="md" src={"/" + image} alt={alt} />
+		<Box bg="red.3" p="xl" pr={0}>
+			<Image
+				h={{ md: 200, lg: 600 }}
+				radius="md"
+				src={"/" + image}
+				alt={alt}
+				style={{
+					borderTopRightRadius: 0,
+					borderBottomRightRadius: 0
+				}}
+			/>
+		</Box>
 	)
 }
 
