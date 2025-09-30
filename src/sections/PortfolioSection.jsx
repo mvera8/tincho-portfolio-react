@@ -42,7 +42,7 @@ export const PortfolioSection = () => {
 										</Stack>
 								</Grid.Col>
 								<Grid.Col span={{ base: 12, md: 12, lg: 8 }}>
-									<Image radius="md" src="/cleanmax.webp" alt="Cleanmax" />
+									<Image radius="md" src={id + '.webp'} alt="Cleanmax" />
 								</Grid.Col>
 							</Grid>
 						</Card>

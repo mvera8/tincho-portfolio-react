@@ -189,8 +189,13 @@
 	"portfolio.works": [
 		{
 			"id": "cleanmax",
-			"title": "Sitio web Cleanmax",
-			"text": "Landing multipágina con formulario de contacto y estilo limpio. Enfoque en rendimiento y claridad del mensaje."
+			"title": "Cleanmax Sitio Web",
+			"text": "Sitio en WordPress con formulario de contacto y estilo limpio. Enfoque en rendimiento y claridad del mensaje."
+		},
+		{
+			"id": "portfolio",
+			"title": "MV Portfolio Sitio Web",
+			"text": ""
 		}
 	],
 	"blog.subtitle": "Noticias y Blog",
