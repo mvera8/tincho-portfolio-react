@@ -190,17 +190,24 @@
 		{
 			"id": "cleanmax",
 			"title": "Cleanmax Website",
-			"text": "Multi-page landing with contact form and clean styling. Focused on performance and message clarity."
+			"text": "WordPress site with contact form and clean styling. Focused on performance and message clarity."
+		},
+		{
+			"id": "portfolio",
+			"title": "MV Portfolio Website",
+			"text": ""
 		}
 	],
 	"blog.subtitle": "News & Blog",
 	"blog.title": "Latest Articles",
 	"blog.posts": [
 		{
+			"id": "performance",
 			"title": "How to Optimize Your WordPress Site for Lightning-Fast Performance",
 			"text": "Practical tips and tools to speed up your site, improve SEO, and enhance the user experience."
 		},
 		{
+			"id": "development",
 			"title": "The Power of UI/UX in Modern Web Development",
 			"text": "How intentional design and great UX can make your site more engaging and effective."
 		}

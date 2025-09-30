@@ -1,11 +1,15 @@
 color: #8e1b22
 Tipography: OpenSans 700
 
+Images: https://shots.so/
+
 References:
 https://hirelab.io/
 https://inversweb.com/product/html/reeni/index-white.html
 
 https://worldbranddesign.com/practice-better-identity-design/
+
+https://zento.framer.website/
 
 Task:
 - Mobile
