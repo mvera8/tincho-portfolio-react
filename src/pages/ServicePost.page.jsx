@@ -1,7 +1,6 @@
 import { Box, Button, Card, Container, Image, SimpleGrid, Text, Title, useMantineTheme } from "@mantine/core"
-import { ArticleCardImage, Footer, Navbar, SectionTitle, TextDimmed, TextList } from "../components"
+import { ArticleCardImage, Footer, Navbar, SectionTitle, TextDimmed, TextDisplay, TextList } from "../components"
 import { ContactSection, FaqsSection } from "../sections"
-import classes from '../sections/HeroSection.module.css';
 import { IconChevronRight } from "@tabler/icons-react";
 
 export const ServicePostPage = () => {
@@ -13,14 +12,7 @@ export const ServicePostPage = () => {
 			<Box component="section">
 				<Container size="sm" py="xl" style={{ textAlign: 'center' }}>
 					<Text size="xl" c="dimmed" mb="xs">🚀 Must-to know about</Text>
-					<Title order={1} c="gray" className={classes.title} mb="xs">
-						<Text
-							className={classes.title}
-							inherit
-							variant="gradient"
-							gradient={{ from: 'red.5', to: 'red.2' }}
-						>WordPress</Text>
-					</Title>
+					<TextDisplay gradient="WordPress" />
 					<TextDimmed align="center" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur tincidunt elit, nec consequat nisi dictum vel. Ut vitae orci at ligula luctus viverra." />
 
 					<Button

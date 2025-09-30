@@ -29,6 +29,6 @@ export const SocialMedia = ({align = "flex-end"}) => {
 }
 
 SocialMedia.propTypes = {
-	align: PropTypes.string.isRequired,
+	align: PropTypes.string,
 };
 
