@@ -1,9 +1,8 @@
-import { Box, Button, Card, Container, Grid, Group, Stack, Text, Title } from "@mantine/core"
+import { Box, Button, Card, Container, Grid, Group, Stack, Text } from "@mantine/core"
 import { IconChevronRight } from "@tabler/icons-react";
-import { Each, MvImage, TextDimmed, TextList } from "../components";
+import { Each, MvImage, TextDimmed, TextDisplay, TextList } from "../components";
 import { useI18n } from "../i18n/useI18n.js";
 import T from "../i18n/T.jsx";
-import classes from './HeroSection.module.css';
 
 export const HeroSection = () => {
 	const { get } = useI18n();
@@ -18,14 +17,7 @@ export const HeroSection = () => {
 						<Text size="xl" c="dimmed" mb="xs">
 							<T k="home.hello" values={{ emoji: "👋" }} />
 						</Text>
-						<Title order={1} c="gray" fw={900} className={classes.title} mb="xs">
-              <Text
-                component="div"
-                inherit
-                variant="gradient"
-                gradient={{ from: 'red.4', to: 'red.8' }}
-              >&quot;Tincho&quot; Vera{' '}</Text>{' '} <T k="home.title" />
-						</Title>
+						<TextDisplay text={<T k="home.title" />} gradient="&quot;Tincho&quot; Vera" />
 						<TextDimmed text={<T k="home.text" />} />
 
 						<Group mt="xl">

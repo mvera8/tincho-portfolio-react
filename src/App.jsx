@@ -1,6 +1,6 @@
 import { createTheme, MantineProvider } from '@mantine/core';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { HomePage, PostPage, PortfolioPostPage, BlogPage, TestPage, ServicePostPage } from './pages';
+import { HomePage, PostPage, PortfolioPostPage, BlogPage, TestPage, ServicePostPage, BentoGridPage } from './pages';
 import ErrorPage from './error-page';
 import LanguageProvider from './i18n/LanguageProvider';
 
@@ -50,6 +50,10 @@ const router = createBrowserRouter([
   {
     path: "test",
     element: <TestPage />,
+  },
+  {
+    path: "bento",
+    element: <BentoGridPage />,
   }
 ]);
 

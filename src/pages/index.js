@@ -1,3 +1,4 @@
+export * from './BentoGrid.page';
 export * from './Blog.page';
 export * from './Home.page';
 export * from './PortfolioPost.page';
