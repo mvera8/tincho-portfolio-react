@@ -1,5 +1,6 @@
 export * from './ArticleCardImage';
 export * from './CardIcon';
+export * from './CardBento';
 export * from './CardSkill';
 export * from './Each';
 export * from './Footer';
