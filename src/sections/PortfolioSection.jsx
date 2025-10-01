@@ -1,5 +1,5 @@
-import { Box, Button, Card, Container, Grid, Image, Stack, Title } from '@mantine/core';
-import { Each, SectionTitle, TextDimmed } from '../components';
+import { Button, Card, Grid, Image, Stack, Title } from '@mantine/core';
+import { Each, MvSection, SectionTitle, TextDimmed } from '../components';
 import { IconArrowUpRight } from '@tabler/icons-react';
 import { useI18n } from '../i18n/useI18n.js';
 import T from "../i18n/T.jsx";
@@ -11,44 +11,42 @@ export const PortfolioSection = () => {
   if (works.length === 0) return null;
 
   return (
-    <Box component="section" py="xl">
-      <Container size="lg" py="xl">
-        <SectionTitle
-          title={<T k="portfolio.title" />}
-          subtitle={<T k="portfolio.subtitle" />}
-          centerText
-        />
+    <MvSection>
+			<SectionTitle
+				title={<T k="portfolio.title" />}
+				subtitle={<T k="portfolio.subtitle" />}
+				centerText
+			/>
 
-        <Each
-          of={works}
-          render={({ id, title, text }, idx) => (
-						<Card key={id ?? idx} p={0} radius="md" mb="md" withBorder style={{ height: '100%' }}>
-							<Grid align="stretch">
-								<Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
-									<Stack
-											h={'100%'}
-											align="stretch"
-											justify="space-between"
-											gap="md"
-											p={{base: "lg", lg: "xl"}}
-										>
-											<div>
-												<Title order={3} size="h2" c="gray" mb="md">{title}</Title>
-												<TextDimmed text={text} />
-											</div>
-											<Button fullWidth size="md" rightSection={<IconArrowUpRight size={20} />}>
-												View Project
-											</Button>
-										</Stack>
-								</Grid.Col>
-								<Grid.Col span={{ base: 12, md: 12, lg: 8 }}>
-									<Image radius="md" src={id + '.webp'} alt="Cleanmax" />
-								</Grid.Col>
-							</Grid>
-						</Card>
-          )}
-        />
-      </Container>
-    </Box>
+			<Each
+				of={works}
+				render={({ id, title, text }, idx) => (
+					<Card key={id ?? idx} p={0} radius="md" mb="xl" withBorder style={{ height: '100%' }}>
+						<Grid align="stretch">
+							<Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
+								<Stack
+										h={'100%'}
+										align="stretch"
+										justify="space-between"
+										gap="md"
+										p={{base: "lg", lg: "xl"}}
+									>
+										<div>
+											<Title order={3} size="h2" c="gray" mb="md">{title}</Title>
+											<TextDimmed text={text} />
+										</div>
+										<Button fullWidth size="md" rightSection={<IconArrowUpRight size={20} />}>
+											View Project
+										</Button>
+									</Stack>
+							</Grid.Col>
+							<Grid.Col span={{ base: 12, md: 12, lg: 8 }}>
+								<Image radius="md" src={id + '.webp'} alt="Cleanmax" />
+							</Grid.Col>
+						</Grid>
+					</Card>
+				)}
+			/>
+		</MvSection>
   );
 };

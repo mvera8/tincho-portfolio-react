@@ -1,5 +1,5 @@
-import { Box, Card, Container, Image, SimpleGrid, Stack, Title, useMantineTheme } from "@mantine/core"
-import { ArticleCardImage, Logo, Navbar, TextDimmed } from '../components';
+import { Box, Card, Container, Image, Paper, SimpleGrid, Stack, Title, useMantineTheme } from "@mantine/core"
+import { ArticleCardImage, CardSkill, Logo, Navbar, TextDimmed } from '../components';
 
 export const BentoGridPage = () => {
 	const theme = useMantineTheme();
@@ -15,9 +15,20 @@ export const BentoGridPage = () => {
 				<Container fluid>
 					<SimpleGrid cols={{ base: 1, xs: 4 }}>
 						<Stack>
-							<Card bg="red.1">
-								<Logo type="gradient" />
-							</Card>
+							<Paper bg="red" p="md" radius="md">
+								<Title order={4} mb="xs">Fast, Responsive Websites</Title>
+								<TextDimmed text="I build websites that load quickly and look great on any device, ensuring your visitors have a seamless experience." />
+
+								<SimpleGrid cols={2} pt="md">
+									<CardSkill title="Wordpress" color="red" progress="90"/>
+									<CardSkill title="Wordpress" color="red" progress="90"/>
+									<CardSkill title="Wordpress" color="red" progress="90"/>
+									<CardSkill title="Wordpress" color="red" progress="90"/>
+								</SimpleGrid>
+							</Paper>
+							
+							
+							
 
 							<Card
 								padding="xl"

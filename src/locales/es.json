@@ -109,78 +109,56 @@
 		{
 			"title": "WordPress",
 			"icon": "IconBrandWordpress",
-			"color": "black",
-			"progress": 99,
 			"category": "backend"
 		},
 		{
 			"title": "PHP",
 			"icon": "IconBrandPhp",
-			"color": "green",
-			"progress": 99,
 			"category": "backend"
 		},
 		{
 			"title": "HTML5",
 			"icon": "IconBrandHtml5",
-			"color": "orange",
-			"progress": 90,
 			"category": "frontend"
 		},
 		{
 			"title": "JavaScript",
 			"icon": "IconBrandJavascript",
-			"color": "red",
-			"progress": 90,
 			"category": "frontend"
 		},
 		{
 			"title": "React",
 			"icon": "IconBrandReact",
-			"color": "blue",
-			"progress": 90,
 			"category": "frontend"
 		},
 		{
 			"title": "Next.js",
 			"icon": "IconBrandNextjs",
-			"color": "black",
-			"progress": 90,
 			"category": "frontend"
 		},
 		{
 			"title": "Bootstrap",
 			"icon": "IconBrandBootstrap",
-			"color": "purple",
-			"progress": 90,
 			"category": "frontend"
 		},
 		{
 			"title": "Figma",
 			"icon": "IconBrandFigma",
-			"color": "teal",
-			"progress": 90,
 			"category": "design"
 		},
 		{
 			"title": "Docker",
 			"icon": "IconBrandDocker",
-			"color": "blue",
-			"progress": 90,
 			"category": "devops"
 		},
 		{
 			"title": "Cypress",
 			"icon": "IconBrandCypress",
-			"color": "teal",
-			"progress": 90,
 			"category": "testing"
 		},
 		{
 			"title": "Photoshop",
 			"icon": "IconBrandAdobePhotoshop",
-			"color": "blue",
-			"progress": 90,
 			"category": "design"
 		}
 	],
@@ -220,5 +198,7 @@
 	"contact.input.message": "Tu mensaje",
 	"contact.input.message.placeholder": "Incluí toda la información relevante",
 	"contact.btn": "Enviar mensaje",
-	"contact.input.btn": "Enviar mensaje"
+	"contact.input.btn": "Enviar mensaje",
+	"faqs.subtitle": "FAQs",
+	"faqs.title": "Preguntas Frecuentes"
 }
