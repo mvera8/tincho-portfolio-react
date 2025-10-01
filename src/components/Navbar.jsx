@@ -34,7 +34,7 @@ export const Navbar = () => {
 
   return (
     <header>
-      <Container size="xl" py="sm">
+      <Container size="xl">
         <Grid align="center">
           <Grid.Col span={{ base: 5, lg: 3 }} order={{ base: 1, lg: 1 }}>
             <Logo type="gradient" />
