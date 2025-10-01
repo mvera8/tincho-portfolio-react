@@ -9,21 +9,21 @@
 	"home.cta2": "Download Resume",
 	"home.bullets": [
 		{
-			"title": "10+",
-			"text": "Years of Experience"
+			"title": "56+",
+			"text": "Projects"
 		},
 		{
 			"title": "100%",
-			"text": "Client Satisfaction"
+			"text": "Happy Clients"
 		},
 		{
-			"title": "1M",
-			"text": "Lines of Code Shipped"
+			"title": "10+",
+			"text": "Year Expertise"
 		}
 	],
 	"about.subtitle": "About Me",
 	"about.title": "Highlights of what I do (and love):",
-	"about.text": "I build production-grade WordPress multisites and modern React apps with a focus on speed, reliability, and maintainability. I’ve led projects that aggregate data across multiple properties (dashboards, reporting, and internal tools), automate content operations (WP-CLI, custom scripts, Jenkins/GitHub Actions), and improve developer workflows end-to-end.",
+	"about.text": "I build production-grade WordPress sites and modern React web apps with a focus on speed, reliability, and maintainability. I’ve led projects that aggregate data across multiple properties (dashboards, reporting, and internal tools), automate content operations (WP-CLI, custom scripts, Jenkins/GitHub Actions), and improve developer workflows end-to-end.",
 	"resume.subtitle": "My résumé",
 	"resume.title": "Experience Solving Real Problems",
 	"resume.jobs": [

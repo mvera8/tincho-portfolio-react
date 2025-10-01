@@ -17,7 +17,6 @@ export const CardBento = ({ children, bg = false, title, subtitle }) => {
 
   return (
 		<Paper bg={bgValue} radius="md" ta="center">
-			
 			{subtitle && (
 				<Text size="xl" c="dimmed" my="xs">{subtitle}</Text>
 			)}
