@@ -9,21 +9,21 @@
 	"home.cta2": "Descargar CV",
 	"home.bullets": [
 		{
-			"title": "10+",
-			"text": "Años de experiencia"
+			"title": "56+",
+			"text": "Proyectos"
 		},
 		{
 			"title": "100%",
-			"text": "Satisfacción de clientes"
+			"text": "Clientes Felices"
 		},
 		{
-			"title": "1M",
-			"text": "Líneas de código escritas"
+			"title": "10+",
+			"text": "Años de Experiencia"
 		}
 	],
 	"about.subtitle": "Sobre mí",
 	"about.title": "Lo que hago (y me encanta):",
-	"about.text": "Construyo multisitios de WordPress a nivel productivo y apps modernas en React, con foco en velocidad, confiabilidad y mantenibilidad. Lideré proyectos que agregan datos de múltiples propiedades (dashboards, reportes y herramientas internas), automatizan operaciones de contenido (WP-CLI, scripts, Jenkins/GitHub Actions) y mejoran el flujo de trabajo de desarrolladores end-to-end.",
+	"about.text": "Construyo sitios en WordPress y web apps modernas en React, con foco en velocidad, confiabilidad y mantenibilidad. Lideré proyectos que agregan datos de múltiples propiedades (dashboards, reportes y herramientas internas), automatizan operaciones de contenido (WP-CLI, scripts, Jenkins/GitHub Actions) y mejoran el flujo de trabajo de desarrolladores end-to-end.",
 	"resume.subtitle": "Mi currículum",
 	"resume.title": "Experiencia resolviendo problemas reales",
 	"resume.jobs": [
@@ -103,6 +103,8 @@
 			"description": "Suites estables, checks visuales y cobertura práctica que se paga sola."
 		}
 	],
+	"services.section.title": "Superando las expectativas",
+	"services.section.subtitle": "Características",
 	"skills.subtitle": "Habilidades destacadas",
 	"skills.title": "Tecnologías que uso",
 	"skills.items": [

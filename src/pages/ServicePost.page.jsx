@@ -118,9 +118,9 @@ export const ServicePostPage = () => {
 					<Card p="xl" radius="md">
 						<SimpleGrid cols={4}>
 							<Title order={2}>WordPress Information</Title>
-							<TextList title="85%" text="Of Sites at Internet are WordPress" />
-							<TextList title="Great" text="Community and " />
-							<TextList title="13+" text="Years of Experience" />
+							<TextList title="2003" text="En ese año nace como herramienta de blogs" />
+							<TextList title="43%" text="De los sitios en internet usan WordPress." />
+							<TextList title="65%" text="De los CMS son WordPress" />
 						</SimpleGrid>
 						
 					</Card>

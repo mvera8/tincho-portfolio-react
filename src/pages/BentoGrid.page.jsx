@@ -1,5 +1,6 @@
-import { Box, Card, Container, Image, SimpleGrid, Stack, Title, useMantineTheme } from "@mantine/core"
-import { ArticleCardImage, CardBento, CardSkill, Logo, Navbar, TextDimmed } from '../components';
+import { Badge, Box, Button, Card, Container, Group, Image, SimpleGrid, Stack, Title, useMantineTheme } from "@mantine/core"
+import { ArticleCardImage, CardBento, CardSkill, Logo, Navbar, TextDimmed, TextList } from '../components';
+import { IconBook, IconBrush, IconCode, IconMapPin, IconWorld } from "@tabler/icons-react";
 
 export const BentoGridPage = () => {
 	const theme = useMantineTheme();
@@ -41,11 +42,42 @@ export const BentoGridPage = () => {
 										/>
 									</Box>
 								</div>
-								
 							</CardBento>
 						</Stack>
 
 						<Stack>
+							<SimpleGrid cols={{ base: 1, xs: 3 }}>
+								<CardBento title="Tech Arsenal" subtitle="My Stack" bg>
+									<TextList title="56+" text="Projects" />
+								</CardBento>
+								<CardBento title="Tech Arsenal" subtitle="My Stack" bg>
+									<TextList title="56+" text="Projects" />
+								</CardBento>
+								<CardBento title="Tech Arsenal" subtitle="My Stack" bg>
+									<TextList title="56+" text="Projects" />
+								</CardBento>
+							</SimpleGrid>
+
+							<CardBento title="Tech Arsenal" subtitle="My Stack" bg>
+								<Group p="md">
+									<Badge variant="default" size="lg" leftSection={ <IconMapPin size={20} color="red" />}>Uruguay</Badge>
+									<Badge variant="default" size="lg" leftSection={ <IconWorld size={20} color="red" />}>Spanish & English</Badge>
+									<Badge variant="default" size="lg" leftSection={ <IconCode size={20} color="red" />}>Tecnico en Diseño Web</Badge>
+									<Badge variant="default" size="lg" leftSection={ <IconBrush size={20} color="red" />}>Diseñador Gráfico</Badge>
+									<Badge variant="default" size="lg" leftSection={ <IconBook size={20} color="red" />}>Universidad ORT</Badge>
+								</Group>
+								<Group p="md" grow>
+									<Button variant="default">Second</Button>
+									<Button variant="default">Third</Button>
+								</Group>
+							</CardBento>
+
+							
+						</Stack>
+
+
+						<Stack>
+							<Image radius="md" src="/martin_vera.webp" alt="Cleanmax" />
 							<Card withBorder>
 								<Logo type="gradient" />
 							</Card>
@@ -55,6 +87,13 @@ export const BentoGridPage = () => {
 						<Stack>
 							<CardBento bg="red.1">
 								<Logo type="gradient" />
+							</CardBento>
+
+							<CardBento title="Tech Arsenal" subtitle="My Stack" bg>
+								<Stack p="md">
+									<Button variant="default">Second</Button>
+									<Button variant="default">Third</Button>
+								</Stack>
 							</CardBento>
 							
 							<Card
