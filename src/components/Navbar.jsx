@@ -19,7 +19,7 @@ const items = [
   { path: '/', name: <T k="navbar.home" /> },
   { path: '/blog', name: 'Blog' },
 	{ path: '/bento', name: 'Bento Grid' },
-	{ path: '#contact', name: <T k="navbar.contact" /> },
+	{ path: '/contact', name: <T k="navbar.contact" /> },
   // { path: '/post', name: 'Post' },
   // { path: '/portfolio-post', name: 'PortfolioPost' },
   // { path: '/service-post', name: 'ServicePost' },

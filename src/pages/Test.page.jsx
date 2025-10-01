@@ -1,6 +1,6 @@
-import { Box, Button, Card, Container, Grid, Group, Image, SimpleGrid, Table, Text, ThemeIcon, Title, useMantineColorScheme, useMantineTheme } from '@mantine/core';
+import { Box, Button, Card, Container, Grid, Image, SimpleGrid, Text, ThemeIcon, Title, useMantineColorScheme, useMantineTheme } from '@mantine/core';
 import { ArticleCardImage, Each, Footer, Navbar } from '../components';
-import { IconBrandWordpress, IconBrush, IconDeviceMobile, IconTopologyRing3, IconChessBishop, IconMovie, IconShoppingCart, IconSettings2, IconBrandNextjs, IconBrandReact, IconBrandDocker, IconBrandBootstrap, IconBrandFigma, IconBrandHtml5, IconBrandJavascript } from '@tabler/icons-react';
+import { IconBrandWordpress, IconBrush, IconDeviceMobile, IconTopologyRing3, IconChessBishop, IconMovie, IconShoppingCart, IconSettings2 } from '@tabler/icons-react';
 
 const services = [
 	{ title: 'WordPress Development', icon: IconBrandWordpress, description: 'Custom themes, plugin integrations, and site optimization for a seamless WordPress experience.' },
@@ -14,33 +14,6 @@ const services = [
 	{ title: 'Cypress E2E Testing', icon: IconSettings2, description: 'Stable suites, visual checks, and practical coverage that pays for itself.' },
 ];
 
-const skills = [
-	{ title: 'WordPress', icon: IconBrandWordpress, color: 'black' },
-	{ title: 'HTML5', icon: IconBrandHtml5, color: 'orange' },
-	{ title: 'JavaScript', icon: IconBrandJavascript, color: 'red' },
-	{ title: 'React', icon: IconBrandReact, color: 'blue' },
-	{ title: 'Next JS', icon: IconBrandNextjs, color: 'black' },
-	{ title: 'Bootstrap', icon: IconBrandBootstrap, color: 'purple' },
-	{ title: 'Figma', icon: IconBrandFigma, color: 'teal' },
-	{ title: 'Docker', icon: IconBrandDocker, color: 'blue' },
-];
-
-const experience = [
-	{ title: 'OnPoint', puesto: 'WordPress Tech Lead', time: 'jun. 2022 - actualidad · 3 años 4 meses' },
-	{ title: 'Muu Vainilla', puesto: 'Front and Back Developer', time: 'jul. 2015 - jul. 2019 · 4 años 1 mes' },
-];
-
-const rows = experience.map((exp) => (
-	<Table.Tr key={exp.title}>
-		<Table.Td>
-			<Text mt="xs" c="dimmed" size="sm" mb="md">{exp.time}</Text>
-		</Table.Td>
-		<Table.Td>
-			<Title order={3}>{exp.title}</Title>
-			<Text>{exp.puesto}</Text>
-		</Table.Td>
-	</Table.Tr>
-));
 
 export const TestPage = () => {
 	const colorScheme = useMantineColorScheme();
@@ -62,36 +35,7 @@ export const TestPage = () => {
 					>
 
 
-						{/* About Me */}
-						<section>
-							<Container size="lg" py="xl" mb="xl">
-								<Grid mb="md" align="center">
-									<Grid.Col span={6}>
-										
-									<Title order={1} my="lg">About Me</Title>
-								<Text
-									size="xl"
-									variant="gradient"
-									gradient={{ from: 'gray', to: colorScheme.colorScheme === 'dark' ? 'white' : 'dark', deg: 90 }}
-									mb="xl"
-								>
-									Designer, Photographer & Developer with 12+ Years of Experience From USA. Worked with Apple, Google, Nike and Spotify. Winner of 34+ international awards.
-								</Text>
-
-								
-									</Grid.Col>
-									<Grid.Col span={4} offset={2}>
-										<Image
-											radius="md"
-											mb="lg"
-											src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png"
-										/>
-									</Grid.Col>
-								</Grid>
-								
-
-							</Container>
-						</section>
+ssdsds
 						
 
 					</div>
@@ -138,39 +82,6 @@ export const TestPage = () => {
 							</Container>
 						</section>
 
-		
-						{/* Experiencia */}
-						<section style={{ borderBottom: 'solid 1px gray' }}>
-							<Container size="lg" py="xl" mb="xl">
-								
-								<Table>
-									<Table.Tbody>{rows}</Table.Tbody>
-								</Table>
-							</Container>
-						</section>
-
-						{/* Skills */}
-						<section style={{ borderBottom: 'solid 1px gray' }}>
-							<Container size="lg" py="xl" mb="xl">
-								
-								<SimpleGrid cols={4} spacing="lg">
-									<Each
-										of={skills}
-										render={(item, index) =>
-												<Card key={index} py="xs" px="xl" radius="md" withBorder>
-													<Group justify="space-between" mt="md" mb="xs">
-														<ThemeIcon variant="transparent" color="gray" p={0}>
-															<item.icon size={30} color={item.color} />
-														</ThemeIcon>
-														<Title order={5}>{item.title}</Title>
-													</Group>
-													
-												</Card>
-										}
-									/>
-								</SimpleGrid>
-							</Container>
-						</section>
 
 						{/* Two cards and three cards */}
 						<section style={{ borderBottom: 'solid 1px gray' }}>
@@ -234,47 +145,6 @@ export const TestPage = () => {
 							</Container>
 						</section>
 						
-
-			{/* Portfolio Section */}
-			<section style={{ borderBottom: 'solid 1px gray' }}>
-							<Container size="lg" py="xl" mb="xl">
-								<Grid mb="mb">
-									<Grid.Col span={4}>
-										<Card padding="xl" radius="md" withBorder style={{height: '100%'}}>
-											<Title order={3} mb="xl">LOGO</Title>
-											<Title order={3}>Cleanmax website</Title>
-											<Text mt="xs" c="dimmed" size="sm" mb="md">
-												Please click anywhere on this card to claim your reward, this is not a fraud, trust us
-											</Text>
-											<Button fullWidth size="md">View Project</Button>
-										</Card>
-									</Grid.Col>
-									<Grid.Col span={8}>
-										<Image
-											radius="md"
-											src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png"
-										/>
-									</Grid.Col>
-								</Grid>
-							</Container>
-						</section>
-
-						{/* Blog */}
-						{/* Contacto */}
-
-						
-
-
-
-
-			<div
-					style={{
-						height: 500,
-						backgroundImage: `radial-gradient(circle 500px at 0 100%, rgba(239,68,68,0.4), transparent)`,
-					}}
-				>
-					
-				</div>
 
 
 			<div

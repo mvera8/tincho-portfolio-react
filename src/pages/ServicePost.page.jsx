@@ -2,6 +2,7 @@ import { Box, Button, Card, Container, Image, SimpleGrid, Text, Title, useMantin
 import { ArticleCardImage, Footer, Navbar, SectionTitle, TextDimmed, TextDisplay, TextList } from "../components"
 import { ContactSection, FaqsSection } from "../sections"
 import { IconChevronRight } from "@tabler/icons-react";
+import T from "../i18n/T.jsx";
 
 export const ServicePostPage = () => {
 	const theme = useMantineTheme();
@@ -19,15 +20,16 @@ export const ServicePostPage = () => {
 						variant="filled"
 						color="red"
 						size="md"
+						mt="md"
 						rightSection={<IconChevronRight size={20} />}>See More</Button>
 				</Container>
 			</Box>	
 
 			<Box component="section" py="xl">
-				<Container size="lg" pt="xl">
+				<Container size="lg" pt="md">
 					<SectionTitle
-						title="Built to help you grow"
-						subtitle="Service Features"
+						title={<T k="services.section.title" />}
+						subtitle={<T k="services.section.subtitle" />}
 						centerText
 					/>
 					
