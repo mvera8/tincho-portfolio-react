@@ -8,7 +8,7 @@ export const SectionTitle = ({ title, subtitle, text, centerText = false }) => {
   return (
     <>
       {subtitle && (
-        <TextDimmed text={subtitle} align={ta} />
+        <TextDimmed text={subtitle} align={ta} color="red" />
       )}
 
       {title && (
@@ -17,11 +17,16 @@ export const SectionTitle = ({ title, subtitle, text, centerText = false }) => {
           size="h1"
           my="lg"
           tt="capitalize"
-          maw={500}
+          maw={700}
           ta={ta}
           mx={centerText ? 'auto' : undefined}
         >
-          {title}
+					<Text
+						component="span"
+						inherit
+          >
+            {title}
+          </Text>
         </Title>
       )}
 

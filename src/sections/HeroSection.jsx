@@ -1,5 +1,5 @@
 import { Button, Card, Grid, Group, Stack, Text } from "@mantine/core"
-import { IconChevronRight } from "@tabler/icons-react";
+import { IconArrowDownDashed, IconArrowRight } from "@tabler/icons-react";
 import { Each, MvImage, MvSection, TextDimmed, TextDisplay, TextList } from "../components";
 import { useI18n } from "../i18n/useI18n.js";
 import T from "../i18n/T.jsx";
@@ -13,10 +13,10 @@ export const HeroSection = () => {
 		<MvSection size="xl">
 			<Grid justify="center" align="center" py={{base: "md", lg: "xl" }}>
 				<Grid.Col span={{ base: 12, md: 12, lg: 5 }}>
-					<Text size="xl" c="dimmed" mb="xs">
-						<T k="home.hello" values={{ emoji: "👋" }} />
+					<Text size="xl" c="gray" mb="xs" fw={700}>
+						<T k="home.hello" values={{ emoji: "👋", name: '"Tincho" Vera' }} />
 					</Text>
-					<TextDisplay gradient={<T k="home.title" />} text="&quot;Tincho&quot; Vera" />
+					<TextDisplay gradient={<T k="home.title" />} />
 					<TextDimmed text={<T k="home.text" />} />
 
 					<Group mt="xl">
@@ -24,15 +24,15 @@ export const HeroSection = () => {
 							variant="filled"
 							color="red"
 							size="md"
-							rightSection={<IconChevronRight size={20} />}>
+							rightSection={<IconArrowRight size={20} />}>
 								<T k="home.cta1" />
-							</Button>
+						</Button>
 						<Button
-							variant="default"
+							variant="subtle"
 							size="md"
-							rightSection={<IconChevronRight color="red" size={20} />}>
+							rightSection={<IconArrowDownDashed size={20} />}>
 								<T k="home.cta2" />
-							</Button>
+						</Button>
 					</Group>
 				</Grid.Col>
 

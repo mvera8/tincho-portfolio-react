@@ -1,8 +1,10 @@
-import { Text, Title } from '@mantine/core'
+import { Text, Title, useMantineColorScheme } from '@mantine/core'
 import PropTypes from "prop-types";
 import classes from './TextDisplay.module.css';
 
 export const TextDisplay = ({text, gradient}) => {
+	const colorScheme = useMantineColorScheme();
+
 	return (
 		<Title order={1} c="gray" fw={900} className={classes.title} mb="xs">
 			{text}{' '} 
@@ -10,7 +12,7 @@ export const TextDisplay = ({text, gradient}) => {
 				component="span"
 				inherit
 				variant="gradient"
-				gradient={{ from: 'red.4', to: 'red.8' }}
+				gradient={{ from: colorScheme.colorScheme === 'dark' ? 'white' : 'red.2', to: 'red.8' }}
 			>{gradient}{' '}</Text>
 		</Title>
 	)

@@ -2,8 +2,8 @@
 	"site.description": "Design & Development",
 	"navbar.home": "Home",
 	"navbar.contact": "Contact",
-	"home.hello": "{emoji} Hello, I'm",
-	"home.title": "Web Developer",
+	"home.hello": "{emoji} Hello, I am {name}",
+	"home.title": "Next-Level Web Developer.",
 	"home.text": "If you want someone who designs the experience, builds the product, automates the pipeline, and tests it properly — that’s me ❤️.",
 	"home.cta1": "Hire Me",
 	"home.cta2": "Download Resume",
@@ -173,7 +173,6 @@
 			"text": "WordPress site with contact form and clean styling. Focused on performance and message clarity."
 		},
 		{
-			"id": "portfolio",
 			"title": "MV Portfolio Website",
 			"text": ""
 		}
