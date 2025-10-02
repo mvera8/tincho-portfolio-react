@@ -1,4 +1,4 @@
-import { Paper, Text, Title, useMantineColorScheme } from "@mantine/core";
+import { Box, Paper, Text, Title, useMantineColorScheme } from "@mantine/core";
 import PropTypes from "prop-types";
 
 export const CardBento = ({ children, bg = false, title, subtitle }) => {
@@ -23,8 +23,10 @@ export const CardBento = ({ children, bg = false, title, subtitle }) => {
 			{title && (
 				<Title order={4} mb="xs">{title}</Title>
 			)}
-			
-			{children}
+
+			<Box p="lg">
+				{children}
+			</Box>
 		</Paper>
   );
 };

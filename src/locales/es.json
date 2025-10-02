@@ -2,8 +2,8 @@
 	"site.description": "Diseño & Desarrollo",
 	"navbar.home": "Inicio",
 	"navbar.contact": "Contacto",
-	"home.hello": "{emoji} Hola, soy",
-	"home.title": "Desarrollador Web",
+	"home.hello": "{emoji} Hola, yo soy {name}",
+	"home.title": "Desarrollador web avanzado",
 	"home.text": "Si buscás a alguien que diseñe la experiencia, construya el producto, automatice el pipeline y lo pruebe como corresponde, soy yo ❤️.",
 	"home.cta1": "Contrátame",
 	"home.cta2": "Descargar CV",
@@ -173,7 +173,6 @@
 			"text": "Sitio en WordPress con formulario de contacto y estilo limpio. Enfoque en rendimiento y claridad del mensaje."
 		},
 		{
-			"id": "portfolio",
 			"title": "MV Portfolio Sitio Web",
 			"text": ""
 		}
