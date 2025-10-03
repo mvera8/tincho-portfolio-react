@@ -1,4 +1,4 @@
-import { ActionIcon, Group } from "@mantine/core";
+import { Card, Group, ThemeIcon, Title } from "@mantine/core";
 import { IconBrandGithub, IconBrandLinkedin } from "@tabler/icons-react";
 import PropTypes from 'prop-types';
 
@@ -10,21 +10,26 @@ const redes = [
 
 export const SocialMedia = ({align = "flex-end"}) => {
 	return (
-		<Group gap={0} justify={align} wrap="nowrap">
+		<>
 			{redes.map((red, index) => (
-				<ActionIcon
+				<Card
 					key={index}
-					size="lg"
-					color="gray"
 					component="a"
 					href={red.link}
-					aria-label={red.title}
-					target='blank'
-					variant="subtle">
-					<red.icon size={22} stroke={1.5} />
-				</ActionIcon>
+					target="_blank"
+					radius="lg"
+					mb="xs"
+					p="xs"
+					withBorder>
+					<Group preventGrowOverflow={false} wrap="nowrap">
+						<ThemeIcon variant="light" color="red" radius="md" size="xl">
+							<red.icon size={40} stroke={1.5} />
+						</ThemeIcon>
+						<Title order={4} c="gray" ta="center">{red.title}</Title>
+					</Group>
+				</Card>
 			))}
-		</Group>
+		</>
 	)
 }
 

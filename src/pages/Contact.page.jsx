@@ -6,7 +6,7 @@ export const ContactPage = () => {
 		<>
 			<Navbar />
 			<MvSection>
-				<TextDisplay text="Contacto" gradient="." />
+				<TextDisplay gradient="Contacto." />
 			</MvSection>
 			<ContactSection />
 			<Footer />
