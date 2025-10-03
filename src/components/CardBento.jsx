@@ -1,40 +1,40 @@
-import { Box, Paper, Text, Title, useMantineColorScheme } from "@mantine/core";
+import { Box, Center, Paper, Text, ThemeIcon, Title, useMantineColorScheme } from "@mantine/core";
 import PropTypes from "prop-types";
 
-export const CardBento = ({ children, bg = false, title, subtitle }) => {
+export const CardBento = ({ children, bg = false, title, subtitle, icon }) => {
   const { colorScheme } = useMantineColorScheme();
 
-  // Resolver valor final de background
-  let bgValue;
-  if (bg === true) {
-    bgValue = colorScheme === "dark" ? "dark" : "gray.1";
-  } else if (bg === false || bg == null) {
-    bgValue = "transparent";
-  } else {
-    // Si viene string (p.ej. "blue.0" o "#f0f0f0")
-    bgValue = bg;
-  }
+  const bgValue =
+    bg === true ? (colorScheme === "dark" ? "dark" : "gray.1")
+    : bg ? bg
+    : "transparent";
 
   return (
-		<Paper bg={bgValue} radius="md" ta="center">
-			{subtitle && (
-				<Text size="xl" c="dimmed" my="xs">{subtitle}</Text>
-			)}
-			{title && (
-				<Title order={4} mb="xs">{title}</Title>
-			)}
-
-			<Box p="lg">
-				{children}
-			</Box>
-		</Paper>
+    <Paper bg={bgValue} radius="lg" ta="center" pb={0}>
+      {subtitle && (
+				<Center mt="sm" mb={0}>
+					{icon &&
+						<ThemeIcon
+						variant="transparent"
+						color="red"
+						mr="xs"
+						size="sm"
+						aria-label={subtitle}>
+						{icon}
+					</ThemeIcon>}
+					<Text size="lg" c="dimmed">{subtitle}</Text>
+				</Center>
+      )}
+      {title && <Title order={4} size="h3">{title}</Title>}
+      <Box p="lg">{children}</Box>
+    </Paper>
   );
 };
 
 CardBento.propTypes = {
   children: PropTypes.node.isRequired,
-  // Puede ser boolean (true activa fondo por defecto) o string (token/color)
   bg: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-	title: PropTypes.string,
-	subtitle: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  icon: PropTypes.node, // 👈 elemento React (instanciado)
 };

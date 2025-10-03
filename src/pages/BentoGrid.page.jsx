@@ -1,6 +1,6 @@
-import { Badge, Box, Button, Card, Container, Group, Image, SimpleGrid, Stack, Title, useMantineTheme } from "@mantine/core"
-import { ArticleCardImage, CardBento, CardSkill, Logo, Navbar, TextDimmed, TextList } from '../components';
-import { IconArrowDownDashed, IconArrowRight, IconBook, IconBrush, IconCode, IconMapPin, IconWorld } from "@tabler/icons-react";
+import { Badge, Box, Button, Card, Container, Grid, Group, Image, SimpleGrid, Stack, Title, useMantineTheme } from "@mantine/core"
+import { CardBento, CardSkill, Logo, Navbar, SocialMedia, TextDimmed, TextList } from '../components';
+import { IconArrowDownDashed, IconArrowRight, IconBook, IconBriefcaseFilled, IconBrush, IconCode, IconMapPin, IconStackBack, IconSunFilled, IconWorld } from "@tabler/icons-react";
 import T from "../i18n/T.jsx";
 
 export const BentoGridPage = () => {
@@ -15,96 +15,139 @@ export const BentoGridPage = () => {
 					padding: '20px 0'
 				}}>
 				<Container fluid>
-					<SimpleGrid cols={{ base: 1, xs: 4 }}>
-						<Stack>
-							<CardBento title="Tech Arsenal" subtitle="My Stack" bg>
-								<SimpleGrid cols={2}>
-									<CardSkill title="Wordpress" color="red" progress="90"/>
-									<CardSkill title="Wordpress" color="red" progress="90"/>
-									<CardSkill title="Wordpress" color="red" progress="90"/>
-									<CardSkill title="Wordpress" color="red" progress="90"/>
-								</SimpleGrid>
-							</CardBento>
+					<Grid>
+						<Grid.Col span={7}>
+							<Grid>
+								<Grid.Col span={5}>
+									<Stack>
+										<CardBento title="Tech Arsenal" icon={<IconStackBack />} subtitle="My Stacks" bg>
+											<SimpleGrid cols={2}>
+												<CardSkill title="Wordpress" color="red" progress="90"/>
+												<CardSkill title="Wordpress" color="red" progress="90"/>
+												<CardSkill title="Wordpress" color="red" progress="90"/>
+												<CardSkill title="Wordpress" color="red" progress="90"/>
+											</SimpleGrid>
+										</CardBento>
 
-							<CardBento title="Solutions Suite" subtitle="Services" bg>
-								<div
-									style={{
-										backgroundImage: `radial-gradient(circle 240px at 50% 100%, rgba(239,68,68,0.4), transparent)`,
-									}}
-								>
-									<Box mx="xl">
-										<Image
-											src="/wp-admin-dashboard.webp"
-											h="auto"
-											alt="WordPress Dashboard"
-										/>
-									</Box>
-								</div>
-							</CardBento>
-						</Stack>
+										<CardBento title="Solutions Suite" icon={<IconBriefcaseFilled />} subtitle="Services" bg>
+											<div
+												style={{
+													backgroundImage: `radial-gradient(circle 240px at 50% 100%, rgba(239,68,68,0.4), transparent)`,
+												}}
+											>
+												<Box mx="xl">
+													<Image
+														src="/wp-admin-dashboard.webp"
+														h="auto"
+														alt="WordPress Dashboard"
+													/>
+												</Box>
+											</div>
+										</CardBento>
+									</Stack>
+								</Grid.Col>
 
-						<Stack>
-							<SimpleGrid cols={{ base: 1, xs: 3 }}>
-								<CardBento bg>
-									<TextList title="56+" text="Projects" />
-								</CardBento>
-								<CardBento bg>
-									<TextList title="56+" text="Projects" />
-								</CardBento>
-								<CardBento bg>
-									<TextList title="56+" text="Projects" />
-								</CardBento>
-							</SimpleGrid>
+								<Grid.Col span={7}>
+									<Stack>
+										<SimpleGrid cols={{ base: 1, xs: 3 }}>
+											<CardBento bg>
+												<TextList title="56+" text="Projects" />
+											</CardBento>
+											<CardBento bg>
+												<TextList title="56+" text="Projects" />
+											</CardBento>
+											<CardBento bg>
+												<TextList title="56+" text="Projects" />
+											</CardBento>
+										</SimpleGrid>
 
-							<CardBento title="Tech Arsenal" subtitle="My Stack" bg>
-								<Group p="md">
-									<Badge variant="default" size="lg" leftSection={ <IconMapPin size={20} color="red" />}>Uruguay</Badge>
-									<Badge variant="default" size="lg" leftSection={ <IconWorld size={20} color="red" />}>Spanish & English</Badge>
-									<Badge variant="default" size="lg" leftSection={ <IconCode size={20} color="red" />}>Tecnico en Diseño Web</Badge>
-									<Badge variant="default" size="lg" leftSection={ <IconBrush size={20} color="red" />}>Diseñador Gráfico</Badge>
-									<Badge variant="default" size="lg" leftSection={ <IconBook size={20} color="red" />}>Universidad ORT</Badge>
-								</Group>
-								<Group p="md" grow>
-								<Button
-									variant="filled"
-									color="red"
-									size="md"
-									rightSection={<IconArrowRight size={20} />}>
-										<T k="home.cta1" />
-								</Button>
-								<Button
-									variant="subtle"
-									size="md"
-									rightSection={<IconArrowDownDashed size={20} />}>
-										<T k="home.cta2" />
-								</Button>
+										<CardBento bg>
+											<Group gap="xs" mb="md">
+												<Badge variant="default" size="lg" leftSection={ <IconMapPin size={20} color="red" />}>Uruguay</Badge>
+												<Badge variant="default" size="lg" leftSection={ <IconWorld size={20} color="red" />}>Spanish & English</Badge>
+												<Badge variant="default" size="lg" leftSection={ <IconCode size={20} color="red" />}>Tecnico en Diseño Web</Badge>
+												<Badge variant="default" size="lg" leftSection={ <IconBrush size={20} color="red" />}>Diseñador Gráfico</Badge>
+												<Badge variant="default" size="lg" leftSection={ <IconBook size={20} color="red" />}>Universidad ORT</Badge>
+											</Group>
+											<Group grow>
+											<Button
+												variant="filled"
+												color="red"
+												size="md"
+												rightSection={<IconArrowRight size={20} />}>
+													<T k="home.cta1" />
+											</Button>
+											<Button
+												variant="subtle"
+												size="md"
+												rightSection={<IconArrowDownDashed size={20} />}>
+													<T k="home.cta2" />
+											</Button>
+												
+											</Group>
+										</CardBento>
+									</Stack>
+								</Grid.Col>
+							</Grid>
+						</Grid.Col>
+
+						<Grid.Col span={5}>
+							<Grid>
+								<Grid.Col span={7}>
+									<Stack>
+										<Image radius="md" src="/martin_vera.webp" alt="Cleanmax" />
+									</Stack>
 									
-								</Group>
-							</CardBento>
 
+								</Grid.Col>
+
+								<Grid.Col span={5}>
+									<CardBento bg="red.1">
+										<Logo type="gradient" />
+									</CardBento>
+
+									<CardBento title="Tech Arsenal" icon={<IconStackBack />} subtitle="My Stacks" bg>
+										<SimpleGrid cols={2}>
+										<Button variant="default">Second</Button>
+										<Button variant="default">Third</Button>
+										</SimpleGrid>
+									</CardBento>
+
+
+								</Grid.Col>
+
+								<Grid.Col span={5}>
+									<CardBento title="Online Presence" icon={<IconSunFilled />} subtitle="Follow Me" bg>
+										<SocialMedia />
+									</CardBento>
+								</Grid.Col>
+
+								<Grid.Col span={7}>
+									<Card bg="red.9">
+										a
+									</Card>
+									<Card bg="red.7">
+										b
+									</Card>
+								</Grid.Col>
+							</Grid>
+						</Grid.Col>
+					</Grid>
+
+
+
+					<SimpleGrid cols={{ base: 1, xs: 4 }}>
+						
+
+						
+
+
+						
+
+						<Stack>
 							
-						</Stack>
 
 
-						<Stack>
-							<Image radius="md" src="/martin_vera.webp" alt="Cleanmax" />
-							<Card withBorder>
-								<Logo type="gradient" />
-							</Card>
-							<ArticleCardImage />
-						</Stack>
-
-						<Stack>
-							<CardBento bg="red.1">
-								<Logo type="gradient" />
-							</CardBento>
-
-							<CardBento title="Tech Arsenal" subtitle="My Stack" bg>
-								<Stack p="md">
-									<Button variant="default">Second</Button>
-									<Button variant="default">Third</Button>
-								</Stack>
-							</CardBento>
 							
 							<Card
 								padding="xl"
@@ -132,12 +175,7 @@ export const BentoGridPage = () => {
 						</Stack>
 
 						<Stack>
-							<Card bg="red.9">
-								a
-							</Card>
-							<Card bg="red.7">
-								b
-							</Card>
+							
 							<Image radius="md" src="/cleanmax.webp" alt="Cleanmax" />
 						</Stack>
 					</SimpleGrid>
