@@ -30,7 +30,7 @@ export const ServicesSection = () => {
 			<SimpleGrid cols={2}>
 				<Each
 					of={items}
-					render={({ title, icon, description }, idx) => {
+					render={({ id, title, icon, description }, idx) => {
 						const IconCmp = ICONS[icon] ?? IconBrandWordpress;
 						return (
 							<Card
@@ -38,7 +38,7 @@ export const ServicesSection = () => {
 								radius="md"
 								padding={{ md: "sm", lg: "xl"}}
 								component="a"
-								href="/service-post"
+								href={"/services/" + id}
 								withBorder
 							>
 								<Grid>

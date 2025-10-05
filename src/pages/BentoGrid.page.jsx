@@ -1,6 +1,6 @@
-import { Badge, Box, Button, Container, Grid, Group, Image, SimpleGrid, Stack, useMantineTheme } from "@mantine/core"
-import { CardBento, CardSkill, Logo, Navbar, SocialMedia, TextList } from '../components';
-import { IconArrowDownDashed, IconArrowRight, IconBook, IconBriefcaseFilled, IconBrush, IconCode, IconMapPin, IconStackBack, IconSunFilled, IconWorld } from "@tabler/icons-react";
+import { Box, Button, Container, Grid, Group, Image, SimpleGrid, Stack, useMantineTheme } from "@mantine/core"
+import { CardBento, CardSkill, GroupBadge, Logo, Navbar, SocialMedia, TextList } from '../components';
+import { IconArrowDownDashed, IconArrowRight, IconBriefcaseFilled, IconStackBack, IconSunFilled } from "@tabler/icons-react";
 import T from "../i18n/T.jsx";
 
 export const BentoGridPage = () => {
@@ -78,13 +78,7 @@ export const BentoGridPage = () => {
 										</SimpleGrid>
 
 										<CardBento bg>
-											<Group gap="xs" mb="md">
-												<Badge variant="default" size="lg" leftSection={ <IconMapPin size={20} color="red" />}>Uruguay</Badge>
-												<Badge variant="default" size="lg" leftSection={ <IconWorld size={20} color="red" />}>Spanish & English</Badge>
-												<Badge variant="default" size="lg" leftSection={ <IconCode size={20} color="red" />}>Tecnico en Diseño Web</Badge>
-												<Badge variant="default" size="lg" leftSection={ <IconBrush size={20} color="red" />}>Diseñador Gráfico</Badge>
-												<Badge variant="default" size="lg" leftSection={ <IconBook size={20} color="red" />}>Universidad ORT</Badge>
-											</Group>
+											<GroupBadge />
 											<Group grow>
 											<Button
 												variant="filled"

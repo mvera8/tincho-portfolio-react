@@ -1,6 +1,7 @@
 {
 	"site.description": "Design & Development",
 	"navbar.home": "Home",
+	"navbar.services": "Services",
 	"navbar.contact": "Contact",
 	"home.hello": "{emoji} Hello, I am {name}",
 	"home.title": "Next-Level Web Developer.",
@@ -24,6 +25,10 @@
 	"about.subtitle": "About Me",
 	"about.title": "Highlights of what I do (and love):",
 	"about.text": "I build production-grade WordPress sites and modern React web apps with a focus on speed, reliability, and maintainability. I’ve led projects that aggregate data across multiple properties (dashboards, reporting, and internal tools), automate content operations (WP-CLI, custom scripts, Jenkins/GitHub Actions), and improve developer workflows end-to-end.",
+	"about.languages": "Spanish & English",
+	"about.study": "ORT University",
+	"about.degree1": "Web Developer Technician",
+	"about.degree2": "Graphic Designer",
 	"list.items": [
 		"Quick response and personalized advice",
 		"Results that speak for themselves"
@@ -72,36 +77,37 @@
 			]
 		},
 		{
+			"id": "apps",
 			"title": "Mobile App Design & Development",
 			"icon": "IconDeviceMobile",
 			"description": "Fast, scalable React / Next.js apps with modern UI."
 		},
 		{
+			"id": "design",
 			"title": "Design Systems (UI/UX)",
 			"icon": "IconBrush",
 			"description": "Accessible, mobile-first interfaces that feel native on any device."
 		},
 		{
+			"id": "branding",
 			"title": "Branding & Visual Identity",
 			"icon": "IconTopologyRing3",
 			"description": "Brand identity, visual guidelines, and cross-channel consistency."
 		},
 		{
-			"title": "Consulting & Strategy",
-			"icon": "IconChessBishop",
-			"description": "Technical audits, roadmaps, and actionable recommendations with a growth focus."
-		},
-		{
+			"id": "videos",
 			"title": "Video Editing",
 			"icon": "IconMovie",
 			"description": "Agile editing for promos, social clips, and tutorials."
 		},
 		{
+			"id": "ecommerce",
 			"title": "E-commerce Solutions",
 			"icon": "IconShoppingCart",
 			"description": "Robust stores with seamless shopping experiences that convert."
 		},
 		{
+			"id": "cypress",
 			"title": "Cypress E2E Testing",
 			"icon": "IconSettings2",
 			"description": "Stable suites, visual checks, and practical coverage that pays for itself."
@@ -166,6 +172,11 @@
 			"title": "Photoshop",
 			"icon": "IconBrandAdobePhotoshop",
 			"category": "design"
+		},
+		{
+			"title": "Illustrator",
+			"icon": "IconBrandAdobeIllustrator",
+			"category": "design"
 		}
 	],
 	"portfolio.subtitle": "Latest Work",
@@ -185,12 +196,10 @@
 	"blog.title": "Latest Articles",
 	"blog.posts": [
 		{
-			"id": "performance",
 			"title": "How to Optimize Your WordPress Site for Lightning-Fast Performance",
 			"text": "Practical tips and tools to speed up your site, improve SEO, and enhance the user experience."
 		},
 		{
-			"id": "development",
 			"title": "The Power of UI/UX in Modern Web Development",
 			"text": "How intentional design and great UX can make your site more engaging and effective."
 		}

@@ -1,6 +1,6 @@
 import { useRef } from 'react';
-import { Grid, Image } from '@mantine/core';
-import { MvList, MvSection, SectionTitle } from '../components';
+import { Divider, Grid, Image } from '@mantine/core';
+import { GroupBadge, MvSection, SectionTitle } from '../components';
 import T from "../i18n/T.jsx";
 
 export const AboutSection = () => {
@@ -21,7 +21,8 @@ export const AboutSection = () => {
             subtitle={<T k="about.subtitle" />}
             text={<T k="about.text" />}
           />
-          <MvList />
+					<Divider my="xl" />
+					<GroupBadge />
         </Grid.Col>
 
         <Grid.Col span={{ base: 12, md: 12, lg: 5 }} offset={{ md: 0, lg: 1 }}>

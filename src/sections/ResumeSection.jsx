@@ -3,7 +3,7 @@ import { ActionIcon,
 	Card,
 	Grid,
 	Table, Text, Title } from '@mantine/core'
-import { Each, MvSection, SectionTitle, TextDimmed } from '../components'
+import { Each, MvList, MvSection, SectionTitle, TextDimmed } from '../components'
 import classes from './ResumeSection.module.css';
 import { IconArrowUpRight } from '@tabler/icons-react';
 import { useI18n } from '../i18n/useI18n.js';
@@ -19,14 +19,16 @@ export const ResumeSection = () => {
 		<MvSection bg>
 			<Grid mb="md" align="center">
 				<Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
-					<div className={classes.circle}></div>
+					<div className={classes.circle}>
+							<MvList />
+					</div>
 				</Grid.Col>
 				<Grid.Col span={{ base: 12, md: 12, lg: 7 }} offset={{ md: 0, lg: 1 }}>
 					<SectionTitle
 						title={<T k="resume.title" />}
 						subtitle={<T k="resume.subtitle" />}
 					/>
-					<Card p={{ base: "sm", lg: "xl"}} radius="md" bg="transparent">
+					<Card p={{ base: "sm", lg: "xl"}} radius="md">
 						<Table>
 							<Table.Tbody>
 								<Each

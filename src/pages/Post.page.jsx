@@ -1,29 +1,54 @@
+// pages/PostPage.jsx
+import { useMemo } from 'react';
+import { useParams, Navigate } from 'react-router-dom';
 import { Image, Text, Title } from '@mantine/core';
 import { Footer, MvSection, Navbar } from '../components';
+import { useI18n } from '../i18n/useI18n.js';
+import { slugify } from '../helpers/slugify';
 
 export const PostPage = () => {
-	return (
-		<>
-			<Navbar />
-			<MvSection size="sm">
+  const { slug } = useParams();
+  const { get } = useI18n();
 
-				<Title order={1} my="xl">Text Expander Snippet Extension</Title>
-				<Text c="dimmed" size="xl"mb="lg">Create, manage, and use custom snippets for faster typing, email responses, and coding.</Text>
-				<Image
-					radius="md"
-					mb="lg"
-					src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png"
-				/>
+  const postsRaw = get("blog.posts");
+  const posts = Array.isArray(postsRaw) ? postsRaw : [];
 
-				<Title order={2} mb="lg">Text Expander Snippet Extension</Title>
-				<Text mb="lg">Store, search, and insert frequently used text snippets. Write faster by using text snippets to store and insert commonly used text. Expand them automatically with a keyword.</Text>
+  // Busca el post por slug
+  const post = useMemo(() => {
+    const bySlug = new Map(posts.map((p) => [slugify(p.title), p]));
+    return bySlug.get(slug);
+  }, [posts, slug]);
 
-				<Title order={3} mb="lg">Text Expander Snippet Extension</Title>
-				<Text mb="lg">Store, search, and insert frequently used text snippets. Write faster by using text snippets to store and insert commonly used text. Expand them automatically with a keyword.</Text>
+  if (!post) {
+    // 404 elegante: vuelve al listado o a una página de no encontrado
+    return <Navigate to="/blog" replace />;
+  }
 
+  return (
+    <>
+      <Navbar />
+      <MvSection size="sm">
+        <Title order={1} my="xl">{post.title}</Title>
+        {post.text && (
+          <Text c="dimmed" size="xl" mb="lg">{post.text}</Text>
+        )}
 
-			</MvSection>
-			<Footer />
-		</>
-	)
-}
+        <Image
+          radius="md"
+          mb="lg"
+          src={post.image || "https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-7.png"}
+          alt={post.title}
+        />
+
+        {/* Si tienes campos como post.subtitle / post.content, renderízalos */}
+        {post.subtitle && (
+          <>
+            <Title order={2} mb="lg">{post.subtitle}</Title>
+            {post.content && <Text mb="lg">{post.content}</Text>}
+          </>
+        )}
+      </MvSection>
+      <Footer />
+    </>
+  );
+};

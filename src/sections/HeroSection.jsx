@@ -13,7 +13,7 @@ export const HeroSection = () => {
 		<MvSection size="xl" padding="xs">
 			<Grid justify="center" align="center" py={{base: "md", lg: "xs" }}>
 				<Grid.Col span={{ base: 12, md: 12, lg: 5 }}>
-					<Text size="xl" c="gray" mb="xs" fw={700}>
+					<Text size="xl" c="gray" mb="xs">
 						<T k="home.hello" values={{ emoji: "👋", name: '"Tincho" Vera' }} />
 					</Text>
 					<TextDisplay gradient={<T k="home.title" />} />

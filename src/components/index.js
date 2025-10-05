@@ -5,6 +5,7 @@ export * from './CardSkill';
 export * from './Each';
 export * from './FloatingBadge';
 export * from './Footer';
+export * from './GroupBadge';
 export * from './Logo';
 export * from './Navbar';
 export * from './MvSection';

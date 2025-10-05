@@ -18,6 +18,7 @@ Task:
 - Mobile
 - Hover items above elements
 - Blur component
-- SEO Optimize
+- SEO Optimize (meta tags)
 -- https://developer.chrome.com/docs/lighthouse/seo/meta-description?utm_source=lighthouse&utm_medium=lr&hl=es-419
 - Form Work
+- sitemap

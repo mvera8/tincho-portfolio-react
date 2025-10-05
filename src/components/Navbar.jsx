@@ -7,6 +7,7 @@ import {
   Group,
   Menu,
   Burger,
+	UnstyledButton,
 } from '@mantine/core';
 import { IconSun, IconMoon } from '@tabler/icons-react';
 import { Each } from './Each';
@@ -14,12 +15,15 @@ import { useLocation } from 'react-router-dom';
 import { Logo } from './Logo';
 import { useI18n } from '../i18n/useI18n.js';
 import T from "../i18n/T.jsx";
+import classes from "./Navbar.module.css";
 
 const items = [
   { path: '/', name: <T k="navbar.home" /> },
+	{ path: '/services', name: <T k="navbar.services" /> },
+	{ path: '/portfolio', name: 'Portfolio' },
   { path: '/blog', name: 'Blog' },
 	{ path: '/contact', name: <T k="navbar.contact" /> },
-	{ path: '/bento', name: 'Bento Grid' },
+	// { path: '/bento', name: 'Bento Grid' },
   // { path: '/post', name: 'Post' },
   // { path: '/portfolio-post', name: 'PortfolioPost' },
   // { path: '/service-post', name: 'ServicePost' },
@@ -98,6 +102,39 @@ export const Navbar = () => {
               >
                 {computedColorScheme === 'light' ? <IconMoon size={20} /> : <IconSun size={20} />}
               </Button>
+							<UnstyledButton
+								onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
+                aria-label="Toggle color scheme"
+							>Button without styles</UnstyledButton>
+
+<input id="switch" type="checkbox" />
+<div className={classes.app}>
+  <div className={classes.body}>
+    
+    <div className={classes.phone}>
+  
+    
+      <div className={classes.content}>
+        <div className={classes.circle}>
+          <div className={classes.crescent}></div>
+        </div>
+       
+        <label htmlFor="switch">
+          <div className={classes.toggle}></div>
+          <div className={classes.names}>
+            <p className={classes.light}>Light</p>
+            <p className={classes.dark}>Dark</p>
+          </div>
+        </label>
+        
+       
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
 
 							{/* mobile menu */}
               <Menu shadow="md" width={220}>

@@ -1,6 +1,7 @@
 import { Image } from '@mantine/core';
-import PropTypes from 'prop-types';
 import { FloatingBadge } from './FloatingBadge';
+import PropTypes from 'prop-types';
+import T from "../i18n/T.jsx";
 
 export const MvImage = ({image, alt}) => {
 	return (
@@ -8,8 +9,8 @@ export const MvImage = ({image, alt}) => {
 				position: 'relative',
 				zIndex: 10
 			}}>
-				<FloatingBadge text="Diseñador Gráfico" top="80%" left="-15%" />
-				<FloatingBadge text="Tecnico en Diseño Web" top="5%" left="70%" animation="fade-right" />
+				<FloatingBadge text={<T k="about.degree1" />} top="80%" left="-15%" />
+				<FloatingBadge text={<T k="about.degree2" />} top="5%" left="70%" />
 				<Image
 					h={{ xs: 200, sm: 600 }}
 					radius="md"
