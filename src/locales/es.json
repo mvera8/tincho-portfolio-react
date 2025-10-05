@@ -5,7 +5,7 @@
 	"home.hello": "{emoji} Hola, yo soy {name}",
 	"home.title": "Desarrollador web avanzado",
 	"home.text": "Si buscás a alguien que diseñe la experiencia, construya el producto, automatice el pipeline y lo pruebe como corresponde, soy yo ❤️.",
-	"home.cta1": "Contrátame",
+	"home.cta1": "Contactame",
 	"home.cta2": "Descargar CV",
 	"home.bullets": [
 		{
@@ -13,17 +13,21 @@
 			"text": "Proyectos"
 		},
 		{
-			"title": "100%",
-			"text": "Clientes Felices"
-		},
-		{
 			"title": "10+",
 			"text": "Años de Experiencia"
+		},
+		{
+			"title": "100%",
+			"text": "Clientes Felices"
 		}
 	],
 	"about.subtitle": "Sobre mí",
 	"about.title": "Lo que hago (y me encanta):",
 	"about.text": "Construyo sitios en WordPress y web apps modernas en React, con foco en velocidad, confiabilidad y mantenibilidad. Lideré proyectos que agregan datos de múltiples propiedades (dashboards, reportes y herramientas internas), automatizan operaciones de contenido (WP-CLI, scripts, Jenkins/GitHub Actions) y mejoran el flujo de trabajo de desarrolladores end-to-end.",
+	"list.items": [
+		"Respuesta rápida y asesoria personalizada",
+		"Resultados que hablan por si solos"
+	],
 	"resume.subtitle": "Mi currículum",
 	"resume.title": "Experiencia resolviendo problemas reales",
 	"resume.jobs": [
@@ -191,7 +195,7 @@
 	],
 	"contact.subtitle": "Contacto",
 	"contact.title": "¿Listo para elevar tu producto?",
-	"contact.text": "Construyamos algo confiable, rápido y realmente útil. Yo envío. Sin drama.",
+	"contact.text": "Construyamos algo confiable, rápido y realmente útil. Yo manejo.",
 	"contact.input.name": "Tu nombre",
 	"contact.input.email": "Tu email",
 	"contact.input.email.placeholder": "hola@martinvera.com.uy",

@@ -1,4 +1,4 @@
-import { Container, SimpleGrid } from '@mantine/core'
+import { Container, Group } from '@mantine/core'
 import { TextDimmed } from './TextDimmed';
 import { SocialMedia } from './SocialMedia';
 
@@ -7,10 +7,12 @@ export const Footer = () => {
 	return (
 		<footer>
       <Container size="lg" pt="xl" pb="md">
-				<SimpleGrid cols={2}>
+				<Group justify="space-between">
 					<TextDimmed text='© 2025 MARTINVERA. All rights reserved.' />
-					<SocialMedia />
-				</SimpleGrid>
+					<Group>
+						<SocialMedia type="icon" />
+					</Group>
+				</Group>
       </Container>
     </footer>
 	)

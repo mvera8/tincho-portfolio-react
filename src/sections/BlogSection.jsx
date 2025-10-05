@@ -1,5 +1,5 @@
-import { Card, Image, SimpleGrid, Title } from '@mantine/core';
-import { Each, MvSection, SectionTitle, TextDimmed } from '../components';
+import { Image, SimpleGrid, Title } from '@mantine/core';
+import { CardBento, Each, MvSection, SectionTitle } from '../components';
 import { useI18n } from '../i18n/useI18n.js';
 import T from "../i18n/T.jsx";
 
@@ -19,24 +19,17 @@ export const BlogSection = () => {
 			<SimpleGrid cols={{ base: 1, md: 1, lg: 2 }}>
 				<Each
 					of={posts}
-					render={({ title, text }, idx) => (
-						<Card
-							key={idx}
-							radius="md"
-							component="a"
-							href="/post"
-							withBorder>
-							<SimpleGrid cols={{ base: 1, md: 1, lg: 2 }}>
-								<Image
-									src="/cleanmax.webp"
-									alt='Cleanmax'
-								/>
-								<div>
-									<Title order={4} c="gray">{title}</Title>
-									<TextDimmed text={text} />
-								</div>
-							</SimpleGrid>
-						</Card>
+					render={({ title }, idx) => (
+						<CardBento key={idx}>
+							<Image
+								radius="md"
+								mb="md"
+								src="/cleanmax.webp"
+								alt={title}
+							/>
+							<Title order={4} size="h3">{title}</Title>
+						</CardBento>
+
 					)}
 				/>
 			</SimpleGrid>

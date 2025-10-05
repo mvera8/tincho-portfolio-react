@@ -7,9 +7,9 @@ export const CardSkill = ({title, icon}) => {
 	const IconCmp = icon ?? IconBrandWordpress;
 
 	return (
-		<Card radius="lg" p="xs">
+		<Card radius="xl" p="xs">
 			<Group preventGrowOverflow={false} wrap="nowrap">
-				<ThemeIcon variant="light" color="red" radius="md" size="xl">
+				<ThemeIcon variant="light" color="red" radius="xl" size="xl">
 					<IconCmp size={40} stroke={1.5} />
 				</ThemeIcon>
 				<Title order={4} c="gray" ta="center">{title}</Title>

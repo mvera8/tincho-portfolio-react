@@ -1,3 +1,4 @@
+import { Center } from '@mantine/core';
 import { Footer, MvSection, Navbar, TextDisplay } from '../components';
 import { ContactSection } from '../sections';
 
@@ -6,7 +7,9 @@ export const ContactPage = () => {
 		<>
 			<Navbar />
 			<MvSection>
-				<TextDisplay gradient="Contacto." />
+				<Center>
+					<TextDisplay gradient="Contacto." />
+				</Center>
 			</MvSection>
 			<ContactSection />
 			<Footer />

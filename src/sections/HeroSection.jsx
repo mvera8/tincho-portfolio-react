@@ -1,6 +1,6 @@
 import { Button, Card, Grid, Group, Stack, Text } from "@mantine/core"
 import { IconArrowDownDashed, IconArrowRight } from "@tabler/icons-react";
-import { Each, MvImage, MvSection, TextDimmed, TextDisplay, TextList } from "../components";
+import { Each, MvImage, MvSection, SocialMedia, TextDimmed, TextDisplay, TextList } from "../components";
 import { useI18n } from "../i18n/useI18n.js";
 import T from "../i18n/T.jsx";
 
@@ -10,8 +10,8 @@ export const HeroSection = () => {
 	const bullets = Array.isArray(bulletsRaw) ? bulletsRaw : [];
 
 	return (
-		<MvSection size="xl">
-			<Grid justify="center" align="center" py={{base: "md", lg: "xl" }}>
+		<MvSection size="xl" padding="xs">
+			<Grid justify="center" align="center" py={{base: "md", lg: "xs" }}>
 				<Grid.Col span={{ base: 12, md: 12, lg: 5 }}>
 					<Text size="xl" c="gray" mb="xs" fw={700}>
 						<T k="home.hello" values={{ emoji: "👋", name: '"Tincho" Vera' }} />
@@ -21,18 +21,25 @@ export const HeroSection = () => {
 
 					<Group mt="xl">
 						<Button
+							component="a"
+							href="/contact"
 							variant="filled"
 							color="red"
 							size="md"
+							radius="xl"
 							rightSection={<IconArrowRight size={20} />}>
 								<T k="home.cta1" />
 						</Button>
 						<Button
-							variant="subtle"
+							component="a"
+							href="/contact"
+							variant="light"
 							size="md"
+							radius="xl"
 							rightSection={<IconArrowDownDashed size={20} />}>
 								<T k="home.cta2" />
 						</Button>
+						<SocialMedia type="icon" />
 					</Group>
 				</Grid.Col>
 

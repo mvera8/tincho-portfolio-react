@@ -3,6 +3,7 @@ export * from './CardIcon';
 export * from './CardBento';
 export * from './CardSkill';
 export * from './Each';
+export * from './FloatingBadge';
 export * from './Footer';
 export * from './Logo';
 export * from './Navbar';

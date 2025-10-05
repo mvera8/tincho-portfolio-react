@@ -5,25 +5,29 @@
 	"home.hello": "{emoji} Hello, I am {name}",
 	"home.title": "Next-Level Web Developer.",
 	"home.text": "If you want someone who designs the experience, builds the product, automates the pipeline, and tests it properly — that’s me ❤️.",
-	"home.cta1": "Hire Me",
-	"home.cta2": "Download Resume",
+	"home.cta1": "Contact Me",
+	"home.cta2": "Download CV",
 	"home.bullets": [
 		{
 			"title": "56+",
 			"text": "Projects"
 		},
 		{
-			"title": "100%",
-			"text": "Happy Clients"
-		},
-		{
 			"title": "10+",
 			"text": "Year Expertise"
+		},
+		{
+			"title": "100%",
+			"text": "Happy Clients"
 		}
 	],
 	"about.subtitle": "About Me",
 	"about.title": "Highlights of what I do (and love):",
 	"about.text": "I build production-grade WordPress sites and modern React web apps with a focus on speed, reliability, and maintainability. I’ve led projects that aggregate data across multiple properties (dashboards, reporting, and internal tools), automate content operations (WP-CLI, custom scripts, Jenkins/GitHub Actions), and improve developer workflows end-to-end.",
+	"list.items": [
+		"Quick response and personalized advice",
+		"Results that speak for themselves"
+	],
 	"resume.subtitle": "My résumé",
 	"resume.title": "Experience Solving Real Problems",
 	"resume.jobs": [

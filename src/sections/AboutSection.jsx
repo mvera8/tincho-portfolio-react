@@ -1,6 +1,6 @@
 import { useRef } from 'react';
-import { Card, Grid } from '@mantine/core';
-import { MvImage, MvList, MvSection, SectionTitle, SocialMedia } from '../components';
+import { Grid, Image } from '@mantine/core';
+import { MvList, MvSection, SectionTitle } from '../components';
 import T from "../i18n/T.jsx";
 
 export const AboutSection = () => {
@@ -13,7 +13,7 @@ export const AboutSection = () => {
   const imageSrc = `martin_vera_${pickOnce.current}.webp`;
 
   return (
-    <MvSection bg>
+    <MvSection>
       <Grid mb="md" align="center">
         <Grid.Col span={{ base: 12, md: 12, lg: 6 }}>
           <SectionTitle
@@ -22,13 +22,15 @@ export const AboutSection = () => {
             text={<T k="about.text" />}
           />
           <MvList />
-          <Card mb={10} shadow="xs" withBorder>
-            <SocialMedia align="flex-start" />
-          </Card>
         </Grid.Col>
 
         <Grid.Col span={{ base: 12, md: 12, lg: 5 }} offset={{ md: 0, lg: 1 }}>
-          <MvImage image={imageSrc} alt="Tincho Vera" />
+					<Image
+						h={{ xs: 200, sm: 600 }}
+						radius="md"
+						src={imageSrc}
+						alt="Tincho Vera"
+					/>
         </Grid.Col>
       </Grid>
     </MvSection>
