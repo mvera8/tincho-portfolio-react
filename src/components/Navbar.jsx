@@ -1,25 +1,23 @@
 import {
   Button,
-  useMantineColorScheme,
-  useComputedColorScheme,
   Container,
   Grid,
   Group,
   Menu,
   Burger,
 } from '@mantine/core';
-import { IconSun, IconMoon } from '@tabler/icons-react';
-import { Each } from './Each';
+import { Each, Logo, ThemeToggleOrb } from '../components';
 import { useLocation } from 'react-router-dom';
-import { Logo } from './Logo';
 import { useI18n } from '../i18n/useI18n.js';
 import T from "../i18n/T.jsx";
 
 const items = [
   { path: '/', name: <T k="navbar.home" /> },
+	{ path: '/services', name: <T k="navbar.services" /> },
+	{ path: '/portfolio', name: 'Portfolio' },
   { path: '/blog', name: 'Blog' },
-	{ path: '/bento', name: 'Bento Grid' },
 	{ path: '/contact', name: <T k="navbar.contact" /> },
+	// { path: '/bento', name: 'Bento Grid' },
   // { path: '/post', name: 'Post' },
   // { path: '/portfolio-post', name: 'PortfolioPost' },
   // { path: '/service-post', name: 'ServicePost' },
@@ -27,8 +25,6 @@ const items = [
 ];
 
 export const Navbar = () => {
-  const { setColorScheme } = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
   const location = useLocation();
   const { lang, setLang } = useI18n();
 
@@ -89,15 +85,9 @@ export const Navbar = () => {
               </Button.Group>
 
 							{/* Toggle tema */}
-              <Button
-                onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
-                variant="transparent"
-                color="gray"
-                px="xs"
-                aria-label="Toggle color scheme"
-              >
-                {computedColorScheme === 'light' ? <IconMoon size={20} /> : <IconSun size={20} />}
-              </Button>
+              <ThemeToggleOrb />
+
+
 
 							{/* mobile menu */}
               <Menu shadow="md" width={220}>

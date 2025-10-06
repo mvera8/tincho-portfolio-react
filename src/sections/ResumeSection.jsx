@@ -1,8 +1,9 @@
 import { ActionIcon,
+	Anchor,
 	Card,
 	Grid,
 	Table, Text, Title } from '@mantine/core'
-import { Each, MvSection, SectionTitle, TextDimmed } from '../components'
+import { Each, MvList, MvSection, SectionTitle, TextDimmed } from '../components'
 import classes from './ResumeSection.module.css';
 import { IconArrowUpRight } from '@tabler/icons-react';
 import { useI18n } from '../i18n/useI18n.js';
@@ -15,10 +16,12 @@ export const ResumeSection = () => {
 	if (jobs.length === 0) return null;
 
 	return (
-		<MvSection>
+		<MvSection bg>
 			<Grid mb="md" align="center">
 				<Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
-					<div className={classes.circle}></div>
+					<div className={classes.circle}>
+							<MvList />
+					</div>
 				</Grid.Col>
 				<Grid.Col span={{ base: 12, md: 12, lg: 7 }} offset={{ md: 0, lg: 1 }}>
 					<SectionTitle
@@ -39,7 +42,7 @@ export const ResumeSection = () => {
 													radius="xl"
 													size="xl"
 													component="a"
-													target='blank'
+													target='_blank'
 													href={link}
 													aria-label={title}>
 													<IconArrowUpRight size={22} />
@@ -49,7 +52,9 @@ export const ResumeSection = () => {
 												<TextDimmed text={time} />
 											</Table.Td>
 											<Table.Td ta="start" py="md">
-												<Title order={3} size="h2" c="gray">{title}</Title>
+												<Anchor href={link} target="_blank">
+													<Title order={3} size="h2" c="red">{title}</Title>
+												</Anchor>
 												<Text>{puesto}</Text>
 											</Table.Td>
 										</Table.Tr>

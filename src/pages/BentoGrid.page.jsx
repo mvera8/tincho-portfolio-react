@@ -1,6 +1,6 @@
-import { Badge, Box, Button, Card, Container, Grid, Group, Image, SimpleGrid, Stack, Title, useMantineTheme } from "@mantine/core"
-import { CardBento, CardSkill, Logo, Navbar, SocialMedia, TextDimmed, TextList } from '../components';
-import { IconArrowDownDashed, IconArrowRight, IconBook, IconBriefcaseFilled, IconBrush, IconCode, IconMapPin, IconStackBack, IconSunFilled, IconWorld } from "@tabler/icons-react";
+import { Box, Button, Container, Grid, Group, Image, SimpleGrid, Stack, useMantineTheme } from "@mantine/core"
+import { CardBento, CardSkill, GroupBadge, Logo, Navbar, SocialMedia, TextList } from '../components';
+import { IconArrowDownDashed, IconArrowRight, IconBriefcaseFilled, IconStackBack, IconSunFilled } from "@tabler/icons-react";
 import T from "../i18n/T.jsx";
 
 export const BentoGridPage = () => {
@@ -16,9 +16,9 @@ export const BentoGridPage = () => {
 				}}>
 				<Container fluid>
 					<Grid>
-						<Grid.Col span={7}>
+						<Grid.Col span={8}>
 							<Grid>
-								<Grid.Col span={5}>
+								<Grid.Col span={7}>
 									<Stack>
 										<CardBento title="Tech Arsenal" icon={<IconStackBack />} subtitle="My Stacks" bg>
 											<SimpleGrid cols={2}>
@@ -47,7 +47,23 @@ export const BentoGridPage = () => {
 									</Stack>
 								</Grid.Col>
 
-								<Grid.Col span={7}>
+								<Grid.Col span={5}>
+									<Stack>
+									<CardBento bg="red.1">
+										<Logo type="gradient" />
+									</CardBento>
+										<Image radius="md" src="/martin_vera.webp" alt="Cleanmax" />
+
+										
+									</Stack>
+								</Grid.Col>
+							</Grid>
+						</Grid.Col>
+
+
+						<Grid.Col span={4}>
+							<Grid>
+								<Grid.Col span={12}>
 									<Stack>
 										<SimpleGrid cols={{ base: 1, xs: 3 }}>
 											<CardBento bg>
@@ -62,13 +78,7 @@ export const BentoGridPage = () => {
 										</SimpleGrid>
 
 										<CardBento bg>
-											<Group gap="xs" mb="md">
-												<Badge variant="default" size="lg" leftSection={ <IconMapPin size={20} color="red" />}>Uruguay</Badge>
-												<Badge variant="default" size="lg" leftSection={ <IconWorld size={20} color="red" />}>Spanish & English</Badge>
-												<Badge variant="default" size="lg" leftSection={ <IconCode size={20} color="red" />}>Tecnico en Diseño Web</Badge>
-												<Badge variant="default" size="lg" leftSection={ <IconBrush size={20} color="red" />}>Diseñador Gráfico</Badge>
-												<Badge variant="default" size="lg" leftSection={ <IconBook size={20} color="red" />}>Universidad ORT</Badge>
-											</Group>
+											<GroupBadge />
 											<Group grow>
 											<Button
 												variant="filled"
@@ -86,99 +96,23 @@ export const BentoGridPage = () => {
 												
 											</Group>
 										</CardBento>
-									</Stack>
-								</Grid.Col>
-							</Grid>
-						</Grid.Col>
 
-						<Grid.Col span={5}>
-							<Grid>
-								<Grid.Col span={7}>
-									<Stack>
-										<Image radius="md" src="/martin_vera.webp" alt="Cleanmax" />
+										<CardBento title="Online Presence" icon={<IconSunFilled />} subtitle="Follow Me" bg>
+										<SocialMedia />
+									</CardBento>
 									</Stack>
 									
 
 								</Grid.Col>
 
-								<Grid.Col span={5}>
-									<CardBento bg="red.1">
-										<Logo type="gradient" />
-									</CardBento>
 
-									<CardBento title="Tech Arsenal" icon={<IconStackBack />} subtitle="My Stacks" bg>
-										<SimpleGrid cols={2}>
-										<Button variant="default">Second</Button>
-										<Button variant="default">Third</Button>
-										</SimpleGrid>
-									</CardBento>
-
-
-								</Grid.Col>
-
-								<Grid.Col span={5}>
-									<CardBento title="Online Presence" icon={<IconSunFilled />} subtitle="Follow Me" bg>
-										<SocialMedia />
-									</CardBento>
-								</Grid.Col>
-
-								<Grid.Col span={7}>
-									<Card bg="red.9">
-										a
-									</Card>
-									<Card bg="red.7">
-										b
-									</Card>
-								</Grid.Col>
 							</Grid>
 						</Grid.Col>
 					</Grid>
 
 
 
-					<SimpleGrid cols={{ base: 1, xs: 4 }}>
-						
-
-						
-
-
-						
-
-						<Stack>
-							
-
-
-							
-							<Card
-								padding="xl"
-								radius="md"
-								bg={theme.colors.red[1]}
-								withBorder>									
-								
-								<Card.Section>
-									<Box
-										mx="xl"
-										p="xl"
-										pt={0}>
-										<Image
-											src="/wp-admin-dashboard.webp"
-											h="auto"
-											alt="WordPress Dashboard"
-										/>
-									</Box>
-								</Card.Section>
-	
-								<Title order={4} c="dark" mb="xs">Fast, Responsive Websites</Title>
-								<TextDimmed text="I build websites that load quickly and look great on any device, ensuring your visitors have a seamless experience." />
-	
-							</Card>
-						</Stack>
-
-						<Stack>
-							
-							<Image radius="md" src="/cleanmax.webp" alt="Cleanmax" />
-						</Stack>
-					</SimpleGrid>
+					
 				</Container>
 			</div>
 		</>

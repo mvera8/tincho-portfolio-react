@@ -1,15 +1,5 @@
 .circle {
-	border-radius: 20px;
-	border: 0.5px solid rgba(255, 255, 255, 0.05);
-	background: rgba(22, 22, 22, 0.3);
-	box-shadow: 15px 26.023px 50px 0px rgba(253, 196, 72, 0.04);
 	backdrop-filter: blur(35px);
-	padding: 64px 80px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	height: 300px;
 }
 
 .circle::after {

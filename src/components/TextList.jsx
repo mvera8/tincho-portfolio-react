@@ -1,16 +1,16 @@
-import { Divider, Text } from '@mantine/core'
+import { Box, Divider, Title } from '@mantine/core'
 import PropTypes from 'prop-types';
 import { TextDimmed } from './TextDimmed';
 
 export const TextList = ({ title, text, showDivider = false }) => {
 	return (
-		<div>
-			<Text fw={700} c="red" size="xl" mb={0}>{title}</Text>
-			<TextDimmed text={text} />
+		<Box ta="center">
+			<Title order={5} size="h1" c="red" mb={0}>{title}</Title>
+			<TextDimmed text={text} align="center" />
 			{showDivider && (
 				<Divider mt="lg" />
       )}
-		</div>
+		</Box>
 	)
 }
 

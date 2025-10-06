@@ -3,9 +3,29 @@ import { ArticleCardImage, Footer, Navbar, SectionTitle, TextDimmed, TextDisplay
 import { ContactSection, FaqsSection } from "../sections"
 import { IconChevronRight } from "@tabler/icons-react";
 import T from "../i18n/T.jsx";
+import { Navigate, useParams } from "react-router-dom";
+import { useI18n } from "../i18n/useI18n.js";
+import { useMemo } from "react";
+import { slugify } from "../helpers/slugify.js";
 
 export const ServicePostPage = () => {
 	const theme = useMantineTheme();
+	const { slug } = useParams();
+	const { get } = useI18n();
+
+	const itemsRaw = get("services.items");
+	const items = Array.isArray(itemsRaw) ? itemsRaw : [];
+
+	// Busca el item por slug
+	const item = useMemo(() => {
+		const bySlug = new Map(items.map((p) => [slugify(p.id), p]));
+		return bySlug.get(slug);
+	}, [items, slug]);
+
+	if (!item) {
+		// 404 elegante: vuelve al listado o a una página de no encontrado
+		return <Navigate to="/services" replace />;
+	}
 
 	return (
 		<>
@@ -13,7 +33,7 @@ export const ServicePostPage = () => {
 			<Box component="section">
 				<Container size="sm" py="xl" style={{ textAlign: 'center' }}>
 					<Text size="xl" c="dimmed" mb="xs">🚀 Must-to know about</Text>
-					<TextDisplay gradient="WordPress" />
+					<TextDisplay gradient={item.title} />
 					<TextDimmed align="center" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur tincidunt elit, nec consequat nisi dictum vel. Ut vitae orci at ligula luctus viverra." />
 
 					<Button
