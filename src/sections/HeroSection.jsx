@@ -11,7 +11,7 @@ export const HeroSection = () => {
 
 	return (
 		<MvSection size="xl" padding="xs">
-			<Grid justify="center" align="center" py={{base: "md", lg: "xs" }}>
+			<Grid justify="center" align="center" pb="xl" pt="md">
 				<Grid.Col span={{ base: 12, md: 12, lg: 5 }}>
 					<Text size="xl" c="gray" mb="xs">
 						<T k="home.hello" values={{ emoji: "👋", name: '"Tincho" Vera' }} />

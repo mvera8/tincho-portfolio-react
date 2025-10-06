@@ -16,3 +16,4 @@ export * from './SocialMedia';
 export * from './TextDimmed';
 export * from './TextDisplay';
 export * from './TextList';
+export * from './ThemeToggleOrb';

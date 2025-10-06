@@ -1,21 +1,15 @@
 import {
   Button,
-  useMantineColorScheme,
-  useComputedColorScheme,
   Container,
   Grid,
   Group,
   Menu,
   Burger,
-	UnstyledButton,
 } from '@mantine/core';
-import { IconSun, IconMoon } from '@tabler/icons-react';
-import { Each } from './Each';
+import { Each, Logo, ThemeToggleOrb } from '../components';
 import { useLocation } from 'react-router-dom';
-import { Logo } from './Logo';
 import { useI18n } from '../i18n/useI18n.js';
 import T from "../i18n/T.jsx";
-import classes from "./Navbar.module.css";
 
 const items = [
   { path: '/', name: <T k="navbar.home" /> },
@@ -31,8 +25,6 @@ const items = [
 ];
 
 export const Navbar = () => {
-  const { setColorScheme } = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
   const location = useLocation();
   const { lang, setLang } = useI18n();
 
@@ -93,47 +85,8 @@ export const Navbar = () => {
               </Button.Group>
 
 							{/* Toggle tema */}
-              <Button
-                onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
-                variant="transparent"
-                color="gray"
-                px="xs"
-                aria-label="Toggle color scheme"
-              >
-                {computedColorScheme === 'light' ? <IconMoon size={20} /> : <IconSun size={20} />}
-              </Button>
-							<UnstyledButton
-								onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
-                aria-label="Toggle color scheme"
-							>Button without styles</UnstyledButton>
+              <ThemeToggleOrb />
 
-<input id="switch" type="checkbox" />
-<div className={classes.app}>
-  <div className={classes.body}>
-    
-    <div className={classes.phone}>
-  
-    
-      <div className={classes.content}>
-        <div className={classes.circle}>
-          <div className={classes.crescent}></div>
-        </div>
-       
-        <label htmlFor="switch">
-          <div className={classes.toggle}></div>
-          <div className={classes.names}>
-            <p className={classes.light}>Light</p>
-            <p className={classes.dark}>Dark</p>
-          </div>
-        </label>
-        
-       
-      </div>
-      
-    </div>
-  </div>
-  
-</div>
 
 
 							{/* mobile menu */}

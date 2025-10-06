@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Badge, Transition } from '@mantine/core';
 import PropTypes from 'prop-types';
 
-const toCss = (v) => (typeof v === 'number' ? `${v}px` : v);
+const toCss = (v) => (v == null ? undefined : typeof v === 'number' ? `${v}px` : v);
 
 export const FloatingBadge = ({ text, top, left, animation = "fade-left" }) => {
   const [mounted, setMounted] = useState(false);
@@ -36,8 +36,8 @@ export const FloatingBadge = ({ text, top, left, animation = "fade-left" }) => {
 };
 
 FloatingBadge.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.node.isRequired,
   top: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   left: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-	animation: PropTypes.string,
+  animation: PropTypes.string,
 };

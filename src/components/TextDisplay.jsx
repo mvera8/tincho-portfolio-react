@@ -20,5 +20,5 @@ export const TextDisplay = ({text, gradient}) => {
 
 TextDisplay.propTypes = {
 	text: PropTypes.object,
-	gradient: PropTypes.string.isRequired,
+	gradient: PropTypes.object,
 };
