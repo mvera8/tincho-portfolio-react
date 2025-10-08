@@ -39,7 +39,7 @@ export const ResumeSection = () => {
 												size="xl"
 												component="a"
 												target='_blank'
-												href={link}
+												href={link + '?ref=martinvera.com.uy'}
 												aria-label={title}>
 												<IconArrowUpRight size={22} />
 											</ActionIcon>
@@ -48,7 +48,7 @@ export const ResumeSection = () => {
 											<TextDimmed text={time} />
 										</Table.Td>
 										<Table.Td ta="start" py="md">
-											<Anchor href={link} target="_blank">
+											<Anchor href={link + '?ref=martinvera.com.uy'} target="_blank">
 												<Title order={3} size="h2" c="red">{title}</Title>
 											</Anchor>
 											<Text>{puesto}</Text>

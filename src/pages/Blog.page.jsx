@@ -1,6 +1,5 @@
 import { Center, SimpleGrid, Stack } from '@mantine/core';
 import { ArticleCardImage, Footer, MvSection, Navbar, TextDisplay } from '../components';
-import { ContactSection } from '../sections';
 
 export const BlogPage = () => {
 	return (
@@ -20,8 +19,6 @@ export const BlogPage = () => {
 					</Stack>
 				</SimpleGrid>
 			</MvSection>
-
-			<ContactSection />
 			<Footer />
 		</>
 	)

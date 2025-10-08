@@ -7,7 +7,7 @@ export const MvSection = ({ children, bg = false, size = "lg", align = "left", p
   // Resolver valor final de background
   let bgValue;
   if (bg === true) {
-    bgValue = colorScheme === "dark" ? "dark" : "red.1";
+    bgValue = colorScheme === "dark" ? "dark" : "gray.1";
   } else if (bg === false || bg == null) {
     bgValue = "transparent";
   } else {
