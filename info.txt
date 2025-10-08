@@ -14,6 +14,8 @@ https://lander.studio/
 
 https://geroldlight.themejunction.net/portfolios/deloitte/
 
+https://lumina-product.framer.website/
+
 Task:
 - Mobile
 - Hover items above elements

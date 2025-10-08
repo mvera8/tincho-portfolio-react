@@ -12,7 +12,7 @@ export const MvImage = ({image, alt}) => {
 				<FloatingBadge text={<T k="about.degree1" />} top="80%" left="-15%" />
 				<FloatingBadge text={<T k="about.degree2" />} top="5%" left="70%" />
 				<Image
-					h={{ xs: 200, sm: 600 }}
+					h={{ xs: 200, sm: 650 }}
 					radius="md"
 					src={"/" + image}
 					alt={alt}

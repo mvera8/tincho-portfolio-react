@@ -1,16 +1,17 @@
-import { Button, Card, Grid, Group, Stack, Text } from "@mantine/core"
+import { Button, Card, Grid, Group, Stack, Text, useMantineColorScheme } from "@mantine/core"
 import { IconArrowDownDashed, IconArrowRight } from "@tabler/icons-react";
-import { Each, MvImage, MvSection, SocialMedia, TextDimmed, TextDisplay, TextList } from "../components";
+import { Each, MvImage, MvSection, TextDimmed, TextDisplay, TextList } from "../components";
 import { useI18n } from "../i18n/useI18n.js";
 import T from "../i18n/T.jsx";
 
 export const HeroSection = () => {
+	const colorScheme = useMantineColorScheme();
 	const { get } = useI18n();
 	const bulletsRaw = get("home.bullets");
 	const bullets = Array.isArray(bulletsRaw) ? bulletsRaw : [];
 
 	return (
-		<MvSection size="xl" padding="xs">
+		<MvSection size="xl" padding="md">
 			<Grid justify="center" align="center" pb="xl" pt="md">
 				<Grid.Col span={{ base: 12, md: 12, lg: 5 }}>
 					<Text size="xl" c="gray" mb="xs">
@@ -23,23 +24,24 @@ export const HeroSection = () => {
 						<Button
 							component="a"
 							href="/contact"
-							variant="filled"
-							color="red"
-							size="md"
-							radius="xl"
+							variant="gradient"
+							gradient={{ from: colorScheme.colorScheme === 'dark' ? 'red.8' : 'red.4', to: 'white', deg: 180 }}
+							c="black"
+							size="xl"
+							radius="md"
 							rightSection={<IconArrowRight size={20} />}>
 								<T k="home.cta1" />
 						</Button>
 						<Button
 							component="a"
 							href="/contact"
-							variant="light"
-							size="md"
-							radius="xl"
+							variant="outline"
+							color={colorScheme.colorScheme === 'dark' ? 'white' : 'dark'}
+							size="xl"
+							radius="md"
 							rightSection={<IconArrowDownDashed size={20} />}>
 								<T k="home.cta2" />
 						</Button>
-						<SocialMedia type="icon" />
 					</Group>
 				</Grid.Col>
 
