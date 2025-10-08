@@ -5,8 +5,8 @@
 .circle::after {
 	content: "";
 	position: absolute;
-	left: 0;
-	top: 10px;
+	left: -300px;
+	top: 100px;
 	background: linear-gradient(0deg, rgba(255, 1, 79, 0) 15.49%, var(--mantine-color-red-5) 100%);
 	filter: blur(2px);
 	border-radius: 100%;
