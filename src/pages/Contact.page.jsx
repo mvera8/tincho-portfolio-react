@@ -1,6 +1,6 @@
 import { Center } from '@mantine/core';
 import { Footer, MvSection, Navbar, TextDisplay } from '../components';
-import { ContactSection } from '../sections';
+import { ContactSection, FaqsSection } from '../sections';
 import T from "../i18n/T.jsx";
 
 export const ContactPage = () => {
@@ -13,6 +13,7 @@ export const ContactPage = () => {
 				</Center>
 			</MvSection>
 			<ContactSection />
+			<FaqsSection />
 			<Footer />
 		</>
 	)

@@ -1,6 +1,6 @@
 import { Box, Button, Card, Container, Image, SimpleGrid, Text, Title, useMantineTheme } from "@mantine/core"
 import { ArticleCardImage, Footer, Navbar, SectionTitle, TextDimmed, TextDisplay, TextList } from "../components"
-import { ContactSection, FaqsSection } from "../sections"
+import { FaqsSection } from "../sections"
 import { IconChevronRight } from "@tabler/icons-react";
 import T from "../i18n/T.jsx";
 import { Navigate, useParams } from "react-router-dom";
@@ -148,7 +148,6 @@ export const ServicePostPage = () => {
 			</Box>
 
 			<FaqsSection />
-			<ContactSection />
 			<Footer />
 		</>
 	)

@@ -24,8 +24,7 @@ export const HeroSection = () => {
 						<Button
 							component="a"
 							href="/contact"
-							variant="gradient"
-							gradient={{ from: colorScheme.colorScheme === 'dark' ? 'red.8' : 'red.4', to: 'white', deg: 180 }}
+							variant="white"
 							c="black"
 							size="xl"
 							radius="md"
