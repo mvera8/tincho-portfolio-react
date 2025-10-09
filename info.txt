@@ -16,6 +16,9 @@ https://geroldlight.themejunction.net/portfolios/deloitte/
 
 https://lumina-product.framer.website/
 
+Compare:
+https://www.npmjs.com/package/react-compare-image
+
 Task:
 - Mobile
 - Hover items above elements

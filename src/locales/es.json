@@ -73,7 +73,39 @@
 			"items": [
 				{
 					"title": "Manage your site in the most prodcutive way",
+					"text": "Tu web, tus datos, tu hosting. Sin depender de plataformas cerradas.",
+					"bg": "radial-gradient(circle 350px at 50% 100%, rgba(239,68,68,0.4), transparent)",
 					"image": "dashboard"
+				},
+				{
+					"title": "Potencia sin límites",
+					"text": "De blogs a portales con millones de visitas. WordPress escala contigo.",
+					"bg": true,
+					"image": "world"
+				},
+				{
+					"title": "Diseño a tu medida",
+					"text": "Personalizá cada detalle: colores, tipografías y estructura.",
+					"bg": "red",
+					"image": "Editor visual con bloques y paleta de colores."
+				},
+				{
+					"title": "Plugins para todo",
+					"text": "SEO, reservas, seguridad o automatización — todo está a un clic.",
+					"bg": "red.1",
+					"image": "Grid de íconos tipo plugin (engranaje, gráfico, candado, calendario)."
+				},
+				{
+					"title": "Comunidad global",
+					"text": "Millones de desarrolladores, soporte constante y mejoras diarias.",
+					"bg": "",
+					"image": "Ilustración de red de personas conectadas o burbujas de chat."
+				}
+			],
+			"faqs": [
+				{
+					"answer": "Manage your site in the most prodcutive way",
+					"question": "Tu web, tus datos, tu hosting. Sin depender de plataformas cerradas."
 				}
 			]
 		},
@@ -81,7 +113,13 @@
 			"id": "apps",
 			"title": "Diseño y Desarrollo de Apps",
 			"icon": "IconDeviceMobile",
-			"description": "Apps rápidas y escalables en React / Next.js con UI moderna."
+			"description": "Apps rápidas y escalables en React / Next.js con UI moderna.",
+			"items": [
+				{
+					"title": "Lighting Fast",
+					"image": "lighting"
+				}
+			]
 		},
 		{
 			"id": "design",

@@ -1,5 +1,6 @@
-import { Box, Center, Paper, Text, ThemeIcon, Title, useMantineColorScheme } from "@mantine/core";
+import { Box, Card, ThemeIcon, Title, useMantineColorScheme } from "@mantine/core";
 import PropTypes from "prop-types";
+import { TextDimmed } from "./TextDimmed";
 
 export const CardBento = ({ children, bg = false, title, subtitle, icon }) => {
   const { colorScheme } = useMantineColorScheme();
@@ -10,24 +11,34 @@ export const CardBento = ({ children, bg = false, title, subtitle, icon }) => {
     : "transparent";
 
   return (
-    <Paper bg={bgValue} radius="lg" ta="center" pb={0}>
-      {subtitle && (
-				<Center mt="sm" mb={0}>
-					{icon &&
-						<ThemeIcon
-						variant="transparent"
-						color="red"
-						mr="xs"
-						size="sm"
-						aria-label={subtitle}>
-						{icon}
-					</ThemeIcon>}
-					<Text size="lg" c="dimmed">{subtitle}</Text>
-				</Center>
+		<Card
+			padding="xl"
+			radius="md"
+			withBorder
+			bg={bgValue}
+		>		
+			{icon &&
+				<ThemeIcon
+					variant="transparent"
+					color="red"
+					mr="xs"
+					size="sm"
+					aria-label={subtitle}>
+					{icon}
+				</ThemeIcon>}							
+			{title && <Title order={4} size="h3" mb="sm">{title}</Title>}
+			{subtitle && (
+				<TextDimmed text={subtitle} />
       )}
-      {title && <Title order={4} size="h3">{title}</Title>}
-      <Box p="lg">{children}</Box>
-    </Paper>
+			<Card.Section>
+				<Box
+					mx="xl"
+					p="xl"
+					pb={0}>
+					{children}
+				</Box>
+			</Card.Section>
+		</Card>
   );
 };
 
