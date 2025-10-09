@@ -1,5 +1,5 @@
-import { Box, Button, Card, Container, Image, SimpleGrid, Text, Title, useMantineTheme } from "@mantine/core"
-import { ArticleCardImage, Footer, Navbar, SectionTitle, TextDimmed, TextDisplay, TextList } from "../components"
+import { Button, Card, Image, SimpleGrid, Text, Title, useMantineColorScheme } from "@mantine/core"
+import { CardBento, Each, Footer, MvSection, Navbar, SectionTitle, TextDimmed, TextDisplay, TextList } from "../components"
 import { FaqsSection } from "../sections"
 import { IconChevronRight } from "@tabler/icons-react";
 import T from "../i18n/T.jsx";
@@ -9,7 +9,7 @@ import { useMemo } from "react";
 import { slugify } from "../helpers/slugify.js";
 
 export const ServicePostPage = () => {
-	const theme = useMantineTheme();
+	const { colorScheme } = useMantineColorScheme();
 	const { slug } = useParams();
 	const { get } = useI18n();
 
@@ -30,124 +30,65 @@ export const ServicePostPage = () => {
 	return (
 		<>
 			<Navbar />
-			<Box component="section">
-				<Container size="sm" py="xl" style={{ textAlign: 'center' }}>
-					<Text size="xl" c="dimmed" mb="xs">🚀 Must-to know about</Text>
-					<TextDisplay gradient={item.title} />
-					<TextDimmed align="center" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur tincidunt elit, nec consequat nisi dictum vel. Ut vitae orci at ligula luctus viverra." />
+			<MvSection size="sm">
+				<Text size="xl" c="dimmed" mb="xs" ta="center">🚀 Must-to know about</Text>
+				<TextDisplay gradient={item.title} align="center" />
+				<TextDimmed align="center" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur tincidunt elit, nec consequat nisi dictum vel. Ut vitae orci at ligula luctus viverra." />
 
-					<Button
-						variant="filled"
-						color="red"
-						size="md"
-						mt="md"
-						rightSection={<IconChevronRight size={20} />}>See More</Button>
-				</Container>
-			</Box>	
+				<Button
+					variant="filled"
+					color="red"
+					size="md"
+					mt="md"
+					rightSection={<IconChevronRight size={20} />}>See More</Button>
 
-			<Box component="section" py="xl">
-				<Container size="lg" pt="md">
-					<SectionTitle
-						title={<T k="services.section.title" />}
-						subtitle={<T k="services.section.subtitle" />}
-						centerText
-					/>
-					
-					<SimpleGrid mb="xl" cols={{ base: 1, xs: 2 }}>
-						<Card
-							padding="xl"
-							radius="md"
-							withBorder
-							style={{
-								height: '100%',
-								backgroundImage: `radial-gradient(circle 350px at 50% 100%, rgba(239,68,68,0.4), transparent)`,
-							}}
-						>									
-							<Title order={4} mb="xs">Fast, Responsive Websites</Title>
-							<TextDimmed text="I build websites that load quickly and look great on any device, ensuring your visitors have a seamless experience." />
+			</MvSection>
 
-							<Card.Section>
-								<Box
-									mx="xl"
-									p="xl"
-									pb={0}>
+			{item.items &&
+				<>
+					<MvSection padding="xs">
+						<SectionTitle
+							title={<T k="services.section.title" />}
+							subtitle={<T k="services.section.subtitle" />}
+							centerText
+						/>
+				
+						<SimpleGrid mb="lg" cols={{ base: 1, xs: 2 }}>
+							<Each
+							of={item.items}
+							render={({ title, text, bg }, idx) => (
+								<CardBento
+									key={idx}
+									title={title}
+									subtitle={text}
+									
+									bg={bg}
+								>
 									<Image
 										src="/wp-admin-dashboard.webp"
 										h="auto"
-										alt="WordPress Dashboard"
+										alt={title}
 									/>
-								</Box>
-							</Card.Section>
-						</Card>
-
-						<Card
-							padding="xl"
-							radius="md"
-							bg={theme.colors.red[1]}
-							withBorder>									
-							
-							<Card.Section>
-								<Box
-									mx="xl"
-									p="xl"
-									pt={0}>
-									<Image
-										src="/wp-admin-dashboard.webp"
-										h="auto"
-										alt="WordPress Dashboard"
-									/>
-								</Box>
-							</Card.Section>
-
-							<Title order={4} c="dark" mb="xs">Fast, Responsive Websites</Title>
-							<TextDimmed text="I build websites that load quickly and look great on any device, ensuring your visitors have a seamless experience." />
-
-						</Card>
-
-					</SimpleGrid>
-					<SimpleGrid cols={{ base: 1, xs: 3 }}>
-						<Card
-							padding="xl"
-							radius="md"
-							withBorder
-							style={{
-								height: '100%',
-							}}
-						>									
-							<Title order={4} mb="xs">Custom themes and plugins</Title>
-							<Card.Section>
-								<Box
-									p="xl"
-									pb={0}>
-									<Image
-										src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"
-										height={100}
-										alt="Norway"
-									/>
-								</Box>
-							</Card.Section>
-						</Card>
-						<ArticleCardImage />
-						<ArticleCardImage />
-					</SimpleGrid>
-				</Container>
-			</Box>	
-
-			<Box component="section">
-				<Container size="lg">
-					<Card p="xl" radius="md">
-						<SimpleGrid cols={4}>
-							<Title order={2}>WordPress Information</Title>
-							<TextList title="2003" text="En ese año nace como herramienta de blogs" />
-							<TextList title="43%" text="De los sitios en internet usan WordPress." />
-							<TextList title="65%" text="De los CMS son WordPress" />
+								</CardBento>
+							)}
+							/>
 						</SimpleGrid>
-						
-					</Card>
-				</Container>
-			</Box>
 
-			<FaqsSection />
+						<Card p="xl" radius="md" bg={colorScheme === "dark" ? "dark" : "gray.1"}>
+							<SimpleGrid cols={4}>
+								<Title order={2}>WordPress Information</Title>
+								<TextList title="2003" text="En ese año nace como herramienta de blogs" />
+								<TextList title="43%" text="De los sitios en internet usan WordPress." />
+								<TextList title="65%" text="De los CMS son WordPress" />
+							</SimpleGrid>
+						</Card>
+
+					</MvSection>
+				</>
+			}
+			{item.faqs &&
+				<FaqsSection faqs={item.faqs} />
+			}			
 			<Footer />
 		</>
 	)
