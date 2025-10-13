@@ -8,7 +8,7 @@ import { useI18n } from "../i18n/useI18n.js";
 import { useMemo } from "react";
 import { slugify } from "../helpers/slugify.js";
 
-export const ServicePostPage = () => {
+export const ServicesPostPage = () => {
 	const { colorScheme } = useMantineColorScheme();
 	const { slug } = useParams();
 	const { get } = useI18n();
@@ -34,14 +34,6 @@ export const ServicePostPage = () => {
 				<Text size="xl" c="dimmed" mb="xs" ta="center">🚀 Must-to know about</Text>
 				<TextDisplay gradient={item.title} align="center" />
 				<TextDimmed align="center" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur tincidunt elit, nec consequat nisi dictum vel. Ut vitae orci at ligula luctus viverra." />
-
-				<Button
-					variant="filled"
-					color="red"
-					size="md"
-					mt="md"
-					rightSection={<IconChevronRight size={20} />}>See More</Button>
-
 			</MvSection>
 
 			{item.items &&

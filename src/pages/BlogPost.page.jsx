@@ -6,7 +6,7 @@ import { Footer, MvSection, Navbar } from '../components';
 import { useI18n } from '../i18n/useI18n.js';
 import { slugify } from '../helpers/slugify';
 
-export const PostPage = () => {
+export const BlogPostPage = () => {
   const { slug } = useParams();
   const { get } = useI18n();
 

@@ -1,8 +1,7 @@
-import { Image, SimpleGrid, Title } from '@mantine/core';
-import { CardBento, Each, MvSection, SectionTitle } from '../components';
+import { Box, Image, SimpleGrid, Title } from '@mantine/core';
+import { CardLink, Each, MvSection, SectionTitle } from '../components';
 import { useI18n } from '../i18n/useI18n.js';
 import { slugify } from '../helpers/slugify';
-import { Link } from 'react-router-dom';
 import T from "../i18n/T.jsx";
 
 export const BlogSection = () => {
@@ -24,12 +23,12 @@ export const BlogSection = () => {
           render={({ title }, idx) => {
             const slug = slugify(title);
             return (
-              <Link key={idx} to={`/blog/${slug}`} style={{ textDecoration: 'none' }}>
-                <CardBento>
-                  <Image radius="md" mb="md" src="/cleanmax.webp" alt={title} />
-                  <Title order={4} size="h3">{title}</Title>
-                </CardBento>
-              </Link>
+							<CardLink key={idx} link={`/blog/${slug}`}>
+								<Box p="md">
+								<Image radius="md" mb="md" src="/cleanmax.webp" alt={title} />
+								<Title p="md" order={3} size="h2" c="gray">{title}</Title>
+								</Box>
+							</CardLink>
             );
           }}
         />

@@ -1,6 +1,6 @@
 import { createTheme, MantineProvider } from '@mantine/core';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { HomePage, PostPage, PortfolioPostPage, BlogPage, TestPage, ServicePostPage, BentoGridPage, ContactPage, ServicesPage, PortfolioPage } from './pages';
+import { HomePage, BlogPostPage, PortfolioPostPage, BlogPage, TestPage, ServicesPostPage, BentoGridPage, ContactPage, ServicesPage, PortfolioPage } from './pages';
 import ErrorPage from './error-page';
 import LanguageProvider from './i18n/LanguageProvider';
 
@@ -15,11 +15,11 @@ const theme = createTheme({
 			"#f2d9da",
 			"#e8afb2",
 			"#df8286",
-			"#d75c62",
+			"#f44d6d", // primary
 			"#d3454a",
 			"#d2393e",
 			"#ba2d31",
-			"#a6262b",
+			"#a90024",
 			"#8e1b22"
 		],
   },
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
   },
 	{
     path: "services/:slug",
-    element: <ServicePostPage />,
+    element: <ServicesPostPage />,
   },
 	{
     path: "portfolio",
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
   },
 	{
     path: "blog/:slug",
-    element: <PostPage />,
+    element: <BlogPostPage />,
   },
   {
     path: "contact",
