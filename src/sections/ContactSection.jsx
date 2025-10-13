@@ -1,5 +1,5 @@
-import { Button, Grid, SimpleGrid, Stack, Textarea, TextInput, useMantineColorScheme } from "@mantine/core"
-import { MvList, MvSection, SectionTitle } from "../components"
+import { Grid, SimpleGrid, Stack, Textarea, TextInput, useMantineColorScheme } from "@mantine/core"
+import { MvButton, MvList, MvSection, SectionTitle } from "../components"
 import { IconChevronRight } from "@tabler/icons-react"
 import { useI18n } from "../i18n/useI18n.js";
 import T from "../i18n/T.jsx";
@@ -37,14 +37,11 @@ export const ContactSection = () => {
 								minRows={3}
 							/>
 
-							<Button
+							<MvButton
 								type="submit"
-								variant="filled"
-								color="red"
-								size="lg"
-								rightSection={<IconChevronRight size={20} />}>
-									<T k="contact.input.btn" />
-							</Button>
+								text={<T k="contact.input.btn" />}
+								Icon={IconChevronRight}
+							/>
 
 						</Stack>
 					</form>

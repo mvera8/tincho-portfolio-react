@@ -1,6 +1,6 @@
-import { Button, Card, Grid, Group, Stack, Text, useMantineColorScheme } from "@mantine/core"
+import { Card, Grid, Group, Stack, Text, useMantineColorScheme } from "@mantine/core"
 import { IconArrowDownDashed, IconArrowRight } from "@tabler/icons-react";
-import { Each, MvImage, MvSection, TextDimmed, TextDisplay, TextList } from "../components";
+import { Each, MvButton, MvImage, MvSection, TextDimmed, TextDisplay, TextList } from "../components";
 import { useI18n } from "../i18n/useI18n.js";
 import T from "../i18n/T.jsx";
 
@@ -21,26 +21,19 @@ export const HeroSection = () => {
 					<TextDimmed text={<T k="home.text" />} />
 
 					<Group mt="xl">
-						<Button
-							component="a"
-							href="/contact"
+						<MvButton
+							text={<T k="home.cta1" />}
+							link="/contact"
 							variant="white"
-							c="black"
-							size="xl"
-							radius="md"
-							rightSection={<IconArrowRight size={20} />}>
-								<T k="home.cta1" />
-						</Button>
-						<Button
-							component="a"
-							href="/contact"
+							Icon={IconArrowRight}
+						/>
+						<MvButton
+							text={<T k="home.cta2" />}
+							link="/bento"
 							variant="outline"
-							color={colorScheme.colorScheme === 'dark' ? 'white' : 'dark'}
-							size="xl"
-							radius="md"
-							rightSection={<IconArrowDownDashed size={20} />}>
-								<T k="home.cta2" />
-						</Button>
+							color={colorScheme.colorScheme === 'dark' ? 'white' : 'red'}
+							Icon={IconArrowDownDashed}
+						/>
 					</Group>
 				</Grid.Col>
 

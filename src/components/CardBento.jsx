@@ -1,6 +1,6 @@
 import { Box, Card, ThemeIcon, Title, useMantineColorScheme } from "@mantine/core";
-import PropTypes from "prop-types";
 import { TextDimmed } from "./TextDimmed";
+import PropTypes from "prop-types";
 
 export const CardBento = ({ children, bg = false, title, subtitle, icon }) => {
   const { colorScheme } = useMantineColorScheme();

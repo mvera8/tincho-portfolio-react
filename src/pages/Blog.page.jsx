@@ -1,5 +1,6 @@
-import { Center, SimpleGrid, Stack } from '@mantine/core';
-import { ArticleCardImage, Footer, MvSection, Navbar, TextDisplay } from '../components';
+import { Center } from '@mantine/core';
+import { Footer, MvSection, Navbar, TextDisplay } from '../components';
+import { BlogSection } from '../sections';
 
 export const BlogPage = () => {
 	return (
@@ -10,15 +11,7 @@ export const BlogPage = () => {
 					<TextDisplay gradient="Blog" />
 				</Center>
 			</MvSection>
-			<MvSection>
-				<SimpleGrid cols={{ base: 1, xs: 2 }}>
-					<ArticleCardImage />
-					<Stack>
-						<ArticleCardImage />
-						<ArticleCardImage />
-					</Stack>
-				</SimpleGrid>
-			</MvSection>
+			<BlogSection />
 			<Footer />
 		</>
 	)

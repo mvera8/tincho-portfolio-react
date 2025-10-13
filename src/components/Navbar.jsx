@@ -20,7 +20,7 @@ const items = [
 	{ path: '/bento', name: 'Bento Grid' },
   // { path: '/post', name: 'Post' },
   // { path: '/portfolio-post', name: 'PortfolioPost' },
-  // { path: '/service-post', name: 'ServicePost' },
+  // { path: '/service-post', name: 'ServicesPost' },
   // { path: '/test', name: 'Test' },
 ];
 
