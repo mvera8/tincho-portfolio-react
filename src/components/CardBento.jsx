@@ -1,20 +1,19 @@
-import { Box, Card, ThemeIcon, Title, useMantineColorScheme } from "@mantine/core";
-import { TextDimmed } from "./TextDimmed";
-import PropTypes from "prop-types";
+import { Box, Card, ThemeIcon, Title, useMantineColorScheme } from '@mantine/core';
+import { TextDimmed } from './TextDimmed';
+import PropTypes from 'prop-types';
 
 export const CardBento = ({ children, bg = false, title, subtitle, icon }) => {
-  const { colorScheme } = useMantineColorScheme();
+	const { colorScheme } = useMantineColorScheme();
 
-  const bgValue =
-    bg === true ? (colorScheme === "dark" ? "dark" : "gray.1")
-    : bg ? bg
-    : "transparent";
+	const bgValue =
+    bg === true ? (colorScheme === 'dark' ? 'dark.7' : 'gray.2')
+    	: bg ? bg
+    		: 'transparent';
 
-  return (
+	return (
 		<Card
 			padding="xl"
 			radius="md"
-			withBorder
 			bg={bgValue}
 		>		
 			{icon &&
@@ -29,7 +28,7 @@ export const CardBento = ({ children, bg = false, title, subtitle, icon }) => {
 			{title && <Title order={4} size="h3" mb="sm">{title}</Title>}
 			{subtitle && (
 				<TextDimmed text={subtitle} />
-      )}
+			)}
 			<Card.Section>
 				<Box
 					mx="xl"
@@ -39,13 +38,13 @@ export const CardBento = ({ children, bg = false, title, subtitle, icon }) => {
 				</Box>
 			</Card.Section>
 		</Card>
-  );
+	);
 };
 
 CardBento.propTypes = {
-  children: PropTypes.node.isRequired,
-  bg: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  icon: PropTypes.node, // 👈 elemento React (instanciado)
+	children: PropTypes.node.isRequired,
+	bg: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+	title: PropTypes.string,
+	subtitle: PropTypes.string,
+	icon: PropTypes.node, // 👈 elemento React (instanciado)
 };

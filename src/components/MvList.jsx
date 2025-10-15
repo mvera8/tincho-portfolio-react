@@ -1,11 +1,11 @@
 import { List, ThemeIcon } from '@mantine/core'
 import { IconCheck } from '@tabler/icons-react'
-import { useI18n } from "../i18n/useI18n.js";
+import { useI18n } from '../i18n/useI18n.js';
 import { Each } from './Each.jsx';
 
 export const MvList = () => {
 	const { get } = useI18n();
-	const itemsRaw = get("list.items");
+	const itemsRaw = get('list.items');
 	const items = Array.isArray(itemsRaw) ? itemsRaw : [];
 
 	return (

@@ -33,7 +33,7 @@
 	"list.items": [
 		"Quick response and personalized advice",
 		"Results that speak for themselves",
-		"More Answer Down!"
+		"More answer down!"
 	],
 	"resume.subtitle": "My résumé",
 	"resume.title": "Experience Solving Real Problems",
@@ -67,7 +67,7 @@
 	"services.title": "Services to Grow Your Business",
 	"services.items": [
 		{
-			"id": "wordpress",
+			"slug": "wordpress",
 			"title": "WordPress Development",
 			"icon": "IconBrandWordpress",
 			"description": "Custom themes, plugin integrations, and site optimization for a seamless WordPress experience.",
@@ -79,37 +79,37 @@
 			]
 		},
 		{
-			"id": "apps",
+			"slug": "apps",
 			"title": "Mobile App Design & Development",
 			"icon": "IconDeviceMobile",
 			"description": "Fast, scalable React / Next.js apps with modern UI."
 		},
 		{
-			"id": "design",
+			"slug": "design",
 			"title": "Design Systems (UI/UX)",
 			"icon": "IconBrush",
 			"description": "Accessible, mobile-first interfaces that feel native on any device."
 		},
 		{
-			"id": "branding",
+			"slug": "branding",
 			"title": "Branding & Visual Identity",
 			"icon": "IconTopologyRing3",
 			"description": "Brand identity, visual guidelines, and cross-channel consistency."
 		},
 		{
-			"id": "videos",
+			"slug": "videos",
 			"title": "Video Editing",
 			"icon": "IconMovie",
 			"description": "Agile editing for promos, social clips, and tutorials."
 		},
 		{
-			"id": "ecommerce",
+			"slug": "ecommerce",
 			"title": "E-commerce Solutions",
 			"icon": "IconShoppingCart",
 			"description": "Robust stores with seamless shopping experiences that convert."
 		},
 		{
-			"id": "cypress",
+			"slug": "cypress",
 			"title": "Cypress E2E Testing",
 			"icon": "IconSettings2",
 			"description": "Stable suites, visual checks, and practical coverage that pays for itself."
@@ -198,10 +198,14 @@
 	"blog.title": "Latest Articles",
 	"blog.posts": [
 		{
+			"image": "lighting",
+			"slug": "how-to-optimize-your-wordpress-site-for-lightning-fast-performance",
 			"title": "How to Optimize Your WordPress Site for Lightning-Fast Performance",
 			"text": "Practical tips and tools to speed up your site, improve SEO, and enhance the user experience."
 		},
 		{
+			"image": "lighting",
+			"slug": "the-power-of-uiux-in-modern-web-development",
 			"title": "The Power of UI/UX in Modern Web Development",
 			"text": "How intentional design and great UX can make your site more engaging and effective."
 		}

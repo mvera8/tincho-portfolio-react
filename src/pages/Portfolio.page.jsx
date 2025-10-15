@@ -1,6 +1,6 @@
-import { Center } from "@mantine/core"
-import { Footer, MvSection, Navbar, TextDisplay } from "../components"
-import { PortfolioSection } from "../sections"
+import { Center } from '@mantine/core'
+import { Footer, MvSection, Navbar, TextDisplay } from '../components'
+import { PortfolioSection } from '../sections'
 
 export const PortfolioPage = () => {
 	return (

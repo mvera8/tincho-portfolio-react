@@ -1,8 +1,8 @@
 import { Text, Title, useMantineColorScheme } from '@mantine/core'
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import classes from './TextDisplay.module.css';
 
-export const TextDisplay = ({text, gradient, align = "left"}) => {
+export const TextDisplay = ({text, gradient, align = 'left'}) => {
 	const colorScheme = useMantineColorScheme();
 
 	return (

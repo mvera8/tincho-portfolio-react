@@ -9,17 +9,17 @@
  * @returns {string}
  */
 export function slugify(str = '') {
-  return String(str)
-    .trim()
-    .toLowerCase()
-    // quitar acentos/diacríticos
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    // reemplazar espacios por guiones
-    .replace(/\s+/g, '-')
-    // quitar cualquier cosa que no sea a-z, 0-9 o '-'
-    .replace(/[^a-z0-9-]/g, '')
-    // colapsar guiones repetidos
-    .replace(/-+/g, '-')
-    // quitar guiones al inicio/fin
-    .replace(/^-+|-+$/g, '');
+	return String(str)
+		.trim()
+		.toLowerCase()
+	// quitar acentos/diacríticos
+		.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+	// reemplazar espacios por guiones
+		.replace(/\s+/g, '-')
+	// quitar cualquier cosa que no sea a-z, 0-9 o '-'
+		.replace(/[^a-z0-9-]/g, '')
+	// colapsar guiones repetidos
+		.replace(/-+/g, '-')
+	// quitar guiones al inicio/fin
+		.replace(/^-+|-+$/g, '');
 }

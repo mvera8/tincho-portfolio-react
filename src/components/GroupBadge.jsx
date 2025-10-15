@@ -1,5 +1,5 @@
 import { Badge, Group, useMantineTheme } from '@mantine/core'
-import T from "../i18n/T.jsx";
+import T from '../i18n/T.jsx';
 import { IconSchool, IconMapPin, IconCertificate, IconWorld, IconMoodKid } from '@tabler/icons-react';
 
 export const GroupBadge = () => {
