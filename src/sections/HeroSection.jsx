@@ -1,13 +1,13 @@
-import { Card, Grid, Group, Stack, Text, useMantineColorScheme } from "@mantine/core"
-import { IconArrowDownDashed, IconArrowRight } from "@tabler/icons-react";
-import { Each, MvButton, MvImage, MvSection, TextDimmed, TextDisplay, TextList } from "../components";
-import { useI18n } from "../i18n/useI18n.js";
-import T from "../i18n/T.jsx";
+import { Card, Grid, Group, Stack, Text, useMantineColorScheme } from '@mantine/core'
+import { IconArrowDownDashed, IconArrowRight } from '@tabler/icons-react';
+import { Each, MvButton, MvImage, MvSection, TextDimmed, TextDisplay, TextList } from '../components';
+import { useI18n } from '../i18n/useI18n.js';
+import T from '../i18n/T.jsx';
 
 export const HeroSection = () => {
 	const colorScheme = useMantineColorScheme();
 	const { get } = useI18n();
-	const bulletsRaw = get("home.bullets");
+	const bulletsRaw = get('home.bullets');
 	const bullets = Array.isArray(bulletsRaw) ? bulletsRaw : [];
 
 	return (
@@ -15,7 +15,7 @@ export const HeroSection = () => {
 			<Grid justify="center" align="center" pb="xl" pt="md">
 				<Grid.Col span={{ base: 12, md: 12, lg: 5 }}>
 					<Text size="xl" c="gray" mb="xs">
-						<T k="home.hello" values={{ emoji: "👋", name: '"Tincho" Vera' }} />
+						<T k="home.hello" values={{ emoji: '👋', name: '"Tincho" Vera' }} />
 					</Text>
 					<TextDisplay gradient={<T k="home.title" />} />
 					<TextDimmed text={<T k="home.text" />} />
@@ -30,8 +30,8 @@ export const HeroSection = () => {
 						<MvButton
 							text={<T k="home.cta2" />}
 							link="/bento"
-							variant="outline"
-							color={colorScheme.colorScheme === 'dark' ? 'white' : 'red'}
+							variant="light"
+							color={colorScheme.colorScheme === 'dark' ? 'gray' : 'red'}
 							Icon={IconArrowDownDashed}
 						/>
 					</Group>

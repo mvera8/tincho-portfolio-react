@@ -1,27 +1,27 @@
-import { Grid, SimpleGrid, Text, ThemeIcon, Title } from "@mantine/core"
-import { CardLink, Each, MvSection, SectionTitle } from "../components"
-import { IconBrandWordpress, IconBrush, IconChessBishop, IconDeviceMobile, IconMovie, IconSettings2, IconShoppingCart, IconTopologyRing3 } from "@tabler/icons-react"
-import { useI18n } from "../i18n/useI18n.js";
-import T from "../i18n/T.jsx";
+import { Grid, SimpleGrid, Text, ThemeIcon, Title } from '@mantine/core'
+import { CardLink, Each, MvSection, SectionTitle } from '../components'
+import { IconBrandWordpress, IconBrush, IconChessBishop, IconDeviceMobile, IconMovie, IconSettings2, IconShoppingCart, IconTopologyRing3 } from '@tabler/icons-react'
+import { useI18n } from '../i18n/useI18n.js';
+import T from '../i18n/T.jsx';
 
 const ICONS = {
-  IconDeviceMobile,
-  IconBrush,
-  IconMovie,
-  IconSettings2,
-  IconShoppingCart,
-  IconTopologyRing3,
-  IconChessBishop,
+	IconDeviceMobile,
+	IconBrush,
+	IconMovie,
+	IconSettings2,
+	IconShoppingCart,
+	IconTopologyRing3,
+	IconChessBishop,
 };
 
 export const ServicesSection = () => {
-  const { get } = useI18n();
-  const itemsRaw = get("services.items");
-  const items = Array.isArray(itemsRaw) ? itemsRaw : [];
-  if (items.length === 0) return null;
+	const { get } = useI18n();
+	const itemsRaw = get('services.items');
+	const items = Array.isArray(itemsRaw) ? itemsRaw : [];
+	if (items.length === 0) return null;
 
-  return (
-    <MvSection>
+	return (
+		<MvSection>
 			<SectionTitle
 				title={<T k="services.title" />}
 				subtitle={<T k="services.subtitle" />}
@@ -30,10 +30,10 @@ export const ServicesSection = () => {
 			<SimpleGrid cols={2}>
 				<Each
 					of={items}
-					render={({ id, title, icon, description }, idx) => {
+					render={({ slug, title, icon, description }, idx) => {
 						const IconCmp = ICONS[icon] ?? IconBrandWordpress;
 						return (
-							<CardLink key={idx} link={`/services/${id}`}>
+							<CardLink key={idx} link={`/services/${slug}`}>
 								<Grid p="md">
 									<Grid.Col span={{ base: 12, md: 12, lg: 2 }}>
 										<Text size="xl" c="gray">.0{idx + 1}</Text>
@@ -42,7 +42,7 @@ export const ServicesSection = () => {
 										<Title order={4} c="gray">{title}</Title>
 										<Text c="dimmed" truncate="end">{description}</Text>
 									</Grid.Col>
-									<Grid.Col span={{ base: 12, md: 12, lg: 2 }} ta={{ md: "center", lg: "end"}}>
+									<Grid.Col span={{ base: 12, md: 12, lg: 2 }} ta={{ md: 'center', lg: 'end'}}>
 										<ThemeIcon variant="light" color="red" radius="xl" size="xl">
 											<IconCmp size={22} />
 										</ThemeIcon>
@@ -53,6 +53,6 @@ export const ServicesSection = () => {
 					}}
 				/>
 			</SimpleGrid>
-    </MvSection>
-  );
+		</MvSection>
+	);
 };

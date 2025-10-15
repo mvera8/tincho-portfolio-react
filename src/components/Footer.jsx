@@ -6,14 +6,14 @@ import { SocialMedia } from './SocialMedia';
 export const Footer = () => {
 	return (
 		<footer>
-      <Container size="lg" pt="lg" pb="xl">
+			<Container size="lg" pt="lg" pb="xl">
 				<Group justify="space-between">
 					<TextDimmed text='© 2025 MARTINVERA. All rights reserved.' />
 					<Group>
 						<SocialMedia type="icon" />
 					</Group>
 				</Group>
-      </Container>
-    </footer>
+			</Container>
+		</footer>
 	)
 }

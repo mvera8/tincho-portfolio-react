@@ -1,11 +1,11 @@
-import { Card } from "@mantine/core"
-import PropTypes from "prop-types";
+import { Card } from '@mantine/core'
+import PropTypes from 'prop-types';
 
 export const CardLink = ({children, link}) => {
 	return (
 		<Card
 			component="a"
-      href={link}
+			href={link}
 			p={0}
 			radius="md"
 			withBorder

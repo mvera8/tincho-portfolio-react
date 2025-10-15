@@ -7,55 +7,55 @@ import {
 } from '@mantine/core';
 import { CardSkill, Each, MvSection, SectionTitle } from '../components';
 import {
-  IconBrandWordpress, IconBrandNextjs, IconBrandReact, IconBrandDocker,
-  IconBrandBootstrap, IconBrandFigma, IconBrandHtml5, IconBrandJavascript,
-  IconBrandPhp, IconBrandCypress, IconBrandAdobePhotoshop, IconBrandAdobeIllustrator
+	IconBrandWordpress, IconBrandNextjs, IconBrandReact, IconBrandDocker,
+	IconBrandBootstrap, IconBrandFigma, IconBrandHtml5, IconBrandJavascript,
+	IconBrandPhp, IconBrandCypress, IconBrandAdobePhotoshop, IconBrandAdobeIllustrator
 } from '@tabler/icons-react';
-import T from "../i18n/T.jsx";
+import T from '../i18n/T.jsx';
 import { useI18n } from '../i18n/useI18n.js';
 
 const ICONS = {
-  IconBrandHtml5,
-  IconBrandJavascript,
-  IconBrandReact,
-  IconBrandNextjs,
-  IconBrandBootstrap,
-  IconBrandFigma,
-  IconBrandDocker,
-  IconBrandPhp,
-  IconBrandCypress,
-  IconBrandAdobePhotoshop,
+	IconBrandHtml5,
+	IconBrandJavascript,
+	IconBrandReact,
+	IconBrandNextjs,
+	IconBrandBootstrap,
+	IconBrandFigma,
+	IconBrandDocker,
+	IconBrandPhp,
+	IconBrandCypress,
+	IconBrandAdobePhotoshop,
 	IconBrandAdobeIllustrator,
 };
 
 export const SkillsSection = () => {
-  const { get } = useI18n();
-  const itemsRaw = get("skills.items");
+	const { get } = useI18n();
+	const itemsRaw = get('skills.items');
 
 	const items = useMemo(() => {
-    return Array.isArray(itemsRaw) ? itemsRaw : [];
-  }, [itemsRaw]);
+		return Array.isArray(itemsRaw) ? itemsRaw : [];
+	}, [itemsRaw]);
 
-  // --- Pills de categorías ---
-  const [activeCat, setActiveCat] = useState('all');
+	// --- Pills de categorías ---
+	const [activeCat, setActiveCat] = useState('all');
 
-  const categories = useMemo(() => {
-    const set = new Set(items.map(i => i.category).filter(Boolean));
-    return ['all', ...Array.from(set)];
-  }, [items]);
+	const categories = useMemo(() => {
+		const set = new Set(items.map(i => i.category).filter(Boolean));
+		return ['all', ...Array.from(set)];
+	}, [items]);
 
-  const labelize = (cat) =>
-    cat === 'all' ? 'All' : cat?.charAt(0).toUpperCase() + cat?.slice(1);
+	const labelize = (cat) =>
+		cat === 'all' ? 'All' : cat?.charAt(0).toUpperCase() + cat?.slice(1);
 
-  const filtered = useMemo(
-    () => (activeCat === 'all' ? items : items.filter(i => i.category === activeCat)),
-    [items, activeCat]
-  );
+	const filtered = useMemo(
+		() => (activeCat === 'all' ? items : items.filter(i => i.category === activeCat)),
+		[items, activeCat]
+	);
 
 	if (items.length === 0) return null;
 
-  return (
-    <MvSection bg>
+	return (
+		<MvSection bg>
 			<Grid mb="md" align="center">
 				<Grid.Col span={{ base: 12, md: 12, lg: 3 }}>
 					<SectionTitle
@@ -93,5 +93,5 @@ export const SkillsSection = () => {
 				</Grid.Col>
 			</Grid>
 		</MvSection>
-  );
+	);
 };

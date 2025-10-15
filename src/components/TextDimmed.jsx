@@ -1,21 +1,21 @@
-import { Text } from "@mantine/core";
-import PropTypes from "prop-types";
+import { Text } from '@mantine/core';
+import PropTypes from 'prop-types';
 
-export const TextDimmed = ({ text, children, align = "left", color = "dimmed", capitalizeText = false }) => {
-  const content = children ?? text;
-  const transform = capitalizeText ? "capitalize" : undefined;
+export const TextDimmed = ({ text, children, align = 'left', color = 'dimmed', capitalizeText = false }) => {
+	const content = children ?? text;
+	const transform = capitalizeText ? 'capitalize' : undefined;
 
-  return (
-    <Text c={color} size="sm" ta={align} tt={transform}>
-      {content}
-    </Text>
-  );
+	return (
+		<Text c={color} size="sm" ta={align} tt={transform}>
+			{content}
+		</Text>
+	);
 };
 
 TextDimmed.propTypes = {
-  text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  children: PropTypes.node,
-  align: PropTypes.oneOf(["left", "center", "right", "justify"]),
+	text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+	children: PropTypes.node,
+	align: PropTypes.oneOf(['left', 'center', 'right', 'justify']),
 	color: PropTypes.string,
-  capitalizeText: PropTypes.bool,
+	capitalizeText: PropTypes.bool,
 };

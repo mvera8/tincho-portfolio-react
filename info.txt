@@ -2,6 +2,7 @@ color: #8e1b22
 Tipography: OpenSans 700
 
 Images: https://shots.so/
+Thumbnail: https://ni3.app/
 
 References:
 https://inversweb.com/product/html/reeni/index-white.html
@@ -15,9 +16,6 @@ https://geroldlight.themejunction.net/portfolios/deloitte/
 
 https://lumina-product.framer.website/
 
-Compare:
-https://www.npmjs.com/package/react-compare-image
-
 Task:
 - Mobile
 - Hover items above elements
@@ -26,3 +24,7 @@ Task:
 -- https://developer.chrome.com/docs/lighthouse/seo/meta-description?utm_source=lighthouse&utm_medium=lr&hl=es-419
 - Form Work
 - sitemap
+
+DeepWiki:
+https://deepwiki.com/mvera8/tincho-portfolio-react
+https://deepwiki.com/search/is-seo-coded_d73639d1-86e0-45d5-ab69-70af8f5e28b7

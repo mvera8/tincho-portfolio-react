@@ -9,7 +9,7 @@ export const TextList = ({ title, text, showDivider = false }) => {
 			<TextDimmed text={text} align="center" />
 			{showDivider && (
 				<Divider mt="lg" />
-      )}
+			)}
 		</Box>
 	)
 }

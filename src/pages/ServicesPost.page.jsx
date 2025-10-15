@@ -1,29 +1,22 @@
-import { Button, Card, Image, SimpleGrid, Text, Title, useMantineColorScheme } from "@mantine/core"
-import { CardBento, Each, Footer, MvSection, Navbar, SectionTitle, TextDimmed, TextDisplay, TextList } from "../components"
-import { FaqsSection } from "../sections"
-import { IconChevronRight } from "@tabler/icons-react";
-import T from "../i18n/T.jsx";
-import { Navigate, useParams } from "react-router-dom";
-import { useI18n } from "../i18n/useI18n.js";
-import { useMemo } from "react";
-import { slugify } from "../helpers/slugify.js";
+import { Image, SimpleGrid, Text, Title } from '@mantine/core'
+import { CardBento, Each, Footer, MvSection, Navbar, SectionTitle, TextDimmed, TextDisplay, TextList } from '../components'
+import { FaqsSection } from '../sections'
+import T from '../i18n/T.jsx';
+import { Navigate, useParams } from 'react-router-dom';
+import { useI18n } from '../i18n/useI18n.js';
+import { useMemo } from 'react';
+import { slugify } from '../helpers/slugify.js';
 
 export const ServicesPostPage = () => {
-	const { colorScheme } = useMantineColorScheme();
 	const { slug } = useParams();
 	const { get } = useI18n();
 
-	const itemsRaw = get("services.items");
-	const items = Array.isArray(itemsRaw) ? itemsRaw : [];
-
-	// Busca el item por slug
 	const item = useMemo(() => {
-		const bySlug = new Map(items.map((p) => [slugify(p.id), p]));
-		return bySlug.get(slug);
-	}, [items, slug]);
+		const list = Array.isArray(get('services.items')) ? get('services.items') : [];
+		return list.find((p) => p.slug === slug);
+	}, [get, slug]);
 
 	if (!item) {
-		// 404 elegante: vuelve al listado o a una página de no encontrado
 		return <Navigate to="/services" replace />;
 	}
 
@@ -38,7 +31,7 @@ export const ServicesPostPage = () => {
 
 			{item.items &&
 				<>
-					<MvSection padding="xs">
+					<MvSection bg>
 						<SectionTitle
 							title={<T k="services.section.title" />}
 							subtitle={<T k="services.section.subtitle" />}
@@ -47,33 +40,32 @@ export const ServicesPostPage = () => {
 				
 						<SimpleGrid mb="lg" cols={{ base: 1, xs: 2 }}>
 							<Each
-							of={item.items}
-							render={({ title, text, bg }, idx) => (
-								<CardBento
-									key={idx}
-									title={title}
-									subtitle={text}
-									
-									bg={bg}
-								>
-									<Image
-										src="/wp-admin-dashboard.webp"
-										h="auto"
-										alt={title}
-									/>
-								</CardBento>
-							)}
+								of={item.items}
+								render={({ title, text, bg }, idx) => (
+									<CardBento
+										key={idx}
+										title={title}
+										subtitle={text}
+										bg={bg}
+									>	
+										<Image
+											src="/wp-admin-dashboard.webp"
+											h="auto"
+											alt={title}
+										/>
+									</CardBento>
+								)}
 							/>
 						</SimpleGrid>
 
-						<Card p="xl" radius="md" bg={colorScheme === "dark" ? "dark" : "gray.1"}>
-							<SimpleGrid cols={4}>
+						<CardBento bg>
+							<SimpleGrid cols={4} mb="lg">
 								<Title order={2}>WordPress Information</Title>
 								<TextList title="2003" text="En ese año nace como herramienta de blogs" />
 								<TextList title="43%" text="De los sitios en internet usan WordPress." />
 								<TextList title="65%" text="De los CMS son WordPress" />
 							</SimpleGrid>
-						</Card>
+						</CardBento>
 
 					</MvSection>
 				</>

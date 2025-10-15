@@ -67,7 +67,7 @@
 	"services.title": "Servicios para impulsar tu negocio",
 	"services.items": [
 		{
-			"id": "wordpress",
+			"slug": "wordpress",
 			"title": "Desarrollo WordPress",
 			"icon": "IconBrandWordpress",
 			"description": "Temas a medida, integración de plugins y optimización del sitio para una experiencia fluida.",
@@ -111,7 +111,7 @@
 			]
 		},
 		{
-			"id": "apps",
+			"slug": "apps",
 			"title": "Diseño y Desarrollo de Apps",
 			"icon": "IconDeviceMobile",
 			"description": "Apps rápidas y escalables en React / Next.js con UI moderna.",
@@ -123,31 +123,31 @@
 			]
 		},
 		{
-			"id": "design",
+			"slug": "design",
 			"title": "Sistemas de Diseño (UI/UX)",
 			"icon": "IconBrush",
 			"description": "Interfaces accesibles y mobile-first que se sienten nativas en cualquier dispositivo."
 		},
 		{
-			"id": "branding",
+			"slug": "branding",
 			"title": "Branding e Identidad Visual",
 			"icon": "IconTopologyRing3",
 			"description": "Identidad de marca, guías visuales y consistencia en todos los puntos de contacto."
 		},
 		{
-			"id": "videos",
+			"slug": "videos",
 			"title": "Edición de Video",
 			"icon": "IconMovie",
 			"description": "Edición ágil para piezas promocionales, sociales y tutoriales."
 		},
 		{
-			"id": "ecommerce",
+			"slug": "ecommerce",
 			"title": "E-commerce",
 			"icon": "IconShoppingCart",
 			"description": "Tiendas robustas con experiencias de compra fluidas que convierten."
 		},
 		{
-			"id": "cypress",
+			"slug": "cypress",
 			"title": "Testing E2E con Cypress",
 			"icon": "IconSettings2",
 			"description": "Suites estables, checks visuales y cobertura práctica que se paga sola."
@@ -236,10 +236,14 @@
 	"blog.title": "Últimos artículos",
 	"blog.posts": [
 		{
+			"image": "lighting",
+			"slug": "how-to-optimize-your-wordpress-site-for-lightning-fast-performance",
 			"title": "Cómo optimizar tu sitio WordPress para un rendimiento al máximo",
 			"text": "Consejos y herramientas prácticas para acelerar tu sitio, mejorar SEO y la experiencia de usuario."
 		},
 		{
+			"image": "lighting",
+			"slug": "the-power-of-uiux-in-modern-web-development",
 			"title": "El poder del UI/UX en el desarrollo web moderno",
 			"text": "Cómo un diseño intencional y una buena experiencia pueden hacer tu sitio más atractivo y efectivo."
 		}

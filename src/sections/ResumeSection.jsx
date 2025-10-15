@@ -1,19 +1,18 @@
 import { ActionIcon,
 	Anchor,
-	Card,
 	Table,
 	Text,
-	Title
+	Title,
 } from '@mantine/core'
-import { Each, MvSection, SectionTitle, TextDimmed } from '../components'
+import { CardBento, Each, MvSection, SectionTitle, TextDimmed } from '../components'
 import classes from './ResumeSection.module.css';
 import { IconArrowUpRight } from '@tabler/icons-react';
 import { useI18n } from '../i18n/useI18n.js';
-import T from "../i18n/T.jsx";
+import T from '../i18n/T.jsx';
 
 export const ResumeSection = () => {
 	const { get } = useI18n();
-	const jobsRaw = get("resume.jobs");
+	const jobsRaw = get('resume.jobs');
 	const jobs = Array.isArray(jobsRaw) ? jobsRaw : [];
 	if (jobs.length === 0) return null;
 
@@ -24,8 +23,9 @@ export const ResumeSection = () => {
 					title={<T k="resume.title" />}
 					subtitle={<T k="resume.subtitle" />}
 				/>
-				<Card p={{ base: "sm", lg: "xl"}} radius="md">
-					<Table>
+
+				<CardBento bg>
+					<Table mb="lg">
 						<Table.Tbody>
 							<Each
 								of={jobs}
@@ -58,7 +58,7 @@ export const ResumeSection = () => {
 							/>
 						</Table.Tbody>
 					</Table>
-				</Card>
+				</CardBento>
 			</div>
 		</MvSection>
 	)
