@@ -1,6 +1,7 @@
 export * from './BentoGrid.page';
 export * from './Blog.page';
 export * from './Contact.page';
+export * from './Error.page';
 export * from './Home.page';
 export * from './Portfolio.page';
 export * from './PortfolioPost.page';

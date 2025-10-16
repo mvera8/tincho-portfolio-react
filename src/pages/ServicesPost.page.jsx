@@ -1,11 +1,10 @@
 import { Image, SimpleGrid, Text, Title } from '@mantine/core'
-import { CardBento, Each, Footer, MvSection, Navbar, SectionTitle, TextDimmed, TextDisplay, TextList } from '../components'
+import { CardBento, Each, Footer, MvHelmet, MvSection, Navbar, SectionTitle, TextDimmed, TextDisplay, TextList } from '../components'
 import { FaqsSection } from '../sections'
-import T from '../i18n/T.jsx';
 import { Navigate, useParams } from 'react-router-dom';
 import { useI18n } from '../i18n/useI18n.js';
 import { useMemo } from 'react';
-import { slugify } from '../helpers/slugify.js';
+import T from '../i18n/T.jsx';
 
 export const ServicesPostPage = () => {
 	const { slug } = useParams();
@@ -22,6 +21,7 @@ export const ServicesPostPage = () => {
 
 	return (
 		<>
+			<MvHelmet page={item.title} slug={slug} />
 			<Navbar />
 			<MvSection size="sm">
 				<Text size="xl" c="dimmed" mb="xs" ta="center">🚀 Must-to know about</Text>

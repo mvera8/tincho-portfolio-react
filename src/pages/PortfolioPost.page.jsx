@@ -1,16 +1,34 @@
+import { useMemo } from 'react';
 import { Card, Grid, Image, Stack, Title } from '@mantine/core';
-import { CardIcon, Footer, MvSection, Navbar, TextList } from '../components';
+import { CardIcon, Footer, MvHelmet, MvSection, Navbar, TextList } from '../components';
 import { FaqsSection } from '../sections';
 import { ReactCompareSlider } from 'react-compare-slider';
+import { Navigate, useParams } from 'react-router-dom';
+import { useI18n } from '../i18n/useI18n';
 
 export const PortfolioPostPage = () => {
+	const { slug } = useParams();
+	const { get } = useI18n();
+	
+	const work = useMemo(() => {
+		const list = Array.isArray(get('portfolio.works')) ? get('portfolio.works') : [];
+		return list.find((p) => p.id === slug);
+	}, [get, slug]);
+	
+	if (!work) {
+		return <Navigate to="/portfolio" replace />;
+	}
+
 	return (
 		<>
+			<MvHelmet page={work.title} slug={slug} />
 			<Navbar />
 			<MvSection>
 				<Grid align="center" pt="xl">
 					<Grid.Col span={10}>
-						<Title order={1} mb="xl">Cleanmax Website</Title>
+						<Title order={1} mb="xl">{work.title}</Title>
+
+						{work.type}
 
 						<ReactCompareSlider
 							itemOne={<Image src="/martin_vera_bits.webp" alt="Image one" />}

@@ -8,6 +8,7 @@ export const CardLink = ({children, link}) => {
 			href={link}
 			p={0}
 			radius="md"
+			mb="md"
 			withBorder
 			style={{ height: '100%' }}>
 			{children}

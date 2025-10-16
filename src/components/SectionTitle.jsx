@@ -1,6 +1,6 @@
 import { Text, Title } from '@mantine/core';
-import PropTypes from 'prop-types';
 import { TextDimmed } from './TextDimmed';
+import PropTypes from 'prop-types';
 
 export const SectionTitle = ({ title, subtitle, text, centerText = false }) => {
 	const ta = centerText ? 'center' : 'left';

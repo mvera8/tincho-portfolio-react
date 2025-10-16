@@ -259,6 +259,7 @@
 	"contact.input.message.placeholder": "Incluí toda la información relevante",
 	"contact.btn": "Enviar mensaje",
 	"contact.input.btn": "Enviar mensaje",
+	"contact.status": "No disponible",
 	"faqs.subtitle": "FAQs",
 	"faqs.title": "Preguntas Frecuentes"
 }

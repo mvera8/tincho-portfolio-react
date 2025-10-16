@@ -34,7 +34,7 @@ export const ServicesSection = () => {
 						const IconCmp = ICONS[icon] ?? IconBrandWordpress;
 						return (
 							<CardLink key={idx} link={`/services/${slug}`}>
-								<Grid p="md">
+								<Grid p="md" pb={0}>
 									<Grid.Col span={{ base: 12, md: 12, lg: 2 }}>
 										<Text size="xl" c="gray">.0{idx + 1}</Text>
 									</Grid.Col>
