@@ -187,10 +187,13 @@
 		{
 			"id": "cleanmax",
 			"title": "Cleanmax Website",
+			"type": "slider",
 			"text": "WordPress site with contact form and clean styling. Focused on performance and message clarity."
 		},
 		{
+			"id": "site",
 			"title": "MV Portfolio Website",
+			"type": "image",
 			"text": ""
 		}
 	],
@@ -221,6 +224,7 @@
 	"contact.input.message.placeholder": "Please include all relevant information",
 	"contact.btn": "Send message",
 	"contact.input.btn": "Send message",
+	"contact.status": "Unavailable",
 	"faqs.subtitle": "FAQs",
 	"faqs.title": "Frequently Asked Questions"
 }

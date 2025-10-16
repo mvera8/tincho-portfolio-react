@@ -1,7 +1,6 @@
 import { createTheme, MantineProvider } from '@mantine/core';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { HomePage, BlogPostPage, PortfolioPostPage, BlogPage, TestPage, ServicesPostPage, BentoGridPage, ContactPage, ServicesPage, PortfolioPage } from './pages';
-import ErrorPage from './error-page';
+import { ErrorPage, HomePage, BlogPostPage, PortfolioPostPage, BlogPage, TestPage, ServicesPostPage, BentoGridPage, ContactPage, ServicesPage, PortfolioPage } from './pages';
 import LanguageProvider from './i18n/LanguageProvider';
 
 import '@mantine/core/styles.css';

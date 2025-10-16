@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { Image, Text, Title } from '@mantine/core';
-import { Footer, MvSection, Navbar } from '../components';
+import { Footer, MvHelmet, MvSection, Navbar } from '../components';
 import { useI18n } from '../i18n/useI18n.js';
 
 export const BlogPostPage = () => {
@@ -19,6 +19,7 @@ export const BlogPostPage = () => {
 
 	return (
 		<>
+			<MvHelmet page={post.title} slug={slug} />
 			<Navbar />
 			<MvSection size="sm">
 				<Title order={1} mb="xl">{post.title}</Title>

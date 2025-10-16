@@ -1,10 +1,11 @@
 import { Center } from '@mantine/core';
-import { Footer, MvSection, Navbar, TextDisplay } from '../components';
+import { Footer, MvHelmet, MvSection, Navbar, TextDisplay } from '../components';
 import { BlogSection } from '../sections';
 
 export const BlogPage = () => {
 	return (
 		<>
+			<MvHelmet page="Blog" slug="blog" />
 			<Navbar />
 			<MvSection>
 				<Center>
