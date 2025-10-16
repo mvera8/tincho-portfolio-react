@@ -1,14 +1,16 @@
 import { Container, useMantineTheme } from '@mantine/core';
 import { Footer, MvHelmet, Navbar } from '../components';
 import { AboutSection, BlogSection, HeroSection, PortfolioSection, ResumeSection, ServicesSection, SkillsSection } from '../sections';
-import T from '../i18n/T.jsx';
+import { useI18n } from '../i18n/useI18n.js';
 
 export const HomePage = () => {
+	const { t } = useI18n();     
+	const pageTitle = t('navbar.home');
 	const theme = useMantineTheme();
 
 	return (
 		<>
-			<MvHelmet page={<T k="navbar.home" />} slug="" />
+			<MvHelmet page={pageTitle} slug="" />
 			<Navbar />
 			<Container size={1824}>
 				<div
