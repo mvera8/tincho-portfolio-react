@@ -6,10 +6,10 @@ export const CardLink = ({children, link}) => {
 		<Card
 			component="a"
 			href={link}
-			p={0}
 			radius="md"
 			mb="md"
 			withBorder
+			p="xs"
 			style={{ height: '100%' }}>
 			{children}
 		</Card>

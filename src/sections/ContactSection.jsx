@@ -21,7 +21,7 @@ export const ContactSection = () => {
 				<Grid.Col span={{ base: 12, md: 12, lg: 7 }} offset={{ md: 0, lg: 1 }}>
 					<Badge variant="dot" color="red" mb="md"><T k="contact.status" /></Badge>
 					<form onSubmit={(event) => event.preventDefault()}>
-						<Stack gap="xl">
+						<Stack gap="md">
 							<SimpleGrid cols={{ base: 1, md: 1, lg: 2 }} mb={0}>
 								<MvInput label={t('contact.input.name')} placeholder={t('contact.input.name')} />
 								<MvInput label={t('contact.input.email')} placeholder={t('contact.input.email')} />

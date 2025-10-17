@@ -27,7 +27,7 @@ export const ServicesSection = () => {
 				subtitle={<T k="services.subtitle" />}
 				centerText
 			/>
-			<SimpleGrid cols={2}>
+			<SimpleGrid cols={{ base: 1, sm: 2 }}>
 				<Each
 					of={items}
 					render={({ slug, title, icon, description }, idx) => {
@@ -35,14 +35,14 @@ export const ServicesSection = () => {
 						return (
 							<CardLink key={idx} link={`/services/${slug}`}>
 								<Grid p="md" pb={0}>
-									<Grid.Col span={{ base: 12, md: 12, lg: 2 }}>
+									<Grid.Col span={{ base: 2, md: 2 }} order={{ base: 2, sm: 1 }}>
 										<Text size="xl" c="gray">.0{idx + 1}</Text>
 									</Grid.Col>
-									<Grid.Col span={{ base: 12, md: 12, lg: 8 }}>
+									<Grid.Col span={{ base: 10, md: 8 }} order={{ base: 3, sm: 2 }}>
 										<Title order={4} c="gray">{title}</Title>
 										<Text c="dimmed" truncate="end">{description}</Text>
 									</Grid.Col>
-									<Grid.Col span={{ base: 12, md: 12, lg: 2 }} ta={{ md: 'center', lg: 'end'}}>
+									<Grid.Col span={{ base: 12, md: 12, lg: 2 }} ta={{ md: 'center', lg: 'end'}} order={{ base: 1, sm: 3 }}>
 										<ThemeIcon variant="light" color="red" radius="xl" size="xl">
 											<IconCmp size={22} />
 										</ThemeIcon>

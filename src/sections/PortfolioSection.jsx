@@ -45,6 +45,7 @@ export const PortfolioSection = () => {
 											<TextDimmed text={text} />
 										</div>
 										<MvButton
+											type='button'
 											text="View Project"
 											Icon={IconArrowRight}
 										/>

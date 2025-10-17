@@ -225,11 +225,14 @@
 		{
 			"id": "cleanmax",
 			"title": "Cleanmax Sitio Web",
+			"type": "slider",
 			"text": "Sitio en WordPress con formulario de contacto y estilo limpio. Enfoque en rendimiento y claridad del mensaje."
 		},
 		{
-			"title": "MV Portfolio Sitio Web",
-			"text": ""
+			"id": "site",
+			"title": "MV Portfolio Website",
+			"type": "image",
+			"text": "lala"
 		}
 	],
 	"blog.subtitle": "Noticias y Blog",

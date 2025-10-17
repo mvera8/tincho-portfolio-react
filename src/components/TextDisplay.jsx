@@ -20,6 +20,6 @@ export const TextDisplay = ({text, gradient, align = 'left'}) => {
 
 TextDisplay.propTypes = {
 	text: PropTypes.object,
-	gradient: PropTypes.object,
+	gradient: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 	align: PropTypes.string,
 };
