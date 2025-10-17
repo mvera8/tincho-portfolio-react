@@ -1,4 +1,9 @@
 .logo {
 	font-size: 33px !important;
 	height: 45px;
+
+	@media (max-width: $mantine-breakpoint-md) {
+		font-size: 22px !important;
+		height: 31px;
+	}
 }

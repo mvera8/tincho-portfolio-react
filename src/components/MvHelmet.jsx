@@ -5,7 +5,7 @@ export const MvHelmet = ({page, slug}) => {
 	const title = slug ? `${page} | Martín Vera` : 'Martín Vera';
 	const description = 'Mirá proyectos reales: frontends en React, integraciones, dashboards y más.';
 	const url = `https://martinvera.com.uy/${slug}`;
-	const ogImage = `https://martinvera.com.uy/${slug}.jpg`;
+	const ogImage = 'https://martinvera.com.uy/site.webp';
 
 	return (
 		<Helmet>

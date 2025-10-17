@@ -1,5 +1,5 @@
 import { ActionIcon, Card, Group, ThemeIcon, Title } from '@mantine/core';
-import { IconBrandBehance, IconBrandGithub, IconBrandLinkedin, IconBrandPinterest } from '@tabler/icons-react';
+import { IconBrandBehance, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin, IconBrandPinterest } from '@tabler/icons-react';
 import PropTypes from 'prop-types';
 
 const redes = [
@@ -7,6 +7,7 @@ const redes = [
 	{ title: 'Github', link: 'https://github.com/mvera8', icon: IconBrandGithub },
 	{ title: 'Behance', link: 'https://www.behance.net/martinverauy', icon: IconBrandBehance },
 	{ title: 'Pinterest', link: 'https://www.pinterest.com/tinchovera8/', icon: IconBrandPinterest },
+	{ title: 'Instagram', link: 'https://www.instagram.com/martinverauy/', icon: IconBrandInstagram },
 ];
 
 export const SocialMedia = ({type = 'card'}) => {

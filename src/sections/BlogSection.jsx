@@ -1,4 +1,4 @@
-import { Box, Image, SimpleGrid, Title } from '@mantine/core';
+import { Image, SimpleGrid, Title } from '@mantine/core';
 import { CardLink, Each, MvSection, SectionTitle } from '../components';
 import { useI18n } from '../i18n/useI18n.js';
 import T from '../i18n/T.jsx';
@@ -22,10 +22,8 @@ export const BlogSection = () => {
 					render={({ title, image, slug }, idx) => {
 						return (
 							<CardLink key={idx} link={`/blog/${slug}`}>
-								<Box p="md">
-									<Image radius="md" mb="md" src={`/${image}.webp`} alt={title} />
-									<Title p="md" order={3} size="h2" c="gray">{title}</Title>
-								</Box>
+								<Title p="xs" order={3} c="gray">{title}</Title>
+								<Image radius="md" src={`/${image}.webp`} alt={title} />
 							</CardLink>
 						);
 					}}
