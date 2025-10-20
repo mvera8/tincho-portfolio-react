@@ -1,9 +1,10 @@
 .logo {
 	font-size: 33px !important;
 	height: 45px;
+}
 
+.mobile {
 	@media (max-width: $mantine-breakpoint-md) {
-		font-size: 22px !important;
-		height: 31px;
+		display: none !important;
 	}
 }

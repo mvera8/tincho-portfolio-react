@@ -8,6 +8,7 @@ import { CardBento, Each, MvSection, SectionTitle, TextDimmed } from '../compone
 import classes from './ResumeSection.module.css';
 import { IconArrowUpRight } from '@tabler/icons-react';
 import { useI18n } from '../i18n/useI18n.js';
+import { isMobile } from 'react-device-detect';
 import T from '../i18n/T.jsx';
 
 export const ResumeSection = () => {
@@ -31,19 +32,22 @@ export const ResumeSection = () => {
 								of={jobs}
 								render={({ title, link, puesto, time }, idx) => (
 									<Table.Tr key={idx}>
-										<Table.Td ta="start" pt="md">
-											<ActionIcon
-												variant="light"
-												color="red"
-												radius="xl"
-												size="xl"
-												component="a"
-												target='_blank'
-												href={link + '?ref=martinvera.com.uy'}
-												aria-label={title}>
-												<IconArrowUpRight size={22} />
-											</ActionIcon>
-										</Table.Td>
+										{!isMobile &&
+											<Table.Td ta="start" pt="md">
+												<ActionIcon
+													variant="light"
+													color="red"
+													radius="xl"
+													size="xl"
+													component="a"
+													target='_blank'
+													href={link + '?ref=martinvera.com.uy'}
+													aria-label={title}>
+													<IconArrowUpRight size={22} />
+												</ActionIcon>
+											</Table.Td>
+										}
+										
 										<Table.Td ta="start" pt="md">
 											<TextDimmed text={time} />
 										</Table.Td>
