@@ -11,14 +11,14 @@ export const Logo = ({ type = 'image' }) => {
 	switch (type) {
 	case 'text':
 		return (
-			<Flex align="flex-end" direction="column">
+			<Flex direction="column">
 				<Text size="xl" fw={900} className={classes.logo} tt="uppercase" c={fg}>
             Martín
 					<Text span c={accent} inherit>
               Vera
 					</Text>
 				</Text>
-				<Text size="xs" c="dimmed" ta="end">
+				<Text size="xs" c="dimmed">
 					<T k="site.description" />
 				</Text>
 			</Flex>
@@ -26,7 +26,7 @@ export const Logo = ({ type = 'image' }) => {
 
 	case 'gradient':
 		return (
-			<Flex align="flex-end" direction="column" py="xs">
+			<Flex direction="column" py="xs">
 				<Text
 					size="xl"
 					fw={900}
@@ -35,9 +35,10 @@ export const Logo = ({ type = 'image' }) => {
 					variant="gradient"
 					gradient={{ from: 'red.4', to: 'red.8' }}
 				>
-            MartínVera
+            
+						M<Text className={classes.mobile} span inherit>artín</Text>V<Text className={classes.mobile} span inherit>era</Text>
 				</Text>
-				<Text size="xs" c="dimmed" ta="end">
+				<Text size="xs" c="dimmed">
 					<T k="site.description" />
 				</Text>
 			</Flex>

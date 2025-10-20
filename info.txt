@@ -3,6 +3,7 @@ Tipography: OpenSans 700
 
 Images: https://shots.so/
 Thumbnail: https://ni3.app/
+Icons: https://www.thiings.co/things
 
 References:
 https://inversweb.com/product/html/reeni/index-white.html
@@ -24,6 +25,7 @@ Task:
 - Form Work
 - Los elementos de imagen no tienen width y height explícitos
 - is mobile (ready added)
+- https://chatgpt.com/c/68f65a70-df54-8325-b407-193ae76d715f
 
 DeepWiki:
 https://deepwiki.com/mvera8/tincho-portfolio-react

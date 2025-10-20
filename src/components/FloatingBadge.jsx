@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Badge, Transition } from '@mantine/core';
+import { isMobile } from 'react-device-detect';
 import PropTypes from 'prop-types';
 
 const toCss = (v) => (v == null ? undefined : typeof v === 'number' ? `${v}px` : v);
@@ -19,7 +20,7 @@ export const FloatingBadge = ({ text, top, left, animation = 'fade-left' }) => {
 					variant="outline"
 					bg="red.1"
 					color="red"
-					size="xl"
+					size={isMobile ? 'md' : 'xl'}
 					style={{
 						...styles,
 						position: 'absolute',
