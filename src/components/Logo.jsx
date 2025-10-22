@@ -1,4 +1,5 @@
 import { Image, Text, useMantineColorScheme, Flex } from '@mantine/core';
+import { isMobile } from 'react-device-detect';
 import PropTypes from 'prop-types';
 import classes from './Logo.module.css';
 import T from '../i18n/T.jsx';
@@ -26,7 +27,7 @@ export const Logo = ({ type = 'image' }) => {
 
 	case 'gradient':
 		return (
-			<Flex direction="column" py="xs">
+			<Flex direction="column" pt={isMobile ? 0 : 'xs'}>
 				<Text
 					size="xl"
 					fw={900}

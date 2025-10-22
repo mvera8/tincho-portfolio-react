@@ -2,6 +2,7 @@ import { Card, Grid, Group, Stack, Text, useMantineColorScheme } from '@mantine/
 import { IconArrowDownDashed, IconArrowRight } from '@tabler/icons-react';
 import { Each, MvButton, MvImage, MvSection, TextDimmed, TextDisplay, TextList } from '../components';
 import { useI18n } from '../i18n/useI18n.js';
+import { isMobile } from 'react-device-detect';
 import T from '../i18n/T.jsx';
 
 export const HeroSection = () => {
@@ -24,7 +25,7 @@ export const HeroSection = () => {
 						<MvButton
 							text={<T k="home.cta1" />}
 							link="/contact"
-							variant="white"
+							variant={isMobile ? 'filled' : 'white'}
 							Icon={IconArrowRight}
 						/>
 						<MvButton

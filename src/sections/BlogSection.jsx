@@ -1,6 +1,8 @@
-import { Image, SimpleGrid, Title } from '@mantine/core';
+import { ActionIcon, Group, Image, SimpleGrid, Title } from '@mantine/core';
 import { CardLink, Each, MvSection, SectionTitle } from '../components';
 import { useI18n } from '../i18n/useI18n.js';
+import { isMobile } from 'react-device-detect';
+import { IconArrowUpRight } from '@tabler/icons-react';
 import T from '../i18n/T.jsx';
 
 export const BlogSection = () => {
@@ -22,7 +24,20 @@ export const BlogSection = () => {
 					render={({ title, image, slug }, idx) => {
 						return (
 							<CardLink key={idx} link={`/blog/${slug}`}>
-								<Title p="xs" order={3} c="gray">{title}</Title>
+								<Group justify="flex-end" wrap="nowrap" gap={isMobile ? 'xs' : 'xl'}>
+									<Title p="xs" order={3} c="gray" mb="md">{title}</Title>
+									<ActionIcon
+										variant="light"
+										color="red"
+										radius="xl"
+										size="xl"
+										mb="md"
+										component="button"
+										href={`/blog/${slug}`}
+										aria-label={title}>
+										<IconArrowUpRight size={22} />
+									</ActionIcon>
+								</Group>												
 								<Image radius="md" src={`/${image}.webp`} alt={title} />
 							</CardLink>
 						);
