@@ -3,13 +3,15 @@ import {
 	Container,
 	Grid,
 	Group,
-	Menu,
 	Burger,
+	Drawer,
+	Divider,
 } from '@mantine/core';
 import { Each, Logo, ThemeToggleOrb } from '../components';
 import { useLocation } from 'react-router-dom';
 import { useI18n } from '../i18n/useI18n.js';
 import T from '../i18n/T.jsx';
+import { useDisclosure } from '@mantine/hooks';
 
 const items = [
 	{ path: '/', name: <T k="navbar.home" /> },
@@ -25,6 +27,7 @@ const items = [
 ];
 
 export const Navbar = () => {
+	const [opened, { open, close }] = useDisclosure(false);
 	const location = useLocation();
 	const { lang, setLang } = useI18n();
 
@@ -87,34 +90,38 @@ export const Navbar = () => {
 							{/* Toggle tema */}
 							<ThemeToggleOrb />
 
-
-
 							{/* mobile menu */}
-							<Menu shadow="md" width={220}>
-								<Menu.Target>
-									<Burger aria-label="Abrir menú" hiddenFrom="lg" />
-								</Menu.Target>
-								<Menu.Dropdown>
-									<Each
-										of={items}
-										render={(item, index) =>
-											item.name && (
-												<Menu.Item
-													key={index}
-													component="a"
-													href={item.path}
-												>
-													{item.name}
-												</Menu.Item>
-											)
-										}
-									/>
-								</Menu.Dropdown>
-							</Menu>
+							<Burger onClick={open} aria-label="Toggle navigation" hiddenFrom="lg" />
 						</Group>
 					</Grid.Col>
 				</Grid>
 			</Container>
+
+			<Drawer opened={opened} onClose={close} size="xs">
+				<Logo type="gradient" />
+				<Divider my="md" />
+				<Each
+					of={items}
+					render={(item, index) =>
+						item.name && (
+							<Button
+								key={index}
+								size="md"
+								component="a"
+								href={item.path}
+								color={location.pathname === item.path ? 'red' : 'gray'}
+								variant="light"
+								mb="xs"
+								fullWidth
+							>
+								{item.name}
+							</Button>
+						)
+					}
+				/>
+			</Drawer>
+
+
 		</header>
 	);
 };
