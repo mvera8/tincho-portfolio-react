@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 
 export const MvInput = ({
 	label,
+	name,
 	placeholder,
-	type = 'input', // 'input' | 'textarea'
-	minRows = 3,    // por si querés cambiarlo
-	...props        // value, onChange, name, etc.
+	disabled = false,  // Cambié el default a false
+	type = 'input',
+	minRows = 3,
+	register,  // ⭐ Recibir register como prop
+	...props
 }) => {
 	const { colorScheme } = useMantineColorScheme();
 	const isTextarea = type === 'textarea';
@@ -19,16 +22,20 @@ export const MvInput = ({
 			label={label}
 			placeholder={placeholder}
 			required
-			disabled
+			disabled={disabled}
 			{...(isTextarea ? { minRows } : {})}
 			{...props}
+			{...register(name, { required: true })}
 		/>
 	);
 };
 
 MvInput.propTypes = {
+	name: PropTypes.string.isRequired,
+	register: PropTypes.func.isRequired,  // ⭐ Añadir PropType
 	label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 	placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 	type: PropTypes.oneOf(['input', 'textarea']),
 	minRows: PropTypes.number,
+	disabled: PropTypes.bool,
 };
