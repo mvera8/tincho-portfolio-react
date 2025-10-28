@@ -12,7 +12,7 @@ export const TextDisplay = ({text, gradient, align = 'left'}) => {
 				component="span"
 				inherit
 				variant="gradient"
-				gradient={{ from: colorScheme.colorScheme === 'dark' ? 'white' : 'red.2', to: 'red.8' }}
+				gradient={{ from: colorScheme.colorScheme === 'dark' ? 'white' : 'red.2', to: 'red.8', deg: 140 }}
 			>{gradient}{' '}</Text>
 		</Title>
 	)

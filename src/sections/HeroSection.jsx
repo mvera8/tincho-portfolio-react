@@ -18,7 +18,7 @@ export const HeroSection = () => {
 					<Text size="xl" c="gray" mb="xs">
 						<T k="home.hello" values={{ emoji: '👋', name: '"Tincho" Vera' }} />
 					</Text>
-					<TextDisplay gradient={<T k="home.title" />} />
+					<TextDisplay text={<T k="home.title" />} gradient={<T k="home.title.last" />} />
 					<TextDimmed text={<T k="home.text" />} />
 
 					<Group mt="xl">
