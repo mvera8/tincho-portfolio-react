@@ -31,6 +31,7 @@ export const AboutSection = () => {
 						radius="md"
 						src={imageSrc}
 						alt="Tincho Vera"
+						loading="lazy"
 					/>
 				</Grid.Col>
 			</Grid>

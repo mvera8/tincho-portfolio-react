@@ -11,7 +11,7 @@ export const WebFormSection = () => {
 	const { t } = useI18n();
 	const {register, reset, handleSubmit} = useForm();
 
-	const [isDisabled] = useState(false);
+	const [isDisabled] = useState(true);
 	const [isSuccess, setIsSuccess] = useState(false);
 	const [result, setResult] = useState(null);
 	const [loading, { toggle }] = useDisclosure();
@@ -105,6 +105,7 @@ export const WebFormSection = () => {
 								type="submit"
 								size="xl"
 								radius="md"
+								disabled={isDisabled}
 								loading={loading}>
 								<T k="contact.input.btn" />
 							</Button>

@@ -14,11 +14,7 @@ https://lumina-product.framer.website/
 Task:
 - Mobile
 - Animation
-- Form Work
 - Los elementos de imagen no tienen width y height explícitos
-- https://chatgpt.com/c/68f65a70-df54-8325-b407-193ae76d715f
-- lenguaje del navegador
-- lazy load
 
 DeepWiki:
 https://deepwiki.com/mvera8/tincho-portfolio-react

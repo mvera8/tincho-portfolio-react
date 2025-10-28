@@ -52,6 +52,7 @@ export const ServicesPostPage = () => {
 											src="/wp-admin-dashboard.webp"
 											h="auto"
 											alt={title}
+											loading="lazy"
 										/>
 									</CardBento>
 								)}
