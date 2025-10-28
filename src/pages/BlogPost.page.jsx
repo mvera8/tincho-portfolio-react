@@ -33,6 +33,7 @@ export const BlogPostPage = () => {
 					mb="lg"
 					src={`/${post.image}.webp`}
 					alt={post.title}
+					loading="lazy"
 				/>
 
 				{post.content && <Text mb="lg">{post.content}</Text>}

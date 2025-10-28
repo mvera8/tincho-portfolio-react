@@ -52,7 +52,11 @@ export const PortfolioSection = () => {
 									</Stack>
 								</Grid.Col>
 								<Grid.Col span={{ base: 12, md: 12, lg: 8 }}>
-									<Image radius="md" src={image} alt={title} />
+									<Image
+										radius="md"
+										loading="lazy"
+										src={image}
+										alt={title} />
 								</Grid.Col>
 							</Grid>
 						</CardLink>

@@ -39,6 +39,7 @@ export const PortfolioPostPage = () => {
 							radius="md"
 							mb="lg"
 							src="/cleanmax.webp"
+							loading="lazy"
 						/>
 					</Grid.Col>
 					<Grid.Col span={2}>

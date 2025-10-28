@@ -38,7 +38,11 @@ export const BlogSection = () => {
 										<IconArrowUpRight size={22} />
 									</ActionIcon>
 								</Group>												
-								<Image radius="md" src={`/${image}.webp`} alt={title} />
+								<Image
+									radius="md"
+									loading="lazy"
+									src={`/${image}.webp`}
+									alt={title} />
 							</CardLink>
 						);
 					}}
