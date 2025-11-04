@@ -1,20 +1,31 @@
+import { useEffect, useState } from 'react';
 import { Grid, Image, Stack, Title } from '@mantine/core';
 import { CardLink, Each, MvButton, MvSection, SectionTitle, TextDimmed } from '../components';
 import { useI18n } from '../i18n/useI18n.js';
 import { IconArrowRight } from '@tabler/icons-react';
 import { slugify } from '../helpers/slugify.js';
 import T from '../i18n/T.jsx';
+import PropTypes from 'prop-types';
 
-export const PortfolioSection = () => {
+export const PortfolioSection = ({title, skip}) => {
+	const { t } = useI18n();
+	const [sectionTitle, setSectionTitle] = useState( t('portfolio.title') ) 
 	const { get } = useI18n();
 	const worksRaw = get('portfolio.works');
 	const works = Array.isArray(worksRaw) ? worksRaw : [];
+
+	useEffect(() => {
+		if (title) {
+			setSectionTitle(title);
+		}
+	}, [title]);
+	
 	if (works.length === 0) return null;
 
 	return (
 		<MvSection>
 			<SectionTitle
-				title={<T k="portfolio.title" />}
+				title={sectionTitle}
 				subtitle={<T k="portfolio.subtitle" />}
 				centerText
 			/>
@@ -23,9 +34,9 @@ export const PortfolioSection = () => {
 				of={works}
 				render={({ id, title, text }, idx) => {
 					const slug = slugify(id);
-					const image = id + '.webp';
+					const image = '/' + id + '.webp';
 
-					if (!id) {
+					if (!id || skip === id) {
 						return;
 					}
 
@@ -65,4 +76,9 @@ export const PortfolioSection = () => {
 			/>
 		</MvSection>
 	);
+};
+
+PortfolioSection.propTypes = {
+	title: PropTypes.string,
+	skip: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };

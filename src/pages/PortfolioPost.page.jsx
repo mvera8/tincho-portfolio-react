@@ -1,75 +1,100 @@
 import { useMemo } from 'react';
-import { Card, Grid, Image, Stack, Title } from '@mantine/core';
-import { CardIcon, Footer, MvHelmet, MvSection, Navbar, TextList } from '../components';
-import { FaqsSection } from '../sections';
+import { Badge, Card, Grid, Image, Paper, Stack, Text, Title } from '@mantine/core';
+import { Each, Footer, MvButton, MvHelmet, MvSection, Navbar, SectionTitle, TextList } from '../components';
 import { ReactCompareSlider } from 'react-compare-slider';
 import { Navigate, useParams } from 'react-router-dom';
 import { useI18n } from '../i18n/useI18n';
+import { PortfolioSection } from '../sections';
+import { IconArrowUpRight } from '@tabler/icons-react';
+import T from '../i18n/T.jsx';
 
 export const PortfolioPostPage = () => {
 	const { slug } = useParams();
 	const { get } = useI18n();
-	
+
 	const work = useMemo(() => {
 		const list = Array.isArray(get('portfolio.works')) ? get('portfolio.works') : [];
 		return list.find((p) => p.id === slug);
 	}, [get, slug]);
-	
+
 	if (!work) {
 		return <Navigate to="/portfolio" replace />;
 	}
+
+	const renderFeatured = () => {
+		switch (work.featured?.type) {
+		case 'slider':
+			return (
+				<Paper mb="lg">
+					<ReactCompareSlider
+						itemOne={<Image src={work.featured.image1} alt={work.featured.alt} />}
+						itemTwo={<Image src={work.featured.image2} alt={work.featured.alt} />}
+					/>
+				</Paper>
+			);
+		case 'image':
+			return (
+				<Image
+					radius="md"
+					mb="lg"
+					src={work.featured?.image}
+					alt={work.featured?.alt}
+				/>
+			);
+		}
+	};
 
 	return (
 		<>
 			<MvHelmet page={work.title} slug={slug} />
 			<Navbar />
 			<MvSection>
-				<Grid align="center" pt="xl">
+				<Grid align="center">
 					<Grid.Col span={10}>
-						<Title order={1} mb="xl">{work.title}</Title>
+						<Title order={1} mb="xs">{work.title}</Title>
+						{work?.goal && <Text mb="xl">{work?.goal}</Text>}
+						{work?.featured?.type && renderFeatured()}
 
-						{work.type}
-
-						<ReactCompareSlider
-							itemOne={<Image src="/martin_vera_bits.webp" alt="Image one" />}
-							itemTwo={<Image src="/martin_vera_draw.webp" alt="Image two" />}
-						/>
-
-						<Image
-							radius="md"
-							mb="lg"
-							src="/cleanmax.webp"
-							loading="lazy"
+						<Each
+							of={work?.tech}
+							render={(item, idx) => (
+								<Badge key={idx} variant="default" size="md" mr="xs">{item}</Badge>
+							)}
 						/>
 					</Grid.Col>
 					<Grid.Col span={2}>
 						<Card p="xl" radius="md">
-							<Stack
-								h={300}
-								align="stretch"
-								justify="center"
-							>
-								<TextList title="Year" text="2025" showDivider />
-								<TextList title="Client" text="Cleanmax" showDivider />
-								<TextList title="Type" text="Web Develop" />
+							<Stack h={300} align="stretch" justify="center">
+								<TextList title="Year" text={work?.data?.year || '—'} showDivider />
+								<TextList title="Client" text={work?.data?.client || '—'} showDivider />
+								<TextList title="Type" text={work?.data?.type || '—'} />
 							</Stack>
 						</Card>
 					</Grid.Col>
-				</Grid>
-				<Grid>
-					<Grid.Col span={4}>
-						<CardIcon />
-					</Grid.Col>
-					<Grid.Col span={4}>
-						<CardIcon />
-					</Grid.Col>
-					<Grid.Col span={4}>
-						<CardIcon />
+					<Grid.Col span={8}>
+						<SectionTitle
+							title={<T k="portfolio.work.title" />}
+							text={work?.content}
+						/>
+
+						{work?.link &&
+							<>
+								<Title order={3} my="lg">
+									<T k="portfolio.work.button" />
+								</Title>
+								<MvButton
+									text={work.title}
+									link={work?.link}
+									variant="filled"
+									Icon={IconArrowUpRight}
+								/>
+							</>
+						}
 					</Grid.Col>
 				</Grid>
 			</MvSection>
-			<FaqsSection />
+			<PortfolioSection skip={slug} title="Other projects" />
 			<Footer />
 		</>
-	)
-}
+	);
+};

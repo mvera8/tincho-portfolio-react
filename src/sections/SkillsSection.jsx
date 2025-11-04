@@ -9,7 +9,8 @@ import { CardSkill, Each, MvSection, SectionTitle } from '../components';
 import {
 	IconBrandWordpress, IconBrandNextjs, IconBrandReact, IconBrandDocker,
 	IconBrandBootstrap, IconBrandFigma, IconBrandHtml5, IconBrandJavascript,
-	IconBrandPhp, IconBrandCypress, IconBrandAdobePhotoshop, IconBrandAdobeIllustrator
+	IconBrandPhp, IconBrandCypress, IconBrandAdobePhotoshop, IconBrandAdobeIllustrator,
+	IconAi
 } from '@tabler/icons-react';
 import T from '../i18n/T.jsx';
 import { useI18n } from '../i18n/useI18n.js';
@@ -26,6 +27,7 @@ const ICONS = {
 	IconBrandCypress,
 	IconBrandAdobePhotoshop,
 	IconBrandAdobeIllustrator,
+	IconAi,
 };
 
 export const SkillsSection = () => {

@@ -6,7 +6,7 @@ export const TextDisplay = ({text, gradient, align = 'left'}) => {
 	const colorScheme = useMantineColorScheme();
 
 	return (
-		<Title order={1} c="gray" className={classes.title} mb="xs" ta={align}>
+		<Title order={1} c={colorScheme.colorScheme === 'dark' ? 'white' : 'dark'} className={classes.title} mb="xs" ta={align}>
 			{text}{' '} 
 			<Text
 				component="span"

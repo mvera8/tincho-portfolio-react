@@ -180,22 +180,71 @@
 			"title": "Illustrator",
 			"icon": "IconBrandAdobeIllustrator",
 			"category": "design"
+		},
+		{
+			"title": "ChatGPT",
+			"icon": "IconAi",
+			"category": "ai"
+		},
+		{
+			"title": "Claude",
+			"icon": "IconAi",
+			"category": "ai"
 		}
 	],
 	"portfolio.subtitle": "Latest Work",
 	"portfolio.title": "Explore My Projects",
+	"portfolio.work.title": "Description",
+	"portfolio.work.button": "See it in action",
 	"portfolio.works": [
 		{
 			"id": "cleanmax",
+			"link": "https://cleanmax.uy/",
 			"title": "Cleanmax Website",
-			"type": "slider",
-			"text": "WordPress site with contact form and clean styling. Focused on performance and message clarity."
+			"featured": {
+				"type": "slider",
+				"image1": "/cleanmax.webp",
+				"image2": "/site.webp",
+				"alt": "Cleanmax WordPress website"
+			},
+			"data": {
+				"year": "2025",
+				"client": "Cleanmax",
+				"type": "WordPress Website"
+			},
+			"tech": [
+				"WordPress",
+				"ACF",
+				"Bootstrap",
+				"PHP",
+				"JavaScript"
+			],
+			"goal": "Performance, corporate design and scalability",
+			"content": "The goal was to build a modern, high-performance website aligned with Cleanmax’s brand identity. Developed in WordPress using ACF for full content flexibility and styled with Bootstrap to match corporate colors and typography. Images and assets were optimized to achieve excellent scores on Google PageSpeed Insights. The result is a professional, fast, and fully responsive website that reflects Cleanmax’s values: maximum cleanliness and maximum efficiency."
 		},
 		{
 			"id": "site",
-			"title": "MV Portfolio Website",
-			"type": "image",
-			"text": "Lala"
+			"title": "Personal Portfolio - Martin Vera",
+			"featured": {
+				"type": "image",
+				"image": "/site.webp",
+				"alt": "Personal portfolio built with React"
+			},
+			"data": {
+				"year": "2025",
+				"client": "Personal project",
+				"type": "React Website"
+			},
+			"tech": [
+				"React",
+				"Mantine",
+				"JavaScript",
+				"Vite",
+				"CSS Modules"
+			],
+			"goal": "Showcase my work as a developer and offer a fast, minimal experience",
+			"text": "Personal portfolio built with React and Mantine, focused on performance, clean design, and maintainability.",
+			"content": "This site was created to centralize my projects and present my work as a web developer in a clear and professional way. Built with React and Mantine UI, it features a minimalist design, smooth animations, and a modular architecture that supports scalability. Vite is used as the bundler to achieve lightning-fast load times and great performance. It also includes multilingual support and Google Analytics integration to monitor user interaction. The result is a fast, modern, and functional site that reflects my development style: simple, efficient, and polished."
 		}
 	],
 	"blog.subtitle": "News & Blog",
@@ -227,5 +276,8 @@
 	"contact.input.btn": "Send message",
 	"contact.status": "Unavailable",
 	"faqs.subtitle": "FAQs",
-	"faqs.title": "Frequently Asked Questions"
+	"faqs.title": "Frequently Asked Questions",
+	"start.title": "Start your free trial today Start your free trial today",
+	"start.subtitle": "Dataly best  SaaS analytics",
+	"start.btn": "Send message"
 }

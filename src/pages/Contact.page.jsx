@@ -1,8 +1,7 @@
 import { Center } from '@mantine/core';
 import { Footer, MvHelmet, MvSection, Navbar, TextDisplay } from '../components';
-import { FaqsSection } from '../sections';
+import { FaqsSection, WebFormSection } from '../sections';
 import { useI18n } from '../i18n/useI18n.js';
-import { WebFormSection } from '../sections/WebFormSection.jsx';
 
 export const ContactPage = () => {
 	const { t } = useI18n();     
