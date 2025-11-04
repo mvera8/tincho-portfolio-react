@@ -11,10 +11,14 @@ https://zento.framer.website/
 https://geroldlight.themejunction.net/portfolios/deloitte/
 https://lumina-product.framer.website/
 
+google data:
+https://www.temlis.com/#pick
+
 Task:
 - Mobile
 - Animation
 - Los elementos de imagen no tienen width y height explícitos
+- favicon
 
 DeepWiki:
 https://deepwiki.com/mvera8/tincho-portfolio-react

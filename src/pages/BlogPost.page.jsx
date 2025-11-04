@@ -3,6 +3,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import { Image, Text, Title } from '@mantine/core';
 import { Footer, MvHelmet, MvSection, Navbar } from '../components';
 import { useI18n } from '../i18n/useI18n.js';
+import { BlogSection } from '../sections/BlogSection.jsx';
 
 export const BlogPostPage = () => {
 	const { slug } = useParams();
@@ -38,6 +39,7 @@ export const BlogPostPage = () => {
 
 				{post.content && <Text mb="lg">{post.content}</Text>}
 			</MvSection>
+			<BlogSection skip={slug} />
 			<Footer />
 		</>
 	);

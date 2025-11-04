@@ -218,22 +218,71 @@
 			"title": "Illustrator",
 			"icon": "IconBrandAdobeIllustrator",
 			"category": "design"
+		},
+		{
+			"title": "ChatGPT",
+			"icon": "IconAi",
+			"category": "ai"
+		},
+		{
+			"title": "Claude",
+			"icon": "IconAi",
+			"category": "ai"
 		}
 	],
 	"portfolio.subtitle": "Últimos trabajos",
 	"portfolio.title": "Explorá mis proyectos",
+	"portfolio.work.title": "Descripción",
+	"portfolio.work.button": "Vealo usted mismo",
 	"portfolio.works": [
 		{
 			"id": "cleanmax",
-			"title": "Cleanmax Sitio Web",
-			"type": "slider",
-			"text": "Sitio en WordPress con formulario de contacto y estilo limpio. Enfoque en rendimiento y claridad del mensaje."
+			"link": "https://cleanmax.uy/",
+			"title": "Sitio Web para Cleanmax",
+			"featured": {
+				"type": "slider",
+				"image1": "/cleanmax.webp",
+				"image2": "/site.webp",
+				"alt": "Sitio web de Cleanmax desarrollado en WordPress"
+			},
+			"data": {
+				"year": "2025",
+				"client": "Cleanmax",
+				"type": "Sitio Web en WordPress"
+			},
+			"tech": [
+				"WordPress",
+				"ACF",
+				"Bootstrap",
+				"PHP",
+				"JavaScript"
+			],
+			"goal": "Performance, diseño corporativo y escalabilidad",
+			"content": "El objetivo fue construir un sitio moderno y de alto rendimiento, alineado con la identidad visual de Cleanmax. Se desarrolló en WordPress utilizando ACF para ofrecer flexibilidad total en la gestión del contenido, y se aplicó Bootstrap para mantener coherencia con los colores y tipografías corporativas. Todas las imágenes y recursos fueron optimizados para obtener excelentes resultados en Google PageSpeed Insights. El resultado es un sitio profesional, rápido y completamente responsive que refleja los valores de Cleanmax: máxima limpieza y máxima eficiencia."
 		},
 		{
 			"id": "site",
-			"title": "MV Portfolio Website",
-			"type": "image",
-			"text": "lala"
+			"title": "Sitio Web Personal - Martin Vera",
+			"featured": {
+				"type": "image",
+				"image": "/site.webp",
+				"alt": "Sitio personal desarrollado en React"
+			},
+			"data": {
+				"year": "2025",
+				"client": "Proyecto personal",
+				"type": "Sitio Web en React"
+			},
+			"tech": [
+				"React",
+				"Mantine",
+				"JavaScript",
+				"Vite",
+				"CSS Modules"
+			],
+			"goal": "Mostrar mi trabajo como desarrollador y ofrecer una experiencia rápida y minimalista",
+			"text": "Portfolio personal desarrollado con React y Mantine, centrado en rendimiento, diseño limpio y facilidad de mantenimiento.",
+			"content": "Este sitio fue creado para centralizar mis proyectos y presentar mi trabajo como desarrollador web de forma clara y profesional. Está construido con React y Mantine UI, aprovechando un diseño minimalista, animaciones suaves y una estructura modular que facilita la escalabilidad. Utiliza Vite como bundler para lograr tiempos de carga mínimos y un excelente rendimiento. Además, incluye soporte multilenguaje e integración con Google Analytics para analizar la interacción de los usuarios. El resultado es un sitio rápido, moderno y funcional que refleja mi estilo de desarrollo: simple, eficiente y bien cuidado."
 		}
 	],
 	"blog.subtitle": "Noticias y Blog",
@@ -265,5 +314,8 @@
 	"contact.input.btn": "Enviar mensaje",
 	"contact.status": "No disponible",
 	"faqs.subtitle": "FAQs",
-	"faqs.title": "Preguntas Frecuentes"
+	"faqs.title": "Preguntas Frecuentes",
+	"start.title": "Start your free trial today",
+	"start.subtitle": "Dataly best  SaaS analytics",
+	"start.btn": "Send message"
 }

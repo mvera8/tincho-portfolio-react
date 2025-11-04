@@ -1,6 +1,6 @@
 import { Container, useMantineTheme } from '@mantine/core';
 import { Footer, MvHelmet, Navbar } from '../components';
-import { AboutSection, BlogSection, HeroSection, PortfolioSection, ResumeSection, ServicesSection, SkillsSection } from '../sections';
+import { AboutSection, BlogSection, HeroSection, PortfolioSection, ResumeSection, ServicesSection, SkillsSection, StartSection } from '../sections';
 import { useI18n } from '../i18n/useI18n.js';
 import { isMobile } from 'react-device-detect';
 
@@ -29,12 +29,13 @@ export const HomePage = () => {
 			<ServicesSection />
 			<SkillsSection />
 			<PortfolioSection />
+			<BlogSection />
 			<div
 				style={{
 					backgroundImage: 'radial-gradient(circle 400px at 0 100%, rgba(239,68,68,0.4), transparent)',
 				}}
 			>
-				<BlogSection />
+				<StartSection />
 			</div>
 			<Footer />
 		</>

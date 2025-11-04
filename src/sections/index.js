@@ -7,3 +7,5 @@ export * from './PortfolioSection';
 export * from './ResumeSection';
 export * from './ServicesSection';
 export * from './SkillsSection';
+export * from './StartSection';
+export * from './WebFormSection';

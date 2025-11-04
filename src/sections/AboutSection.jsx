@@ -5,7 +5,7 @@ import T from '../i18n/T.jsx';
 
 export const AboutSection = () => {
 	// Palabras candidatas: agregá o quitá a gusto
-	const variants = useRef(['sofa', 'draw', 'glass', 'paint', 'toy', 'lights']);
+	const variants = useRef(['draw', 'glass', 'paint', 'toy', 'lights']);
 	const pickOnce = useRef(
 		variants.current[Math.floor(Math.random() * variants.current.length)]
 	);
