@@ -4,7 +4,7 @@ import { Each, Footer, MvButton, MvHelmet, MvSection, Navbar, SectionTitle, Text
 import { ReactCompareSlider } from 'react-compare-slider';
 import { Navigate, useParams } from 'react-router-dom';
 import { useI18n } from '../i18n/useI18n';
-import { PortfolioSection } from '../sections';
+import { PortfolioSection, StartSection } from '../sections';
 import { IconArrowUpRight } from '@tabler/icons-react';
 import T from '../i18n/T.jsx';
 
@@ -93,7 +93,14 @@ export const PortfolioPostPage = () => {
 					</Grid.Col>
 				</Grid>
 			</MvSection>
-			<PortfolioSection skip={slug} title="Other projects" />
+			<div
+				style={{
+					backgroundImage: 'radial-gradient(circle 400px at 0 100%, rgba(239,68,68,0.4), transparent)',
+				}}
+			>
+				<PortfolioSection skip={slug} title="Other projects" />
+				<StartSection />
+			</div>
 			<Footer />
 		</>
 	);

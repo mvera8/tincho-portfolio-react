@@ -116,8 +116,9 @@
 			"description": "Stable suites, visual checks, and practical coverage that pays for itself."
 		}
 	],
-	"services.section.title": "Exceeding expectentions",
-	"services.section.subtitle": "Service Feature",
+	"services.single.badge": "{emoji} Must-to know about",
+	"services.single.title": "Exceeding expectentions",
+	"services.single.subtitle": "Service Feature",
 	"skills.subtitle": "Top Skills",
 	"skills.title": "Tech I Use",
 	"skills.items": [
@@ -277,7 +278,7 @@
 	"contact.status": "Unavailable",
 	"faqs.subtitle": "FAQs",
 	"faqs.title": "Frequently Asked Questions",
-	"start.title": "Start your free trial today Start your free trial today",
-	"start.subtitle": "Dataly best  SaaS analytics",
-	"start.btn": "Send message"
+	"start.title": "Ready to get started?",
+	"start.subtitle": "Convinced?",
+	"start.btn": "Let's talk"
 }

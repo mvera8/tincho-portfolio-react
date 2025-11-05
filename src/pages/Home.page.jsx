@@ -29,12 +29,12 @@ export const HomePage = () => {
 			<ServicesSection />
 			<SkillsSection />
 			<PortfolioSection />
-			<BlogSection />
 			<div
 				style={{
 					backgroundImage: 'radial-gradient(circle 400px at 0 100%, rgba(239,68,68,0.4), transparent)',
 				}}
 			>
+				<BlogSection />
 				<StartSection />
 			</div>
 			<Footer />

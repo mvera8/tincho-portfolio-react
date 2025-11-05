@@ -68,94 +68,125 @@
 	"services.title": "Servicios para impulsar tu negocio",
 	"services.items": [
 		{
-			"slug": "wordpress",
-			"title": "Desarrollo WordPress",
+			"slug": "web",
+			"title": "Sitios Web que Generan Confianza",
 			"icon": "IconBrandWordpress",
-			"description": "Temas a medida, integración de plugins y optimización del sitio para una experiencia fluida.",
+			"description": "Presencia sólida y profesional que convierte visitas en consultas reales. Sitios rápidos, claros y fáciles de gestionar.",
 			"items": [
 				{
-					"title": "Manage your site in the most prodcutive way",
-					"text": "Tu web, tus datos, tu hosting. Sin depender de plataformas cerradas.",
+					"title": "Claridad ante todo",
+					"text": "Tu mensaje se entiende en 3 segundos. Nada de texto de relleno.",
+					"bg": "red.9",
+					"image": "940shots_so"
+				},
+				
+				{
+					"title": "Fácil de mantener",
+					"text": "Podés editar texto, fotos y secciones sin depender de nadie.",
 					"bg": "radial-gradient(circle 350px at 50% 100%, rgba(239,68,68,0.4), transparent)",
-					"image": "dashboard"
+					"image": "wp-admin-dashboard"
 				},
 				{
-					"title": "Potencia sin límites",
-					"text": "De blogs a portales con millones de visitas. WordPress escala contigo.",
+					"title": "Stack flexible",
+					"text": "WordPress para sitios autogestionables o React/Next.js para interfaces más dinámicas. Elegimos según tu proyecto, no por moda.",
 					"bg": true,
-					"image": "world"
+					"image": "icon_code"
 				},
 				{
-					"title": "Diseño a tu medida",
-					"text": "Personalizá cada detalle: colores, tipografías y estructura.",
-					"bg": "red",
-					"image": "Editor visual con bloques y paleta de colores."
+					"title": "Velocidad y rendimiento",
+					"text": "Optimización real para que cargue rápido y no pierdas visitas.",
+					"bg": true,
+					"image": "icon_thunder"
 				},
 				{
-					"title": "Plugins para todo",
-					"text": "SEO, reservas, seguridad o automatización — todo está a un clic.",
-					"bg": "red.1",
-					"image": "Grid de íconos tipo plugin (engranaje, gráfico, candado, calendario)."
-				},
-				{
-					"title": "Comunidad global",
-					"text": "Millones de desarrolladores, soporte constante y mejoras diarias.",
-					"bg": "",
-					"image": "Ilustración de red de personas conectadas o burbujas de chat."
+					"title": "Mantenimiento opcional",
+					"text": "Backups, actualizaciones, seguridad y mejoras pequeñas mensuales. Si algo se rompe, lo arreglo yo.",
+					"bg": true
 				}
 			],
 			"faqs": [
 				{
-					"answer": "Manage your site in the most prodcutive way",
-					"question": "Tu web, tus datos, tu hosting. Sin depender de plataformas cerradas."
+					"question": "¿WordPress o React? ¿Cuál me conviene?",
+					"answer": "Si necesitás actualizar contenido seguido y manejar la web sin depender de nadie, WordPress es ideal. Si necesitás algo más dinámico, con lógica o procesos internos, React/Next.js es la mejor opción. Lo vemos juntos según tu caso."
+				},
+				{
+					"question": "¿Voy a poder cambiar contenido yo mismo?",
+					"answer": "Sí. Te dejo el sitio listo para que puedas editar texto, imágenes y secciones. Además, doy una breve guía para que no dependas de mí."
+				},
+				{
+					"question": "¿La web va a ser rápida?",
+					"answer": "Sí. Configuro caché, compresión, optimización de imágenes y buenas prácticas desde el día uno. Nada de plantillas cargadas de basura."
+				},
+				{
+					"question": "¿Qué necesito para empezar?",
+					"answer": "Un dominio y un hosting. Si no tenés, te ayudo a elegir uno bueno sin gastar de más."
 				}
 			]
 		},
 		{
 			"slug": "apps",
-			"title": "Diseño y Desarrollo de Apps",
+			"title": "Aplicaciones Web a Medida",
 			"icon": "IconDeviceMobile",
-			"description": "Apps rápidas y escalables en React / Next.js con UI moderna.",
+			"description": "Automatización de procesos, paneles internos y funciones específicas que encajan con tu negocio.",
 			"items": [
 				{
-					"title": "Lighting Fast",
-					"image": "lighting"
+					"title": "A medida de verdad",
+					"text": "No partimos de plantillas ni forzamos herramientas."
+				},
+				{
+					"title": "Escalable",
+					"text": "Crece a medida que tu negocio crece."
+				},
+				{
+					"title": "Integraciones",
+					"text": "Google Calendar, WhatsApp, pagos y más."
 				}
 			]
 		},
 		{
 			"slug": "design",
-			"title": "Sistemas de Diseño (UI/UX)",
+			"title": "Diseño de Marca e Interfaces",
 			"icon": "IconBrush",
-			"description": "Interfaces accesibles y mobile-first que se sienten nativas en cualquier dispositivo."
+			"description": "Identidad visual y diseño de interfaces consistentes y claros. Se sienten modernos, humanos y profesionales.",
+			"items": [
+				{
+					"title": "Marca coherente",
+					"text": "Tu identidad se respeta y se reconoce en todos lados."
+				},
+				{
+					"title": "Diseño accesible",
+					"text": "Se ve bien y se usa fácil, sin sobrepensarlo."
+				},
+				{
+					"title": "Mobile-first",
+					"text": "Hecho para el celular antes que para el monitor."
+				}
+			]
 		},
 		{
-			"slug": "branding",
-			"title": "Branding e Identidad Visual",
-			"icon": "IconTopologyRing3",
-			"description": "Identidad de marca, guías visuales y consistencia en todos los puntos de contacto."
-		},
-		{
-			"slug": "videos",
-			"title": "Edición de Video",
-			"icon": "IconMovie",
-			"description": "Edición ágil para piezas promocionales, sociales y tutoriales."
-		},
-		{
-			"slug": "ecommerce",
-			"title": "E-commerce",
-			"icon": "IconShoppingCart",
-			"description": "Tiendas robustas con experiencias de compra fluidas que convierten."
-		},
-		{
-			"slug": "cypress",
-			"title": "Testing E2E con Cypress",
+			"slug": "qa",
+			"title": "QA y Testing Automatizado",
 			"icon": "IconSettings2",
-			"description": "Suites estables, checks visuales y cobertura práctica que se paga sola."
+			"description": "Pruebas E2E, test visuales y controles continuos para que tu producto funcione siempre, incluso cuando cambia.",
+			"items": [
+				{
+					"title": "Confianza al desplegar",
+					"text": "Subí cambios sin miedo a romper nada."
+				},
+				{
+					"title": "Detectamos errores antes",
+					"text": "Automatizaciones que encuentran problemas antes del usuario."
+				},
+				{
+					"title": "Ahorro en soporte",
+					"text": "Menos tickets, menos retrabajo, menos estrés."
+				}
+			]
 		}
 	],
-	"services.section.title": "Superando las expectativas",
-	"services.section.subtitle": "Características",
+	"services.single.badge": "{emoji} Lo que hay que saber sobre",
+	"services.single.title": "Superando las expectativas",
+	"services.single.subtitle": "Características",
 	"skills.subtitle": "Habilidades destacadas",
 	"skills.title": "Tecnologías que uso",
 	"skills.items": [
@@ -315,7 +346,7 @@
 	"contact.status": "No disponible",
 	"faqs.subtitle": "FAQs",
 	"faqs.title": "Preguntas Frecuentes",
-	"start.title": "Start your free trial today",
-	"start.subtitle": "Dataly best  SaaS analytics",
-	"start.btn": "Send message"
+	"start.title": "¿Listo para empezar?y",
+	"start.subtitle": "Convencido?",
+	"start.btn": "Hablemos"
 }

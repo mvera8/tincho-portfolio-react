@@ -1,5 +1,6 @@
 import { ActionIcon,
 	Anchor,
+	Paper,
 	Table,
 	Text,
 	Title,
@@ -26,14 +27,15 @@ export const ResumeSection = () => {
 				/>
 
 				<CardBento bg>
-					<Table mb="lg">
-						<Table.Tbody>
-							<Each
-								of={jobs}
-								render={({ title, link, puesto, time }, idx) => (
-									<Table.Tr key={idx}>
-										{!isMobile &&
-											<Table.Td ta="start" pt="md">
+					<Paper p="xl">
+						<Table>
+							<Table.Tbody>
+								<Each
+									of={jobs}
+									render={({ title, link, puesto, time }, idx) => (
+										<Table.Tr key={idx}>
+											{!isMobile &&
+											<Table.Td ta="start" pt="md" px="md">
 												<ActionIcon
 													variant="light"
 													color="red"
@@ -46,22 +48,24 @@ export const ResumeSection = () => {
 													<IconArrowUpRight size={22} />
 												</ActionIcon>
 											</Table.Td>
-										}
+											}
 										
-										<Table.Td ta="start" pt="md">
-											<TextDimmed text={time} />
-										</Table.Td>
-										<Table.Td ta="start" py="md">
-											<Anchor href={link + '?ref=martinvera.com.uy'} target="_blank">
-												<Title order={3} size="h2" c="red">{title}</Title>
-											</Anchor>
-											<Text>{puesto}</Text>
-										</Table.Td>
-									</Table.Tr>
-								)}
-							/>
-						</Table.Tbody>
-					</Table>
+											<Table.Td ta="start" pt="xl">
+												<TextDimmed text={time} />
+											</Table.Td>
+											<Table.Td ta="start" py="md" px="md">
+												<Anchor href={link + '?ref=martinvera.com.uy'} target="_blank">
+													<Title order={3} size="h2" c="red">{title}</Title>
+												</Anchor>
+												<Text>{puesto}</Text>
+											</Table.Td>
+										</Table.Tr>
+									)}
+								/>
+							</Table.Tbody>
+						</Table>
+					</Paper>
+					
 				</CardBento>
 			</div>
 		</MvSection>
