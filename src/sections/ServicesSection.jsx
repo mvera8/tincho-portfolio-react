@@ -39,8 +39,8 @@ export const ServicesSection = () => {
 										<Text size="xl" c="gray">.0{idx + 1}</Text>
 									</Grid.Col>
 									<Grid.Col span={{ base: 10, md: 8 }} order={{ base: 3, sm: 2 }}>
-										<Title order={4} c="gray">{title}</Title>
-										<Text c="dimmed" truncate="end">{description}</Text>
+										<Title order={4} c="gray" mb="xs">{title}</Title>
+										<Text c="dimmed">{description}</Text>
 									</Grid.Col>
 									<Grid.Col span={{ base: 12, md: 12, lg: 2 }} ta={{ md: 'center', lg: 'end'}} order={{ base: 1, sm: 3 }}>
 										<ThemeIcon variant="light" color="red" radius="xl" size="xl">

@@ -1,5 +1,5 @@
-import { Image, SimpleGrid, Text, Title } from '@mantine/core'
-import { CardBento, Each, Footer, MvHelmet, MvSection, Navbar, SectionTitle, TextDimmed, TextDisplay, TextList } from '../components'
+import { Center, Flex, Grid, Image, SimpleGrid, Text } from '@mantine/core'
+import { CardBento, Footer, MvHelmet, MvSection, Navbar, SectionTitle, TextDimmed, TextDisplay } from '../components'
 import { FaqsSection } from '../sections'
 import { Navigate, useParams } from 'react-router-dom';
 import { useI18n } from '../i18n/useI18n.js';
@@ -24,7 +24,9 @@ export const ServicesPostPage = () => {
 			<MvHelmet page={item.title} slug={slug} />
 			<Navbar />
 			<MvSection size="sm">
-				<Text size="xl" c="dimmed" mb="xs" ta="center">🚀 Must-to know about</Text>
+				<Text size="xl" c="dimmed" mb="xs" ta="center">
+					<T k="services.single.badge" values={{ emoji: '🚀' }} />
+				</Text>
 				<TextDisplay gradient={item.title} align="center" />
 				<TextDimmed align="center" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur tincidunt elit, nec consequat nisi dictum vel. Ut vitae orci at ligula luctus viverra." />
 			</MvSection>
@@ -33,42 +35,93 @@ export const ServicesPostPage = () => {
 				<>
 					<MvSection bg>
 						<SectionTitle
-							title={<T k="services.section.title" />}
-							subtitle={<T k="services.section.subtitle" />}
+							title={<T k="services.single.title" />}
+							subtitle={<T k="services.single.subtitle" />}
 							centerText
 						/>
-				
-						<SimpleGrid mb="lg" cols={{ base: 1, xs: 2 }}>
-							<Each
-								of={item.items}
-								render={({ title, text, bg }, idx) => (
-									<CardBento
-										key={idx}
-										title={title}
-										subtitle={text}
-										bg={bg}
-									>	
+
+						<SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md" mb="md">
+							{/* Columna izquierda: el primer item en grande */}
+							{item.items[0] && (
+								<CardBento
+									title={item.items[0].title}
+									subtitle={item.items[0].text}
+									bg={item.items[0].bg}
+								>
+									<Flex
+										h="100%"
+										gap="md"
+										justify="center"
+										align="flex-end"
+										direction="row"
+										wrap="wrap"
+									>
 										<Image
-											src="/wp-admin-dashboard.webp"
-											h="auto"
-											alt={title}
+											src={'/' + item.items[0].image + '.webp'}
+											h={500}
+											alt={item.items[0].title}
 											loading="lazy"
 										/>
-									</CardBento>
+									</Flex>
+								</CardBento>
+							)}
+
+							{/* Columna derecha con grid interno */}
+							<Grid gutter="md">
+								{/* Item 2 arriba */}
+								{item.items[1] && (
+									<Grid.Col>
+										<CardBento
+											title={item.items[1].title}
+											subtitle={item.items[1].text}
+											bg={item.items[1].bg}
+										>
+											<Center>
+												<Image
+													src={'/' + item.items[1].image + '.webp'}
+													h={160}
+													w="auto"
+													alt={item.items[1].title}
+													loading="lazy"
+												/>
+											</Center>
+										</CardBento>
+									</Grid.Col>
 								)}
-							/>
+
+								{/* Item 3 y 4 lado a lado */}
+								{item.items.slice(2, 4).map((card, idx) => (
+									<Grid.Col key={idx} span={6}>
+										<CardBento
+											title={card.title}
+											subtitle={card.text}
+											bg={card.bg}
+										>
+											<Center>
+												<Image
+													src={'/' + card.image + '.webp'}
+													h={140}
+													w="auto"
+													alt={card.title}
+													loading="lazy"
+													pb="md"
+												/>
+											</Center>
+										</CardBento>
+									</Grid.Col>
+								))}
+							</Grid>
 						</SimpleGrid>
-
-						<CardBento bg>
-							<SimpleGrid cols={4} mb="lg">
-								<Title order={2}>WordPress Information</Title>
-								<TextList title="2003" text="En ese año nace como herramienta de blogs" />
-								<TextList title="43%" text="De los sitios en internet usan WordPress." />
-								<TextList title="65%" text="De los CMS son WordPress" />
-							</SimpleGrid>
-						</CardBento>
-
+						{/* Item 3 y 4 lado a lado */}
+						{item.items[4] && (
+							<CardBento
+								title={item.items[4].title}
+								subtitle={item.items[4].text}
+								bg={item.items[4].bg}
+							/>
+						)}
 					</MvSection>
+
 				</>
 			}
 			{item.faqs &&

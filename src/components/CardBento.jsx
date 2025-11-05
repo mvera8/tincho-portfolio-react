@@ -12,39 +12,46 @@ export const CardBento = ({ children, bg = false, title, subtitle, icon }) => {
 
 	return (
 		<Card
-			padding="xl"
+			p={0}
 			radius="md"
 			bg={bgValue}
-		>		
+			style={{
+				display: 'flex',
+				flexDirection: 'column',
+				height: '100%',
+				minHeight: 130,
+			}}
+		>
 			{icon &&
-				<ThemeIcon
-					variant="transparent"
-					color="red"
-					mr="xs"
-					size="sm"
-					aria-label={subtitle}>
-					{icon}
-				</ThemeIcon>}							
-			{title && <Title order={4} size="h3" mb="sm">{title}</Title>}
-			{subtitle && (
-				<TextDimmed text={subtitle} />
-			)}
-			<Card.Section>
-				<Box
-					mx="xl"
-					p="xl"
-					pb={0}>
-					{children}
+        <ThemeIcon
+        	variant="transparent"
+        	color="red"
+        	mr="xs"
+        	size="sm"
+        	aria-label={subtitle}
+        >
+        	{icon}
+        </ThemeIcon>
+			}
+
+			{(title || subtitle) && (
+				<Box m="xl">
+					{title && <Title order={4} size="h3" mb="sm">{title}</Title>}
+					{subtitle && <TextDimmed text={subtitle} />}
 				</Box>
-			</Card.Section>
+			)}
+
+			<div style={{ flex: 1 }}>
+				{children}
+			</div>
 		</Card>
 	);
 };
 
 CardBento.propTypes = {
-	children: PropTypes.node.isRequired,
+	children: PropTypes.node,
 	bg: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 	title: PropTypes.string,
 	subtitle: PropTypes.string,
-	icon: PropTypes.node, // 👈 elemento React (instanciado)
+	icon: PropTypes.node,
 };
