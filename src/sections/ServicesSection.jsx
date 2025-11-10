@@ -1,6 +1,6 @@
 import { Grid, SimpleGrid, Text, ThemeIcon, Title } from '@mantine/core'
 import { CardLink, Each, MvSection, SectionTitle } from '../components'
-import { IconBrandWordpress, IconBrush, IconChessBishop, IconDeviceMobile, IconMovie, IconSettings2, IconShoppingCart, IconTopologyRing3 } from '@tabler/icons-react'
+import { IconBrandWordpress, IconBrush, IconChessBishop, IconDeviceMobile, IconMovie, IconSettings2, IconShoppingCart, IconTopologyRing3, IconAppWindow } from '@tabler/icons-react'
 import { useI18n } from '../i18n/useI18n.js';
 import T from '../i18n/T.jsx';
 
@@ -12,6 +12,7 @@ const ICONS = {
 	IconShoppingCart,
 	IconTopologyRing3,
 	IconChessBishop,
+	IconAppWindow
 };
 
 export const ServicesSection = () => {

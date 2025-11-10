@@ -4,8 +4,9 @@ import { FaqsSection, WebFormSection } from '../sections';
 import { useI18n } from '../i18n/useI18n.js';
 
 export const ContactPage = () => {
-	const { t } = useI18n();     
+	const { t, get } = useI18n(); // ← Usa get() para arrays/objetos
 	const pageTitle = t('navbar.contact');
+	const contactFaqs = get('contact.faqs'); // ← get() devuelve el valor raw
 
 	return (
 		<>
@@ -17,7 +18,9 @@ export const ContactPage = () => {
 				</Center>
 			</MvSection>
 			<WebFormSection />
-			<FaqsSection />
+			{contactFaqs && Array.isArray(contactFaqs) && (
+				<FaqsSection faqs={contactFaqs} />
+			)}
 			<Footer />
 		</>
 	)

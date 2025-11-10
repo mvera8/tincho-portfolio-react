@@ -68,52 +68,171 @@
 	"services.title": "Services to Grow Your Business",
 	"services.items": [
 		{
-			"slug": "wordpress",
-			"title": "WordPress Development",
-			"icon": "IconBrandWordpress",
-			"description": "Custom themes, plugin integrations, and site optimization for a seamless WordPress experience.",
+			"slug": "web",
+			"title": "Websites That Inspire Trust",
+			"icon": "IconAppWindow",
+			"description": "A solid, professional presence that turns visits into real leads. Fast, clear, and easy to manage.",
 			"items": [
 				{
-					"title": "Manage your site in the most prodcutive way",
-					"image": "dashboard"
+					"title": "Clarity first",
+					"text": "Your message is understood in 3 seconds. No fluff.",
+					"bg": "red.9",
+					"image": "940shots_so"
+				},
+				{
+					"title": "Easy to manage",
+					"text": "Edit text, images, and sections without depending on anyone.",
+					"bg": "radial-gradient(circle 350px at 50% 100%, rgba(239,68,68,0.4), transparent)",
+					"image": "wp-admin-dashboard"
+				},
+				{
+					"title": "Flexible stack",
+					"text": "WordPress for self-managed sites or React/Next.js for more dynamic experiences. We choose based on your project, not trends.",
+					"bg": true,
+					"image": "icon_code"
+				},
+				{
+					"title": "Speed & performance",
+					"text": "Real optimization so the site loads fast and you don't lose visitors.",
+					"bg": true,
+					"image": "icon_thunder"
+				},
+				{
+					"title": "Optional maintenance",
+					"text": "Updates, backups, security, and small improvements every month. If something breaks, I fix it.",
+					"bg": true
+				}
+			],
+			"faqs": [
+				{
+					"question": "WordPress or React? Which one is better for me?",
+					"answer": "If you need to update content often and manage the site yourself, WordPress is perfect. If you need more dynamic logic or custom flows, React/Next.js is the better fit. We decide together."
+				},
+				{
+					"question": "Will I be able to edit things on my own?",
+					"answer": "Yes. You’ll be able to change text, images, and sections. I also include a short walkthrough so you don't depend on me."
+				},
+				{
+					"question": "Will the site be fast?",
+					"answer": "Yes. I configure caching, compression, image optimization, and clean structure from day one. No bloated templates."
+				},
+				{
+					"question": "What do I need to get started?",
+					"answer": "A domain and a hosting service. If you don’t have them, I’ll help you choose a good option without overspending."
 				}
 			]
 		},
 		{
 			"slug": "apps",
-			"title": "Mobile App Design & Development",
+			"title": "Custom Web Applications",
 			"icon": "IconDeviceMobile",
-			"description": "Fast, scalable React / Next.js apps with modern UI."
+			"description": "Internal dashboards, automation tools, and workflows built to match your business.",
+			"items": [
+				{
+					"title": "Truly custom",
+					"text": "Designed specifically for your workflow. No templates, no forcing processes.",
+					"bg": "red.9",
+					"image": "940shots_so"
+				},
+				{
+					"title": "Scales with your business",
+					"text": "Start simple. Grow when you need to. No full rewrites.",
+					"bg": "radial-gradient(circle 350px at 50% 100%, rgba(239,68,68,0.4), transparent)",
+					"image": "wp-admin-dashboard"
+				},
+				{
+					"title": "Real integrations",
+					"text": "Google Calendar, WhatsApp, payments, CRMs… if it exists, we connect it.",
+					"bg": true,
+					"image": "icon_plug"
+				}
+			],
+			"faqs": [
+				{
+					"question": "Can this replace spreadsheets or manual work?",
+					"answer": "Yes. If you have repetitive tasks or tracking in Excel, a custom app automates it and reduces mistakes."
+				},
+				{
+					"question": "Do I need to know anything technical?",
+					"answer": "No. We design it together to be simple to use. I handle the technical part."
+				},
+				{
+					"question": "Can I add new features later?",
+					"answer": "Yes. It’s designed to evolve without breaking."
+				}
+			]
 		},
 		{
 			"slug": "design",
-			"title": "Design Systems (UI/UX)",
+			"title": "Brand & Interface Design",
 			"icon": "IconBrush",
-			"description": "Accessible, mobile-first interfaces that feel native on any device."
+			"description": "Visual identity and clean interface design that feels modern, human, and professional.",
+			"items": [
+				{
+					"title": "Recognizable brand",
+					"text": "Colors, typography, and tone used consistently everywhere.",
+					"bg": "red.9",
+					"image": "940shots_so"
+				},
+				{
+					"title": "Clear interfaces",
+					"text": "Everything in the right place. Nothing distracting. Only what matters.",
+					"bg": true,
+					"image": "wp-admin-dashboard"
+				},
+				{
+					"title": "Mobile-first",
+					"text": "Designed for phones first, not as an afterthought.",
+					"bg": "radial-gradient(circle 350px at 50% 100%, rgba(239,68,68,0.4), transparent)",
+					"image": "icon_phone"
+				}
+			],
+			"faqs": [
+				{
+					"question": "Do you design logos too?",
+					"answer": "Yes. I can create or refine your visual identity across brand, web, and social use."
+				},
+				{
+					"question": "How do I know if my brand needs improvement?",
+					"answer": "If it looks inconsistent across platforms or doesn't clearly convey who you are, it likely needs alignment."
+				}
+			]
 		},
 		{
-			"slug": "branding",
-			"title": "Branding & Visual Identity",
-			"icon": "IconTopologyRing3",
-			"description": "Brand identity, visual guidelines, and cross-channel consistency."
-		},
-		{
-			"slug": "videos",
-			"title": "Video Editing",
-			"icon": "IconMovie",
-			"description": "Agile editing for promos, social clips, and tutorials."
-		},
-		{
-			"slug": "ecommerce",
-			"title": "E-commerce Solutions",
-			"icon": "IconShoppingCart",
-			"description": "Robust stores with seamless shopping experiences that convert."
-		},
-		{
-			"slug": "cypress",
-			"title": "Cypress E2E Testing",
+			"slug": "qa",
+			"title": "QA & Automated Testing",
 			"icon": "IconSettings2",
-			"description": "Stable suites, visual checks, and practical coverage that pays for itself."
+			"description": "E2E tests, regression checks, and visual monitoring so your product keeps working even as it changes.",
+			"items": [
+				{
+					"title": "Deploy with confidence",
+					"text": "If something breaks, we know before users do.",
+					"bg": "red.9",
+					"image": "940shots_so"
+				},
+				{
+					"title": "Errors caught early",
+					"text": "Automation tests the things humans forget to check.",
+					"bg": true,
+					"image": "wp-admin-dashboard"
+				},
+				{
+					"title": "Less support load",
+					"text": "Fewer tickets, fewer surprises, less stress.",
+					"bg": "radial-gradient(circle 350px at 50% 100%, rgba(239,68,68,0.4), transparent)",
+					"image": "icon_bug"
+				}
+			],
+			"faqs": [
+				{
+					"question": "Which tools do you use?",
+					"answer": "Cypress, Jest, and GitHub Actions. But the tool is less important than the coverage and clarity."
+				},
+				{
+					"question": "Does this replace manual QA?",
+					"answer": "No. Human testers provide context and judgment. Automation ensures the basics never fail."
+				}
+			]
 		}
 	],
 	"services.single.badge": "{emoji} Must-to know about",
@@ -121,78 +240,6 @@
 	"services.single.subtitle": "Service Feature",
 	"skills.subtitle": "Top Skills",
 	"skills.title": "Tech I Use",
-	"skills.items": [
-		{
-			"title": "WordPress",
-			"icon": "IconBrandWordpress",
-			"category": "backend"
-		},
-		{
-			"title": "PHP",
-			"icon": "IconBrandPhp",
-			"category": "backend"
-		},
-		{
-			"title": "HTML5",
-			"icon": "IconBrandHtml5",
-			"category": "frontend"
-		},
-		{
-			"title": "JavaScript",
-			"icon": "IconBrandJavascript",
-			"category": "frontend"
-		},
-		{
-			"title": "React",
-			"icon": "IconBrandReact",
-			"category": "frontend"
-		},
-		{
-			"title": "Next.js",
-			"icon": "IconBrandNextjs",
-			"category": "frontend"
-		},
-		{
-			"title": "Bootstrap",
-			"icon": "IconBrandBootstrap",
-			"category": "frontend"
-		},
-		{
-			"title": "Figma",
-			"icon": "IconBrandFigma",
-			"category": "design"
-		},
-		{
-			"title": "Docker",
-			"icon": "IconBrandDocker",
-			"category": "devops"
-		},
-		{
-			"title": "Cypress",
-			"icon": "IconBrandCypress",
-			"category": "testing"
-		},
-		{
-			"title": "Photoshop",
-			"icon": "IconBrandAdobePhotoshop",
-			"category": "design"
-		},
-		{
-			"title": "Illustrator",
-			"icon": "IconBrandAdobeIllustrator",
-			"category": "design"
-		},
-		{
-			"title": "ChatGPT",
-			"icon": "IconAi",
-			"category": "ai"
-		},
-		{
-			"title": "Claude",
-			"icon": "IconAi",
-			"category": "ai"
-		}
-	],
 	"portfolio.subtitle": "Latest Work",
 	"portfolio.title": "Explore My Projects",
 	"portfolio.work.title": "Description",
@@ -276,6 +323,28 @@
 	"contact.btn": "Send message",
 	"contact.input.btn": "Send message",
 	"contact.status": "Unavailable",
+	"contact.faqs": [
+		{
+			"question": "How soon will you reply?",
+			"answer": "Usually within 24 hours. If I'm in the middle of a delivery, it may take a bit longer, but I always respond."
+		},
+		{
+			"question": "Do we need a video call first?",
+			"answer": "Not always. If your message explains the project clearly, we can start by email. A call is useful once we have details to align."
+		},
+		{
+			"question": "Can you work with my existing developer or team?",
+			"answer": "Yes. I collaborate with designers, devs, PMs, and QA teams often. Clear communication is the key."
+		},
+		{
+			"question": "Do you work with international clients?",
+			"answer": "Yes. I work with clients in the US, LATAM, and Europe. Payments and communication are not an issue."
+		},
+		{
+			"question": "What information should I include in the message?",
+			"answer": "Tell me what you need, any links, examples, deadlines, and what success looks like to you. The clearer the initial message, the faster we move."
+		}
+	],
 	"faqs.subtitle": "FAQs",
 	"faqs.title": "Frequently Asked Questions",
 	"start.title": "Ready to get started?",

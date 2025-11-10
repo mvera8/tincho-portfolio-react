@@ -70,7 +70,7 @@
 		{
 			"slug": "web",
 			"title": "Sitios Web que Generan Confianza",
-			"icon": "IconBrandWordpress",
+			"icon": "IconAppWindow",
 			"description": "Presencia sólida y profesional que convierte visitas en consultas reales. Sitios rápidos, claros y fáciles de gestionar.",
 			"items": [
 				{
@@ -131,15 +131,35 @@
 			"items": [
 				{
 					"title": "A medida de verdad",
-					"text": "No partimos de plantillas ni forzamos herramientas."
+					"text": "Diseñado exactamente para tu flujo de trabajo. No plantillas, no forzar procesos.",
+					"bg": "red.9",
+					"image": "icon_puzzle"
 				},
 				{
-					"title": "Escalable",
-					"text": "Crece a medida que tu negocio crece."
+					"title": "Crece con tu negocio",
+					"text": "Empieza simple. Escala cuando lo necesites. Sin rehacer todo desde cero.",
+					"bg": "radial-gradient(circle 350px at 50% 100%, rgba(239,68,68,0.4), transparent)",
+					"image": "icon_graph"
 				},
 				{
-					"title": "Integraciones",
-					"text": "Google Calendar, WhatsApp, pagos y más."
+					"title": "Integraciones reales",
+					"text": "Google Calendar, WhatsApp, pagos, CRM, planillas… si existe, se conecta.",
+					"bg": true,
+					"image": "icon_plug"
+				}
+			],
+			"faqs": [
+				{
+					"question": "¿Esto reemplaza planillas o trabajo manual?",
+					"answer": "Sí. Si hoy tenés tareas repetitivas, registros en Excel o pasos que dependen de memoria, una app a medida automatiza eso y reduce errores."
+				},
+				{
+					"question": "¿Necesito saber de tecnología?",
+					"answer": "No. La diseñamos juntos para que sea fácil de usar. Yo me ocupo de lo técnico."
+				},
+				{
+					"question": "¿Puedo agregar funciones después?",
+					"answer": "Sí. Está pensado para evolucionar sin romperse."
 				}
 			]
 		},
@@ -147,19 +167,35 @@
 			"slug": "design",
 			"title": "Diseño de Marca e Interfaces",
 			"icon": "IconBrush",
-			"description": "Identidad visual y diseño de interfaces consistentes y claros. Se sienten modernos, humanos y profesionales.",
+			"description": "Identidad visual y diseño de interfaces consistentes y claros. Modernos, humanos y funcionales.",
 			"items": [
 				{
-					"title": "Marca coherente",
-					"text": "Tu identidad se respeta y se reconoce en todos lados."
+					"title": "Marca que se reconoce",
+					"text": "Colores, tipografías y estilo coherente. Nada al azar.",
+					"bg": "red.9",
+					"image": "icon_palette"
 				},
 				{
-					"title": "Diseño accesible",
-					"text": "Se ve bien y se usa fácil, sin sobrepensarlo."
+					"title": "Interfaces claras",
+					"text": "Cada cosa en su lugar. Nada que distraiga. Todo lo que importa, visible.",
+					"bg": true,
+					"image": "icon_layout"
 				},
 				{
-					"title": "Mobile-first",
-					"text": "Hecho para el celular antes que para el monitor."
+					"title": "Pensado para celular",
+					"text": "La web se usa en la mano. Diseñamos desde ahí.",
+					"bg": "radial-gradient(circle 350px at 50% 100%, rgba(239,68,68,0.4), transparent)",
+					"image": "icon_phone"
+				}
+			],
+			"faqs": [
+				{
+					"question": "¿También hacés logos?",
+					"answer": "Sí. Diseño o refuerzo tu identidad visual desde el logo hasta cómo se aplica en tu web y redes."
+				},
+				{
+					"question": "¿Cómo sé si mi marca está mal diseñada?",
+					"answer": "Si se ve distinta en cada lugar o si no transmite nada claro, probablemente esté desalineada. Lo revisamos juntos."
 				}
 			]
 		},
@@ -167,19 +203,35 @@
 			"slug": "qa",
 			"title": "QA y Testing Automatizado",
 			"icon": "IconSettings2",
-			"description": "Pruebas E2E, test visuales y controles continuos para que tu producto funcione siempre, incluso cuando cambia.",
+			"description": "Pruebas E2E y controles continuos para que tu producto funcione siempre, incluso cuando cambia.",
 			"items": [
 				{
-					"title": "Confianza al desplegar",
-					"text": "Subí cambios sin miedo a romper nada."
+					"title": "Desplegar sin miedo",
+					"text": "Si algo se rompe, lo sabemos antes de que llegue al cliente.",
+					"bg": "red.9",
+					"image": "icon_shield"
 				},
 				{
-					"title": "Detectamos errores antes",
-					"text": "Automatizaciones que encuentran problemas antes del usuario."
+					"title": "Errores detectados antes",
+					"text": "Automatizaciones que prueban lo que los humanos olvidan revisar.",
+					"bg": true,
+					"image": "icon_robot"
 				},
 				{
-					"title": "Ahorro en soporte",
-					"text": "Menos tickets, menos retrabajo, menos estrés."
+					"title": "Menos soporte",
+					"text": "Menos tickets, menos estrés, menos tiempo perdido.",
+					"bg": "radial-gradient(circle 350px at 50% 100%, rgba(239,68,68,0.4), transparent)",
+					"image": "icon_bug"
+				}
+			],
+			"faqs": [
+				{
+					"question": "¿Qué herramientas usás?",
+					"answer": "Cypress, Jest y GitHub Actions. Pero la herramienta es lo de menos. Lo importante es la cobertura real."
+				},
+				{
+					"question": "¿Esto reemplaza a un tester?",
+					"answer": "No. Los testers humanos ven contexto y criterio. La automatización asegura que lo básico nunca falle."
 				}
 			]
 		}
@@ -189,78 +241,6 @@
 	"services.single.subtitle": "Características",
 	"skills.subtitle": "Habilidades destacadas",
 	"skills.title": "Tecnologías que uso",
-	"skills.items": [
-		{
-			"title": "WordPress",
-			"icon": "IconBrandWordpress",
-			"category": "backend"
-		},
-		{
-			"title": "PHP",
-			"icon": "IconBrandPhp",
-			"category": "backend"
-		},
-		{
-			"title": "HTML5",
-			"icon": "IconBrandHtml5",
-			"category": "frontend"
-		},
-		{
-			"title": "JavaScript",
-			"icon": "IconBrandJavascript",
-			"category": "frontend"
-		},
-		{
-			"title": "React",
-			"icon": "IconBrandReact",
-			"category": "frontend"
-		},
-		{
-			"title": "Next.js",
-			"icon": "IconBrandNextjs",
-			"category": "frontend"
-		},
-		{
-			"title": "Bootstrap",
-			"icon": "IconBrandBootstrap",
-			"category": "frontend"
-		},
-		{
-			"title": "Figma",
-			"icon": "IconBrandFigma",
-			"category": "design"
-		},
-		{
-			"title": "Docker",
-			"icon": "IconBrandDocker",
-			"category": "devops"
-		},
-		{
-			"title": "Cypress",
-			"icon": "IconBrandCypress",
-			"category": "testing"
-		},
-		{
-			"title": "Photoshop",
-			"icon": "IconBrandAdobePhotoshop",
-			"category": "design"
-		},
-		{
-			"title": "Illustrator",
-			"icon": "IconBrandAdobeIllustrator",
-			"category": "design"
-		},
-		{
-			"title": "ChatGPT",
-			"icon": "IconAi",
-			"category": "ai"
-		},
-		{
-			"title": "Claude",
-			"icon": "IconAi",
-			"category": "ai"
-		}
-	],
 	"portfolio.subtitle": "Últimos trabajos",
 	"portfolio.title": "Explorá mis proyectos",
 	"portfolio.work.title": "Descripción",
@@ -344,9 +324,31 @@
 	"contact.btn": "Enviar mensaje",
 	"contact.input.btn": "Enviar mensaje",
 	"contact.status": "No disponible",
+	"contact.faqs": [
+		{
+			"question": "¿Cuánto tardarás en responder?",
+			"answer": "Normalmente, en un plazo de 24 horas. Si estoy realizando una entrega, puede que tarde un poco más, pero siempre respondo"
+		},
+		{
+			"question": "¿Es necesario hacer primero una videollamada?",
+			"answer": "No siempre. Si su mensaje explica claramente el proyecto, podemos empezar por correo electrónico. Una llamada es útil una vez que tenemos los detalles para ponernos de acuerdo."
+		},
+		{
+			"question": "¿Puedes trabajar con mi desarrollador o equipo actual?",
+			"answer": "Sí. Colaboro a menudo con diseñadores, desarrolladores, gestores de proyectos y equipos de control de calidad. La clave es una comunicación clara."
+		},
+		{
+			"question": "¿Trabajas con clientes internacionales?",
+			"answer": "Sí. Trabajo con clientes de EE. UU., Latinoamérica y Europa. Los pagos y la comunicación no suponen ningún problema"
+		},
+		{
+			"question": "¿Qué información debo incluir en el mensaje?",
+			"answer": "Dime lo que necesitas, cualquier enlace, ejemplos, plazos y qué es para ti el éxito. Cuanto más claro sea el mensaje inicial, más rápido avanzaremos"
+		}
+	],
 	"faqs.subtitle": "FAQs",
 	"faqs.title": "Preguntas Frecuentes",
-	"start.title": "¿Listo para empezar?y",
+	"start.title": "¿Listo para empezar?",
 	"start.subtitle": "Convencido?",
 	"start.btn": "Hablemos"
 }
