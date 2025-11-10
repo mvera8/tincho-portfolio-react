@@ -19,7 +19,7 @@ export const CardBento = ({ children, bg = false, title, subtitle, icon }) => {
 				display: 'flex',
 				flexDirection: 'column',
 				height: '100%',
-				minHeight: 130,
+				minHeight: 120,
 			}}
 		>
 			{icon &&
@@ -35,7 +35,7 @@ export const CardBento = ({ children, bg = false, title, subtitle, icon }) => {
 			}
 
 			{(title || subtitle) && (
-				<Box m="xl">
+				<Box m="lg">
 					{title && <Title order={4} size="h3" mb="sm">{title}</Title>}
 					{subtitle && <TextDimmed text={subtitle} />}
 				</Box>

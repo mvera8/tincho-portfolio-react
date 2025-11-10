@@ -10,51 +10,106 @@ import {
 	IconBrandWordpress, IconBrandNextjs, IconBrandReact, IconBrandDocker,
 	IconBrandBootstrap, IconBrandFigma, IconBrandHtml5, IconBrandJavascript,
 	IconBrandPhp, IconBrandCypress, IconBrandAdobePhotoshop, IconBrandAdobeIllustrator,
-	IconAi
+	IconAi, IconBrandCss3
 } from '@tabler/icons-react';
 import T from '../i18n/T.jsx';
-import { useI18n } from '../i18n/useI18n.js';
 
-const ICONS = {
-	IconBrandHtml5,
-	IconBrandJavascript,
-	IconBrandReact,
-	IconBrandNextjs,
-	IconBrandBootstrap,
-	IconBrandFigma,
-	IconBrandDocker,
-	IconBrandPhp,
-	IconBrandCypress,
-	IconBrandAdobePhotoshop,
-	IconBrandAdobeIllustrator,
-	IconAi,
-};
+const skills = [
+	{
+		'title': 'WordPress',
+		'icon': IconBrandWordpress,
+		'category': 'backend'
+	},
+	{
+		'title': 'PHP',
+		'icon': IconBrandPhp,
+		'category': 'backend'
+	},
+	{
+		'title': 'HTML5',
+		'icon': IconBrandHtml5,
+		'category': 'frontend'
+	},
+	{
+		'title': 'CSS3',
+		'icon': IconBrandCss3,
+		'category': 'frontend'
+	},
+	{
+		'title': 'JavaScript',
+		'icon': IconBrandJavascript,
+		'category': 'frontend'
+	},
+	{
+		'title': 'React',
+		'icon': IconBrandReact,
+		'category': 'frontend'
+	},
+	{
+		'title': 'Next.js',
+		'icon': IconBrandNextjs,
+		'category': 'frontend'
+	},
+	{
+		'title': 'Bootstrap',
+		'icon': IconBrandBootstrap,
+		'category': 'frontend'
+	},
+	{
+		'title': 'Figma',
+		'icon': IconBrandFigma,
+		'category': 'design'
+	},
+	{
+		'title': 'Docker',
+		'icon': IconBrandDocker,
+		'category': 'devops'
+	},
+	{
+		'title': 'Cypress',
+		'icon': IconBrandCypress,
+		'category': 'testing'
+	},
+	{
+		'title': 'Photoshop',
+		'icon': IconBrandAdobePhotoshop,
+		'category': 'design'
+	},
+	{
+		'title': 'Illustrator',
+		'icon': IconBrandAdobeIllustrator,
+		'category': 'design'
+	},
+	{
+		'title': 'ChatGPT',
+		'icon': IconAi,
+		'category': 'ai'
+	},
+	{
+		'title': 'Claude',
+		'icon': IconAi,
+		'category': 'ai'
+	}
+];
 
 export const SkillsSection = () => {
-	const { get } = useI18n();
-	const itemsRaw = get('skills.items');
-
-	const items = useMemo(() => {
-		return Array.isArray(itemsRaw) ? itemsRaw : [];
-	}, [itemsRaw]);
-
 	// --- Pills de categorías ---
 	const [activeCat, setActiveCat] = useState('all');
 
 	const categories = useMemo(() => {
-		const set = new Set(items.map(i => i.category).filter(Boolean));
+		const set = new Set(skills.map(i => i.category).filter(Boolean));
 		return ['all', ...Array.from(set)];
-	}, [items]);
+	}, []);
 
 	const labelize = (cat) =>
 		cat === 'all' ? 'All' : cat?.charAt(0).toUpperCase() + cat?.slice(1);
 
 	const filtered = useMemo(
-		() => (activeCat === 'all' ? items : items.filter(i => i.category === activeCat)),
-		[items, activeCat]
+		() => (activeCat === 'all' ? skills : skills.filter(i => i.category === activeCat)),
+		[activeCat]
 	);
 
-	if (items.length === 0) return null;
+	if (skills.length === 0) return null;
 
 	return (
 		<MvSection bg>
@@ -85,9 +140,8 @@ export const SkillsSection = () => {
 						<Each
 							of={filtered}
 							render={({ title, icon }, idx) => {
-								const IconCmp = ICONS[icon] ?? IconBrandWordpress;
 								return (
-									<CardSkill key={idx} icon={IconCmp} title={title} />
+									<CardSkill key={idx} icon={icon} title={title} />
 								);
 							}}
 						/>

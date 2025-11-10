@@ -28,7 +28,7 @@ export const ServicesPostPage = () => {
 					<T k="services.single.badge" values={{ emoji: '🚀' }} />
 				</Text>
 				<TextDisplay gradient={item.title} align="center" />
-				<TextDimmed align="center" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur tincidunt elit, nec consequat nisi dictum vel. Ut vitae orci at ligula luctus viverra." />
+				<TextDimmed align="center" text={item.description} />
 			</MvSection>
 
 			{item.items &&
@@ -58,7 +58,7 @@ export const ServicesPostPage = () => {
 									>
 										<Image
 											src={'/' + item.items[0].image + '.webp'}
-											h={500}
+											h={400}
 											alt={item.items[0].title}
 											loading="lazy"
 										/>
