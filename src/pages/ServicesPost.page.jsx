@@ -1,4 +1,4 @@
-import { Center, Flex, Grid, Image, SimpleGrid, Text } from '@mantine/core'
+import { Center, Flex, Grid, Image, RingProgress, SimpleGrid, Text } from '@mantine/core'
 import { CardBento, Footer, MvHelmet, MvSection, Navbar, SectionTitle, TextDimmed, TextDisplay } from '../components'
 import { FaqsSection } from '../sections'
 import { Navigate, useParams } from 'react-router-dom';
@@ -18,6 +18,37 @@ export const ServicesPostPage = () => {
 	if (!item) {
 		return <Navigate to="/services" replace />;
 	}
+
+	const renderFeatured = (card) => {
+		if (typeof card.image === 'number') {
+			return (
+				<RingProgress
+					size={150}
+					roundCaps
+					label={
+						<Text size={30} fw={900} c="green" ta="center" style={{ pointerEvents: 'none' }}>
+							+{card.image}
+						</Text>
+					}
+					sections={[
+						{ value: card.image, color: 'green' },
+					]}
+					rootColor="gray"
+				/>
+			);
+		}
+	
+		return (
+			<Image
+				src={'/' + card.image + '.webp'}
+				h={140}
+				w="auto"
+				alt={card.title}
+				loading="lazy"
+				pb="md"
+			/>
+		);
+	};
 
 	return (
 		<>
@@ -91,21 +122,15 @@ export const ServicesPostPage = () => {
 
 								{/* Item 3 y 4 lado a lado */}
 								{item.items.slice(2, 4).map((card, idx) => (
-									<Grid.Col key={idx} span={6}>
+									<Grid.Col key={idx} span={{ base: 12, md: 6 }}>
 										<CardBento
 											title={card.title}
 											subtitle={card.text}
 											bg={card.bg}
 										>
 											<Center>
-												<Image
-													src={'/' + card.image + '.webp'}
-													h={140}
-													w="auto"
-													alt={card.title}
-													loading="lazy"
-													pb="md"
-												/>
+												{card.image && renderFeatured(card)}
+												
 											</Center>
 										</CardBento>
 									</Grid.Col>

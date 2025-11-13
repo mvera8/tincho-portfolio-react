@@ -90,13 +90,13 @@
 					"title": "Stack flexible",
 					"text": "WordPress para sitios autogestionables o React/Next.js para interfaces más dinámicas. Elegimos según tu proyecto, no por moda.",
 					"bg": true,
-					"image": "icon_code"
+					"image": "icon_thunder"
 				},
 				{
 					"title": "Velocidad y rendimiento",
 					"text": "Optimización real para que cargue rápido y no pierdas visitas.",
-					"bg": true,
-					"image": "icon_thunder"
+					"bg": "white",
+					"image": 90
 				},
 				{
 					"title": "Mantenimiento opcional",

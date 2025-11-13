@@ -43,7 +43,7 @@ export const PortfolioSection = ({title, skip}) => {
 					return (
 						<CardLink key={idx} link={`/portfolio/${slug}`}>
 							<Grid align="stretch">
-								<Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
+								<Grid.Col span={{ base: 12, md: 12, lg: 4 }} order={{ base: 2, sm: 1 }}>
 									<Stack
 										h={'100%'}
 										align="stretch"
@@ -62,7 +62,7 @@ export const PortfolioSection = ({title, skip}) => {
 										/>
 									</Stack>
 								</Grid.Col>
-								<Grid.Col span={{ base: 12, md: 12, lg: 8 }}>
+								<Grid.Col span={{ base: 12, md: 12, lg: 8 }} order={{ base: 1, sm: 2 }}>
 									<Image
 										radius="md"
 										loading="lazy"
