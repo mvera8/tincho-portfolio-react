@@ -2,6 +2,7 @@ import { Grid, SimpleGrid, Text, ThemeIcon, Title } from '@mantine/core'
 import { CardLink, Each, MvSection, SectionTitle } from '../components'
 import { IconBrandWordpress, IconBrush, IconChessBishop, IconDeviceMobile, IconMovie, IconSettings2, IconShoppingCart, IconTopologyRing3, IconAppWindow } from '@tabler/icons-react'
 import { useI18n } from '../i18n/useI18n.js';
+import { isMobile } from 'react-device-detect';
 import T from '../i18n/T.jsx';
 
 const ICONS = {
@@ -36,9 +37,11 @@ export const ServicesSection = () => {
 						return (
 							<CardLink key={idx} link={`/services/${slug}`}>
 								<Grid p="md" pb={0}>
+									{!isMobile &&
 									<Grid.Col span={{ base: 2, md: 2 }} order={{ base: 2, sm: 1 }}>
 										<Text size="xl" c="gray">.0{idx + 1}</Text>
 									</Grid.Col>
+									}
 									<Grid.Col span={{ base: 10, md: 8 }} order={{ base: 3, sm: 2 }}>
 										<Title order={4} c="gray" mb="xs">{title}</Title>
 										<Text c="dimmed">{description}</Text>
@@ -47,7 +50,7 @@ export const ServicesSection = () => {
 										<ThemeIcon variant="light" color="red" radius="xl" size="xl">
 											<IconCmp size={22} />
 										</ThemeIcon>
-									</Grid.Col>
+									</Grid.Col>									
 								</Grid>
 							</CardLink>
 						);

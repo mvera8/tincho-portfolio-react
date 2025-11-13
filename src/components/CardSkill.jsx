@@ -1,5 +1,6 @@
 import { Card, Group, ThemeIcon, Title } from '@mantine/core';
 import { IconBrandWordpress } from '@tabler/icons-react';
+import { isMobile } from 'react-device-detect';
 import PropTypes from 'prop-types';
 
 export const CardSkill = ({ title, icon: IconCmp }) => {
@@ -8,8 +9,8 @@ export const CardSkill = ({ title, icon: IconCmp }) => {
 	return (
 		<Card radius="xl" p="xs">
 			<Group preventGrowOverflow={false} wrap="nowrap">
-				<ThemeIcon variant="light" color="red" radius="xl" size="xl">
-					<Icon size={40} stroke={1.5} />
+				<ThemeIcon variant="light" color="red" radius="xl" size={isMobile ? 'lg' : 'xl'}>
+					<Icon size={isMobile ? 30 : 40} stroke={1.5} />
 				</ThemeIcon>
 				<Title order={4} c="gray" ta="center">
 					{title}

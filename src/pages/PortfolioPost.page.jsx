@@ -50,7 +50,7 @@ export const PortfolioPostPage = () => {
 			<Navbar />
 			<MvSection>
 				<Grid align="center">
-					<Grid.Col span={10}>
+					<Grid.Col span={{ base: 12, md: 10 }}>
 						<Title order={1} mb="xs">{work.title}</Title>
 						{work?.goal && <Text mb="xl">{work?.goal}</Text>}
 						{work?.featured?.type && renderFeatured()}
@@ -62,7 +62,7 @@ export const PortfolioPostPage = () => {
 							)}
 						/>
 					</Grid.Col>
-					<Grid.Col span={2}>
+					<Grid.Col span={{ base: 12, md: 2 }}>
 						<Card p="xl" radius="md">
 							<Stack h={300} align="stretch" justify="center">
 								<TextList title="Year" text={work?.data?.year || '—'} showDivider />
@@ -71,7 +71,7 @@ export const PortfolioPostPage = () => {
 							</Stack>
 						</Card>
 					</Grid.Col>
-					<Grid.Col span={8}>
+					<Grid.Col span={{ base: 12, md: 8 }}>
 						<SectionTitle
 							title={<T k="portfolio.work.title" />}
 							text={work?.content}

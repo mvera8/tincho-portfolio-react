@@ -20,14 +20,14 @@ export const ResumeSection = () => {
 
 	return (
 		<MvSection size="sm" bg>
-			<div className={classes.circle}>
+			<div className={!isMobile && classes.circle}>
 				<SectionTitle
 					title={<T k="resume.title" />}
 					subtitle={<T k="resume.subtitle" />}
 				/>
 
 				<CardBento bg>
-					<Paper p="xl">
+					<Paper p={{base: 'xs', lg: 'xl'}}>
 						<Table>
 							<Table.Tbody>
 								<Each

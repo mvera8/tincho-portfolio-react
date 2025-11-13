@@ -11,6 +11,8 @@ https://zento.framer.website/
 https://geroldlight.themejunction.net/portfolios/deloitte/
 https://lumina-product.framer.website/
 
+https://appwrite.io/blog/post/from-student-to-developer-how-open-source-can-launch-your-career?ref=dailydev
+
 google data:
 https://www.temlis.com/#pick
 
@@ -19,6 +21,7 @@ Task:
 - Animation
 - Los elementos de imagen no tienen width y height explícitos
 - favicon
+- pdf
 
 DeepWiki:
 https://deepwiki.com/mvera8/tincho-portfolio-react
