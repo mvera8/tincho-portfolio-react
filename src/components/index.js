@@ -9,6 +9,7 @@ export * from './Footer';
 export * from './GroupBadge';
 export * from './Logo';
 export * from './Navbar';
+export * from './ResumeTable';
 export * from './MvButton';
 export * from './MvHelmet';
 export * from './MvImage';
