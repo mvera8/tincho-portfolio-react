@@ -1,10 +1,16 @@
-import { Box, Container, Grid, Image, SimpleGrid, Title } from '@mantine/core';
-import { CardBento, CardSkill, Each, GroupBadge, ResumeTable, SocialMedia } from '../components'
+import { Avatar, Box, Container, Grid, Image, List, SimpleGrid, ThemeIcon, Title } from '@mantine/core';
+import { CardBento, CardSkill, Each, GroupBadge, ResumeTable, TextDisplay } from '../components'
 import {
 	IconBrandWordpress, IconBrandNextjs, IconBrandReact, IconBrandDocker,
 	IconBrandBootstrap, IconBrandFigma, IconBrandHtml5, IconBrandJavascript,
 	IconBrandPhp, IconBrandCypress, IconBrandAdobePhotoshop, IconBrandAdobeIllustrator,
-	IconAi, IconBrandCss3
+	IconAi, IconBrandCss3,
+	IconPhone,
+	IconMail,
+	IconMapPin,
+	IconAppWindow,
+	IconCode,
+	IconBriefcase2
 } from '@tabler/icons-react';
 import T from '../i18n/T.jsx';
 
@@ -88,6 +94,11 @@ const skills = [
 		'title': 'Gemini',
 		'icon': IconAi,
 		'category': 'ai'
+	},
+	{
+		'title': 'Nextjs',
+		'icon': IconBrandNextjs,
+		'category': 'frontend'
 	}
 ];
 
@@ -96,36 +107,125 @@ export const CVPage = () => {
 		<>
 			<Container fluid px={0}>
 				<Grid>
-					<Grid.Col span={4}>
-						<CardBento bg="dark">
-							<Image src="hero_image.webp" alt="Martín Vera" />
-							<Box p="md">
-								<Title order={1} c="red">Martín Vera</Title>
-								<GroupBadge />
-								<Title order={2} c="red">Contacto</Title>
-								<SocialMedia />
-							</Box>
-						</CardBento>
-
+					<Grid.Col span={2}>
+						<Avatar
+							src="martin_vera.webp"
+							alt="Martín Vera"
+							size={120}
+						/>
 					</Grid.Col>
-					<Grid.Col span={8}>
-						<Title order={2} c="red">Profile</Title>
-						<T k="about.text" />
+					<Grid.Col span={9}>
+						<Box mb="xl">
+							<TextDisplay gradient="Martín Vera" mb={0} />
+							<Title order={2} c="dark" mb="xs">Desarrollador web</Title>
+							<GroupBadge />
+						</Box>
+						<Box mb="xl">
+							<Grid>
+								<Grid.Col span={6}>
+									<List spacing="sm">
+										<List.Item
+											icon={
+												<ThemeIcon color="red" size={24} radius="xl">
+													<IconPhone size={16} />
+												</ThemeIcon>
+											}
+										>098 771 201</List.Item>
+										<List.Item
+											icon={
+												<ThemeIcon color="red" size={24} radius="xl">
+													<IconMail size={16} />
+												</ThemeIcon>
+											}
+										>tinchovera8@hotmail.com</List.Item>
+										<List.Item
+											icon={
+												<ThemeIcon color="red" size={24} radius="xl">
+													<IconMapPin size={16} />
+												</ThemeIcon>
+											}
+										>Montevideo, Uruguay</List.Item>
+									</List>
+								</Grid.Col>
+								<Grid.Col span={6}>
+									<List spacing="sm">
+										<List.Item
+											icon={
+												<ThemeIcon color="red" size={24} radius="xl">
+													<IconAppWindow size={16} />
+												</ThemeIcon>
+											}
+										>https://martinvera.com.uy</List.Item>
+										<List.Item
+											icon={
+												<ThemeIcon color="red" size={24} radius="xl">
+													<IconCode size={16} />
+												</ThemeIcon>
+											}
+										>https://github.com/tinchovera</List.Item>
+										<List.Item
+											icon={
+												<ThemeIcon color="red" size={24} radius="xl">
+													<IconBriefcase2 size={16} />
+												</ThemeIcon>
+											}
+										>https://www.linkedin.com/in/tincho8/</List.Item>
+									</List>
+								</Grid.Col>
+							</Grid>
+						</Box>
 
-						<Title order={2} c="red">Experience</Title>
-						<ResumeTable />
+						<Box mb="xl">
+							<Title order={2} c="red" mb="sm">Profile</Title>
+							<T k="about.text" />
+						</Box>
 
-						<Title order={2} c="red">Skills</Title>
-						<SimpleGrid cols={{ base: 2, md: 2, lg: 4 }}>
-							<Each
-								of={skills}
-								render={({ title, icon }, idx) => {
-									return (
-										<CardSkill key={idx} icon={icon} title={title} />
-									);
-								}}
-							/>
-						</SimpleGrid>
+						<Box mb="xl">
+							<Title order={2} c="red" mb={0}>Experience</Title>
+							<ResumeTable />
+						</Box>
+
+						<Box mb="xl">
+							<Title order={2} c="red" mb="sm">Skills</Title>
+							<SimpleGrid cols={4}>
+								<Each
+									of={skills}
+									render={({ title, icon }, idx) => {
+										return (
+											<CardSkill
+												key={idx}
+												icon={icon}
+												title={title}
+												size="sm"
+											/>
+										);
+									}}
+								/>
+							</SimpleGrid>
+						</Box>
+
+						<Box mb="xl">
+							<Grid>
+								<Grid.Col span={6}>
+									<CardBento title="Cleanmax" subtitle="WordPress" bg>
+										<Image
+											src="cleanmax.webp"
+											alt="Cleanmax"
+											size={120}
+										/>
+									</CardBento>
+								</Grid.Col>
+								<Grid.Col span={6}>
+									<CardBento title="Portfolio Personal" subtitle="React" bg>
+										<Image
+											src="site.webp"
+											alt="Portfolio Personal"
+											size={120}
+										/>
+									</CardBento>
+								</Grid.Col>
+							</Grid>
+						</Box>
 					</Grid.Col>
 				</Grid>
 			</Container>

@@ -4,6 +4,7 @@ import { CVPage, ErrorPage, HomePage, BlogPostPage, PortfolioPostPage, BlogPage,
 import LanguageProvider from './i18n/LanguageProvider';
 
 import '@mantine/core/styles.css';
+import { CVPDFPage } from './pages/CVPDF.page';
 
 const theme = createTheme({
 	fontFamily: 'Open Sans, sans-serif',
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
 	{
 		path: 'cv',
 		element: <CVPage />,
+	},
+	{
+		path: 'cv-pdf',
+		element: <CVPDFPage />,
 	}
 ]);
 

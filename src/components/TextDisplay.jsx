@@ -2,12 +2,18 @@ import { Text, Title, useMantineColorScheme } from '@mantine/core'
 import PropTypes from 'prop-types';
 import classes from './TextDisplay.module.css';
 
-export const TextDisplay = ({text, gradient, align = 'left'}) => {
+export const TextDisplay = ({ text, gradient, align = 'left', mb = 'xs' }) => {
 	const colorScheme = useMantineColorScheme();
 
 	return (
-		<Title order={1} c={colorScheme.colorScheme === 'dark' ? 'white' : 'dark'} className={classes.title} mb="xs" ta={align}>
-			{text}{' '} 
+		<Title
+			order={1}
+			c={colorScheme.colorScheme === 'dark' ? 'white' : 'dark'}
+			className={classes.title}
+			mb={mb}
+			ta={align}
+		>
+			{text}{' '}
 			<Text
 				component="span"
 				inherit
@@ -22,4 +28,5 @@ TextDisplay.propTypes = {
 	text: PropTypes.object,
 	gradient: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 	align: PropTypes.string,
+	mb: PropTypes.string,
 };

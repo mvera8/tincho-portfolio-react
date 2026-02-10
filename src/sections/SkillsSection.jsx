@@ -94,6 +94,11 @@ const skills = [
 		'title': 'Gemini',
 		'icon': IconAi,
 		'category': 'ai'
+	},
+	{
+		'title': 'Nextjs',
+		'icon': IconBrandNextjs,
+		'category': 'frontend'
 	}
 ];
 

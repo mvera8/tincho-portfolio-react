@@ -1,4 +1,5 @@
-import { ActionIcon,
+import {
+	ActionIcon,
 	Anchor,
 	Paper,
 	Table,
@@ -16,9 +17,9 @@ export const ResumeTable = () => {
 	const jobsRaw = get('resume.jobs');
 	const jobs = Array.isArray(jobsRaw) ? jobsRaw : [];
 	if (jobs.length === 0) return null;
-		
+
 	return (
-		<Paper p={{base: 'xs', lg: 'xl'}}>
+		<Paper p={{ base: 'xs', lg: 'md' }}>
 			<Table>
 				<Table.Tbody>
 					<Each
@@ -26,21 +27,21 @@ export const ResumeTable = () => {
 						render={({ title, link, puesto, time }, idx) => (
 							<Table.Tr key={idx}>
 								{!isMobile &&
-											<Table.Td ta="start" pt="md" px="md">
-												<ActionIcon
-													variant="light"
-													color="red"
-													radius="xl"
-													size="xl"
-													component="a"
-													target='_blank'
-													href={link + '?ref=martinvera.com.uy'}
-													aria-label={title}>
-													<IconArrowUpRight size={22} />
-												</ActionIcon>
-											</Table.Td>
+									<Table.Td ta="start" pt="md" px="md">
+										<ActionIcon
+											variant="light"
+											color="red"
+											radius="xl"
+											size="xl"
+											component="a"
+											target='_blank'
+											href={link + '?ref=martinvera.com.uy'}
+											aria-label={title}>
+											<IconArrowUpRight size={22} />
+										</ActionIcon>
+									</Table.Td>
 								}
-										
+
 								<Table.Td ta="start" pt="xl">
 									<TextDimmed text={time} />
 								</Table.Td>
