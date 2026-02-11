@@ -1,9 +1,10 @@
 import { createTheme, MantineProvider } from '@mantine/core';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { ErrorPage, HomePage, BlogPostPage, PortfolioPostPage, BlogPage, TestPage, ServicesPostPage, BentoGridPage, ContactPage, ServicesPage, PortfolioPage } from './pages';
+import { CVPage, ErrorPage, HomePage, BlogPostPage, PortfolioPostPage, BlogPage, ServicesPostPage, BentoGridPage, ContactPage, ServicesPage, PortfolioPage } from './pages';
 import LanguageProvider from './i18n/LanguageProvider';
 
 import '@mantine/core/styles.css';
+import './App.css';
 
 const theme = createTheme({
 	fontFamily: 'Open Sans, sans-serif',
@@ -59,13 +60,13 @@ const router = createBrowserRouter([
 		element: <ContactPage />,
 	},
 	{
-		path: 'test',
-		element: <TestPage />,
-	},
-	{
 		path: 'bento',
 		element: <BentoGridPage />,
-	}
+	},
+	{
+		path: 'cv',
+		element: <CVPage />,
+	},
 ]);
 
 export default function App() {

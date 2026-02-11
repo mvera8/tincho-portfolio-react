@@ -13,7 +13,7 @@ export const HeroSection = () => {
 
 	return (
 		<MvSection size="xl" padding="xs">
-			<Grid justify="center" align="center" pb={{base: 'xs', lg: 'xl'}} pt={{base: 'xs', lg: 'md'}}>
+			<Grid justify="center" align="center" pb={{ base: 'xs', lg: 'xl' }} pt={{ base: 'xs', lg: 'md' }}>
 				<Grid.Col span={{ base: 12, md: 12, lg: 5 }}>
 					<Text size="xl" c="gray" mb="xs">
 						<T k="home.hello" values={{ emoji: '👋', name: '"Tincho" Vera' }} />
@@ -30,7 +30,7 @@ export const HeroSection = () => {
 						/>
 						<MvButton
 							text={<T k="home.cta2" />}
-							link="/bento"
+							link="/cv"
 							variant="light"
 							color={colorScheme.colorScheme === 'dark' ? 'gray' : 'red'}
 							Icon={IconArrowDownDashed}
@@ -64,7 +64,7 @@ export const HeroSection = () => {
 							</Stack>
 						</Card>
 					</Grid.Col>
-				}					
+				}
 			</Grid>
 		</MvSection>
 	)

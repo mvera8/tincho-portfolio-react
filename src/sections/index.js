@@ -1,6 +1,7 @@
 export * from './AboutSection';
 export * from './BlogSection';
 export * from './ContactSection';
+export * from './CVPDFSection';
 export * from './FaqsSection';
 export * from './HeroSection';
 export * from './PortfolioSection';

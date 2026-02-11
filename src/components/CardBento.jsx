@@ -2,8 +2,12 @@ import { Box, Card, ThemeIcon, Title, useMantineColorScheme } from '@mantine/cor
 import { TextDimmed } from './TextDimmed';
 import PropTypes from 'prop-types';
 
-export const CardBento = ({ children, bg = false, title, subtitle, icon }) => {
+export const CardBento = ({ children, bg = false, title, subtitle, icon, color = '' }) => {
 	const { colorScheme } = useMantineColorScheme();
+
+	const colorValue = color === true ? (colorScheme === 'dark' ? 'gray.0' : 'dark.9')
+		: color ? color
+			: colorScheme === 'dark' ? 'gray.0' : 'dark.9';
 
 	const bgValue =
     bg === true ? (colorScheme === 'dark' ? 'dark.7' : 'gray.2')
@@ -36,7 +40,7 @@ export const CardBento = ({ children, bg = false, title, subtitle, icon }) => {
 
 			{(title || subtitle) && (
 				<Box m="lg">
-					{title && <Title order={4} size="h3" mb="sm">{title}</Title>}
+					{title && <Title order={4} size="h3" mb="sm" c={colorValue}>{title}</Title>}
 					{subtitle && <TextDimmed text={subtitle} />}
 				</Box>
 			)}
@@ -51,6 +55,7 @@ export const CardBento = ({ children, bg = false, title, subtitle, icon }) => {
 CardBento.propTypes = {
 	children: PropTypes.node,
 	bg: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+	color: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 	title: PropTypes.string,
 	subtitle: PropTypes.string,
 	icon: PropTypes.node,

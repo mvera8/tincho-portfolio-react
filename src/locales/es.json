@@ -25,7 +25,7 @@
 	],
 	"about.subtitle": "Sobre mí",
 	"about.title": "Lo que hago (y me encanta):",
-	"about.text": "Construyo sitios en WordPress y web apps modernas en React, con foco en velocidad, confiabilidad y mantenibilidad. Lideré proyectos que agregan datos de múltiples propiedades (dashboards, reportes y herramientas internas), automatizan operaciones de contenido (WP-CLI, scripts, Jenkins/GitHub Actions) y mejoran el flujo de trabajo de desarrolladores end-to-end.",
+	"about.text": "Construyo sitios en WordPress y web apps modernas en React/Nextjs, con foco en velocidad, confiabilidad y mantenibilidad. Lideré proyectos que agregan datos de múltiples propiedades (dashboards, reportes y herramientas internas), automatizan operaciones de contenido (WP-CLI, scripts, Jenkins/GitHub Actions) y mejoran el flujo de trabajo de desarrolladores end-to-end.",
 	"about.languages": "Español e Inglés",
 	"about.study": "Universidad ORT",
 	"about.degree1": "Tecnico en Diseño Web",
@@ -43,7 +43,7 @@
 			"title": "OnPoint Global",
 			"link": "https://onpointglobal.com/",
 			"puesto": "WordPress Tech Lead",
-			"time": "Ago. 2019 – Hoy"
+			"time": "Ago. 2019 – Feb. 2026"
 		},
 		{
 			"title": "Muu Vainilla",
@@ -79,7 +79,6 @@
 					"bg": "red.9",
 					"image": "940shots_so"
 				},
-				
 				{
 					"title": "Fácil de mantener",
 					"text": "Podés editar texto, fotos y secciones sin depender de nadie.",
@@ -133,13 +132,19 @@
 					"title": "A medida de verdad",
 					"text": "Diseñado exactamente para tu flujo de trabajo. No plantillas, no forzar procesos.",
 					"bg": "red.9",
-					"image": "icon_puzzle"
+					"image": "940shots_so"
 				},
 				{
 					"title": "Crece con tu negocio",
 					"text": "Empieza simple. Escala cuando lo necesites. Sin rehacer todo desde cero.",
 					"bg": "radial-gradient(circle 350px at 50% 100%, rgba(239,68,68,0.4), transparent)",
-					"image": "icon_graph"
+					"image": "image_start"
+				},
+				{
+					"title": "Sitios rápidos",
+					"text": "React/Nextjs para una experiencia suave y ultra rápida que se mantiene al ritmo de tu negocio.",
+					"bg": true,
+					"image": "icon_thunder"
 				},
 				{
 					"title": "Integraciones reales",
@@ -173,13 +178,13 @@
 					"title": "Marca que se reconoce",
 					"text": "Colores, tipografías y estilo coherente. Nada al azar.",
 					"bg": "red.9",
-					"image": "icon_palette"
+					"image": "940shots_so"
 				},
 				{
 					"title": "Interfaces claras",
 					"text": "Cada cosa en su lugar. Nada que distraiga. Todo lo que importa, visible.",
 					"bg": true,
-					"image": "icon_layout"
+					"image": "image_interfaces"
 				},
 				{
 					"title": "Pensado para celular",
@@ -209,13 +214,13 @@
 					"title": "Desplegar sin miedo",
 					"text": "Si algo se rompe, lo sabemos antes de que llegue al cliente.",
 					"bg": "red.9",
-					"image": "icon_shield"
+					"image": "940shots_so"
 				},
 				{
 					"title": "Errores detectados antes",
 					"text": "Automatizaciones que prueban lo que los humanos olvidan revisar.",
 					"bg": true,
-					"image": "icon_robot"
+					"image": "image_errors"
 				},
 				{
 					"title": "Menos soporte",
@@ -243,6 +248,7 @@
 	"skills.title": "Tecnologías que uso",
 	"portfolio.subtitle": "Últimos trabajos",
 	"portfolio.title": "Explorá mis proyectos",
+	"portfolio.button": "Ver proyecto",
 	"portfolio.work.title": "Descripción",
 	"portfolio.work.button": "Vealo usted mismo",
 	"portfolio.works": [
@@ -253,7 +259,7 @@
 			"featured": {
 				"type": "slider",
 				"image1": "/cleanmax.webp",
-				"image2": "/site.webp",
+				"image2": "/wordpress.webp",
 				"alt": "Sitio web de Cleanmax desarrollado en WordPress"
 			},
 			"data": {
@@ -273,7 +279,7 @@
 		},
 		{
 			"id": "site",
-			"title": "Sitio Web Personal - Martin Vera",
+			"title": "Sitio Web Personal - Martín Vera",
 			"featured": {
 				"type": "image",
 				"image": "/site.webp",

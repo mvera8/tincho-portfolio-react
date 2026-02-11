@@ -57,7 +57,7 @@ export const PortfolioSection = ({title, skip}) => {
 										</div>
 										<MvButton
 											type='button'
-											text="View Project"
+											text={<T k="portfolio.button" />}
 											Icon={IconArrowRight}
 										/>
 									</Stack>

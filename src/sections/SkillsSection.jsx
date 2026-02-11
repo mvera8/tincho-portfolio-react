@@ -89,6 +89,16 @@ const skills = [
 		'title': 'Claude',
 		'icon': IconAi,
 		'category': 'ai'
+	},
+	{
+		'title': 'Gemini',
+		'icon': IconAi,
+		'category': 'ai'
+	},
+	{
+		'title': 'Nextjs',
+		'icon': IconBrandNextjs,
+		'category': 'frontend'
 	}
 ];
 

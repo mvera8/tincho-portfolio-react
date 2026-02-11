@@ -1,6 +1,7 @@
 export * from './BentoGrid.page';
 export * from './Blog.page';
 export * from './Contact.page';
+export * from './CV.page';
 export * from './Error.page';
 export * from './Home.page';
 export * from './Portfolio.page';
@@ -8,4 +9,3 @@ export * from './PortfolioPost.page';
 export * from './BlogPost.page';
 export * from './ServicesPost.page';
 export * from './Services.page';
-export * from './Test.page';
