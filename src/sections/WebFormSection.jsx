@@ -11,7 +11,7 @@ export const WebFormSection = () => {
 	const { t } = useI18n();
 	const {register, reset, handleSubmit} = useForm();
 
-	const [isDisabled] = useState(true);
+	const [isDisabled] = useState(false);
 	const [isSuccess, setIsSuccess] = useState(false);
 	const [result, setResult] = useState(null);
 	const [loading, { toggle }] = useDisclosure();

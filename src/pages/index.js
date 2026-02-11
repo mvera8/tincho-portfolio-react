@@ -9,4 +9,3 @@ export * from './PortfolioPost.page';
 export * from './BlogPost.page';
 export * from './ServicesPost.page';
 export * from './Services.page';
-export * from './Test.page';

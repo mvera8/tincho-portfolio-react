@@ -1,10 +1,10 @@
 import { createTheme, MantineProvider } from '@mantine/core';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { CVPage, ErrorPage, HomePage, BlogPostPage, PortfolioPostPage, BlogPage, TestPage, ServicesPostPage, BentoGridPage, ContactPage, ServicesPage, PortfolioPage } from './pages';
+import { CVPage, ErrorPage, HomePage, BlogPostPage, PortfolioPostPage, BlogPage, ServicesPostPage, BentoGridPage, ContactPage, ServicesPage, PortfolioPage } from './pages';
 import LanguageProvider from './i18n/LanguageProvider';
 
 import '@mantine/core/styles.css';
-import { CVPDFPage } from './pages/CVPDF.page';
+import './App.css';
 
 const theme = createTheme({
 	fontFamily: 'Open Sans, sans-serif',
@@ -60,10 +60,6 @@ const router = createBrowserRouter([
 		element: <ContactPage />,
 	},
 	{
-		path: 'test',
-		element: <TestPage />,
-	},
-	{
 		path: 'bento',
 		element: <BentoGridPage />,
 	},
@@ -71,10 +67,6 @@ const router = createBrowserRouter([
 		path: 'cv',
 		element: <CVPage />,
 	},
-	{
-		path: 'cv-pdf',
-		element: <CVPDFPage />,
-	}
 ]);
 
 export default function App() {

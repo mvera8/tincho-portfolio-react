@@ -25,7 +25,7 @@
 	],
 	"about.subtitle": "About Me",
 	"about.title": "Highlights of what I do (and love):",
-	"about.text": "I build production-grade WordPress sites and modern React web apps with a focus on speed, reliability, and maintainability. I’ve led projects that aggregate data across multiple properties (dashboards, reporting, and internal tools), automate content operations (WP-CLI, custom scripts, Jenkins/GitHub Actions), and improve developer workflows end-to-end.",
+	"about.text": "I build production-grade WordPress sites and modern React/Nextjs web apps with a focus on speed, reliability, and maintainability. I’ve led projects that aggregate data across multiple properties (dashboards, reporting, and internal tools), automate content operations (WP-CLI, custom scripts, Jenkins/GitHub Actions), and improve developer workflows end-to-end.",
 	"about.languages": "Spanish & English",
 	"about.study": "ORT University",
 	"about.degree1": "Web Developer Technician",
@@ -94,8 +94,8 @@
 				{
 					"title": "Speed & performance",
 					"text": "Real optimization so the site loads fast and you don't lose visitors.",
-					"bg": true,
-					"image": "icon_thunder"
+					"bg": "white",
+					"image": 90
 				},
 				{
 					"title": "Optional maintenance",
@@ -138,7 +138,13 @@
 					"title": "Scales with your business",
 					"text": "Start simple. Grow when you need to. No full rewrites.",
 					"bg": "radial-gradient(circle 350px at 50% 100%, rgba(239,68,68,0.4), transparent)",
-					"image": "wp-admin-dashboard"
+					"image": "image_start"
+				},
+				{
+					"title": "Super Fast",
+					"text": "React/Nextjs for a smooth, lightning-fast experience that keeps up with your pace.",
+					"bg": true,
+					"image": "icon_thunder"
 				},
 				{
 					"title": "Real integrations",
@@ -178,7 +184,7 @@
 					"title": "Clear interfaces",
 					"text": "Everything in the right place. Nothing distracting. Only what matters.",
 					"bg": true,
-					"image": "wp-admin-dashboard"
+					"image": "image_interfaces"
 				},
 				{
 					"title": "Mobile-first",
@@ -214,7 +220,7 @@
 					"title": "Errors caught early",
 					"text": "Automation tests the things humans forget to check.",
 					"bg": true,
-					"image": "wp-admin-dashboard"
+					"image": "image_errors"
 				},
 				{
 					"title": "Less support load",
@@ -242,6 +248,7 @@
 	"skills.title": "Tech I Use",
 	"portfolio.subtitle": "Latest Work",
 	"portfolio.title": "Explore My Projects",
+	"portfolio.button": "View project",
 	"portfolio.work.title": "Description",
 	"portfolio.work.button": "See it in action",
 	"portfolio.works": [
@@ -252,7 +259,7 @@
 			"featured": {
 				"type": "slider",
 				"image1": "/cleanmax.webp",
-				"image2": "/site.webp",
+				"image2": "/wordpress.webp",
 				"alt": "Cleanmax WordPress website"
 			},
 			"data": {
@@ -272,7 +279,7 @@
 		},
 		{
 			"id": "site",
-			"title": "Personal Portfolio - Martin Vera",
+			"title": "Personal Portfolio - Martín Vera",
 			"featured": {
 				"type": "image",
 				"image": "/site.webp",

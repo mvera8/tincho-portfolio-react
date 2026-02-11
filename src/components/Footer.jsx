@@ -5,7 +5,7 @@ import { isMobile } from 'react-device-detect';
 
 export const Footer = () => {
 	return (
-		<footer>
+		<footer className='no-print'>
 			<Container size="lg" pt="lg" pb="xl">
 				<Group justify={isMobile ? 'center' : 'space-between'}>
 					<TextDimmed text='© 2025 MARTINVERA. All rights reserved.' />

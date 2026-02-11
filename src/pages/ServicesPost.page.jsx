@@ -23,6 +23,7 @@ export const ServicesPostPage = () => {
 		if (typeof card.image === 'number') {
 			return (
 				<RingProgress
+					bg="transparent"
 					size={150}
 					roundCaps
 					label={
@@ -33,7 +34,7 @@ export const ServicesPostPage = () => {
 					sections={[
 						{ value: card.image, color: 'green' },
 					]}
-					rootColor="gray"
+					rootColor="transparent"
 				/>
 			);
 		}
@@ -78,6 +79,7 @@ export const ServicesPostPage = () => {
 									title={item.items[0].title}
 									subtitle={item.items[0].text}
 									bg={item.items[0].bg}
+									color='white'
 								>
 									<Flex
 										h="100%"
@@ -127,6 +129,7 @@ export const ServicesPostPage = () => {
 											title={card.title}
 											subtitle={card.text}
 											bg={card.bg}
+											color='grey'
 										>
 											<Center>
 												{card.image && renderFeatured(card)}
