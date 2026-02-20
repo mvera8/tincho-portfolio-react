@@ -1,7 +1,6 @@
 import { createTheme, MantineProvider } from '@mantine/core';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { CVPage, ErrorPage, HomePage, BlogPostPage, PortfolioPostPage, BlogPage, ServicesPostPage, BentoGridPage, ContactPage, ServicesPage, PortfolioPage } from './pages';
-import { Analytics } from "@vercel/analytics/react"
 import LanguageProvider from './i18n/LanguageProvider';
 
 import '@mantine/core/styles.css';
