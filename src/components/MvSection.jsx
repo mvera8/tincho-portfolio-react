@@ -4,14 +4,12 @@ import PropTypes from 'prop-types';
 export const MvSection = ({ children, bg = false, size = 'lg', align = 'left', padding = 'xl' }) => {
 	const { colorScheme } = useMantineColorScheme();
 
-	// Resolver valor final de background
 	let bgValue;
 	if (bg === true) {
 		bgValue = colorScheme === 'dark' ? 'dark' : 'gray.1';
 	} else if (bg === false || bg == null) {
 		bgValue = 'transparent';
 	} else {
-		// Si viene string (p.ej. "blue.0" o "#f0f0f0")
 		bgValue = bg;
 	}
 
@@ -26,7 +24,6 @@ export const MvSection = ({ children, bg = false, size = 'lg', align = 'left', p
 
 MvSection.propTypes = {
 	children: PropTypes.node.isRequired,
-	// Puede ser boolean (true activa fondo por defecto) o string (token/color)
 	bg: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 	size: PropTypes.string,
 	align: PropTypes.oneOf(['left', 'center', 'right', 'justify']),

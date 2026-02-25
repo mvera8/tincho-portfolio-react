@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Grid, Image, Stack, Title } from '@mantine/core';
+import { Badge, Grid, Image, Stack, Title } from '@mantine/core';
 import { CardLink, Each, MvButton, MvSection, SectionTitle, TextDimmed } from '../components';
 import { useI18n } from '../i18n/useI18n.js';
 import { IconArrowRight } from '@tabler/icons-react';
@@ -7,9 +7,9 @@ import { slugify } from '../helpers/slugify.js';
 import T from '../i18n/T.jsx';
 import PropTypes from 'prop-types';
 
-export const PortfolioSection = ({title, skip}) => {
+export const PortfolioSection = ({ title, skip }) => {
 	const { t } = useI18n();
-	const [sectionTitle, setSectionTitle] = useState( t('portfolio.title') ) 
+	const [sectionTitle, setSectionTitle] = useState(t('portfolio.title'))
 	const { get } = useI18n();
 	const worksRaw = get('portfolio.works');
 	const works = Array.isArray(worksRaw) ? worksRaw : [];
@@ -19,7 +19,7 @@ export const PortfolioSection = ({title, skip}) => {
 			setSectionTitle(title);
 		}
 	}, [title]);
-	
+
 	if (works.length === 0) return null;
 
 	return (
@@ -32,7 +32,7 @@ export const PortfolioSection = ({title, skip}) => {
 
 			<Each
 				of={works}
-				render={({ id, title, text }, idx) => {
+				render={({ id, title, text, tech }, idx) => {
 					const slug = slugify(id);
 					const image = '/' + id + '.webp';
 
@@ -49,11 +49,17 @@ export const PortfolioSection = ({title, skip}) => {
 										align="stretch"
 										justify="space-between"
 										gap="md"
-										p={{base: 'lg', lg: 'xl'}}
+										p={{ base: 'lg', lg: 'xl' }}
 									>
 										<div>
 											<Title order={3} size="h2" c="gray" mb="md">{title}</Title>
 											<TextDimmed text={text} />
+											<Each
+												of={tech}
+												render={(item, idx) => (
+													<Badge key={idx} variant="default" size="md" mr="xs">{item}</Badge>
+												)}
+											/>
 										</div>
 										<MvButton
 											type='button'
